@@ -1,0 +1,26 @@
+body {
+    margin: auto;
+}
+
+nav {
+    position: fixed;
+    color: white;
+    width: 100vw;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+}
+/*
+.menu {
+    display: flex;
+    margin-left: 500%;
+} */
+
+.view-mobile {
+    width: 100vw;
+    height: 100vh;
+}
