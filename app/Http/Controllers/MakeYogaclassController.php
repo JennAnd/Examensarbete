@@ -37,4 +37,12 @@ class MakeYogaclassController extends Controller
         $yogaclass->save();
         return redirect('adminpanel');
     }
+
+    public function fetchYogaclasses()
+    {
+        $yogaclasses = Yogaclass::select('*')
+            ->get();
+
+        return view('adminpanel', ['yogaclasses' => $yogaclasses]);
+    }
 }

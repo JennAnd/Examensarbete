@@ -42,6 +42,9 @@
         </div>
         <button type="submit">Add class</button>
     </form>
+    @foreach ($yogaclasses as $yogaclass)
+    <p>{{$yogaclass->class-name}}</p>
+    @endforeach
 
 </body>
 
