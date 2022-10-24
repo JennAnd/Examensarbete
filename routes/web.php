@@ -7,6 +7,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\MakeYogaclassController;
 use App\Http\Controllers\AdminScheduleController;
+use App\Http\Controllers\SchemeController;
+use App\Http\Controllers\SignUpController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,13 +30,19 @@ Route::get('/adminpanel', function () {
     return view('adminpanel');
 });
 
+Route::get('/signup', function () {
+    return view('signup');
+});
+
 
 
 Route::view('/login', 'login')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
+Route::post('signup', SignUpController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 Route::get('ourclasses', [ClassesController::class, 'index'])->name('ourclasses');
 Route::get('ourclasses/{id}', [ClassesController::class, 'show'])->name('ourclasses.show');
 Route::post('make-yogaclass', MakeYogaclassController::class);
 Route::get('/adminpanel', AdminScheduleController::class);
+Route::get('/scheme', SchemeController::class);

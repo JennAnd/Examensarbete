@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Yogaclass;
 use Illuminate\Http\Request;
 
 class SchemeController extends Controller
@@ -14,6 +15,10 @@ class SchemeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        $yogaclasses = Yogaclass::select('*')
+            ->get();
+
+
+        return view('scheme', ['yogaclasses' => $yogaclasses]);
     }
 }

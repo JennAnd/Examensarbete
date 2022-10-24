@@ -43,13 +43,13 @@
         <button type="submit">Add class</button>
     </form>
     @foreach ($yogaclasses as $yogaclass)
-    {{ $cleantime = substr($yogaclass->time,0,-3)}}
+
     <div>
         <p>{{$yogaclass->class_name}}</p>
         <p>{{$yogaclass->length}} min</p>
         <p>{{$yogaclass->teacher}}</p>
         <p>{{$yogaclass->date}}</p>
-        <p>{{$cleantime}}</p>
+        <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
         <p> Available: {{$yogaclass->available}}</p>
         <p>Reserved: {{$yogaclass->reserved}}</p>
     </div>
