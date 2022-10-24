@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('yogaclasses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('class-name');
+            $table->text('class_name');
             $table->text('teacher');
             $table->date('date');
             $table->time('time');

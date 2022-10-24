@@ -13,8 +13,8 @@
     <form method="post" action="make-yogaclass">
         @csrf
         <div>
-            <label for="class-name">Class name</label>
-            <input name="class-name" id="class-name" type="text" />
+            <label for="class_name">Class name</label>
+            <input name="class_name" id="class_name" type="text" />
         </div>
         <div>
             <label for="teacher">Teacher</label>
@@ -43,7 +43,16 @@
         <button type="submit">Add class</button>
     </form>
     @foreach ($yogaclasses as $yogaclass)
-    <p>{{$yogaclass->class-name}}</p>
+    {{ $cleantime = substr($yogaclass->time,0,-3)}}
+    <div>
+        <p>{{$yogaclass->class_name}}</p>
+        <p>{{$yogaclass->length}} min</p>
+        <p>{{$yogaclass->teacher}}</p>
+        <p>{{$yogaclass->date}}</p>
+        <p>{{$cleantime}}</p>
+        <p> Available: {{$yogaclass->available}}</p>
+        <p>Reserved: {{$yogaclass->reserved}}</p>
+    </div>
     @endforeach
 
 </body>

@@ -10,7 +10,7 @@ class Yogaclass extends Model
     use HasFactory;
 
     protected $fillable = [
-        'class-name',
+        'class_name',
         'teacher',
         'date',
         'time',

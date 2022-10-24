@@ -16,7 +16,7 @@ class MakeYogaclassController extends Controller
     public function __invoke(Request $request)
     {
         // $this->validate($request, [
-        //     'class-name' => 'required|string',
+        //     'class_name' => 'required|string',
         //     'teacher' => 'required|string',
         //     'date' => 'required|date',
         //     'time' => 'required|time',
@@ -25,7 +25,7 @@ class MakeYogaclassController extends Controller
         // ]);
 
         $yogaclass = new Yogaclass([
-            'class-name' => $request->get('class-name'),
+            'class_name' => $request->get('class_name'),
             'teacher' => $request->get('teacher'),
             'date' => $request->get('date'),
             'time' => $request->get('time'),
@@ -36,13 +36,5 @@ class MakeYogaclassController extends Controller
 
         $yogaclass->save();
         return redirect('adminpanel');
-    }
-
-    public function fetchYogaclasses()
-    {
-        $yogaclasses = Yogaclass::select('*')
-            ->get();
-
-        return view('adminpanel', ['yogaclasses' => $yogaclasses]);
     }
 }

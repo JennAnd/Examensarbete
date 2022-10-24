@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\MakeYogaclassController;
+use App\Http\Controllers\AdminScheduleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,4 @@ Route::get('logout', LogoutController::class);
 Route::get('ourclasses', [ClassesController::class, 'index'])->name('ourclasses');
 Route::get('ourclasses/{id}', [ClassesController::class, 'show'])->name('ourclasses.show');
 Route::post('make-yogaclass', MakeYogaclassController::class);
+Route::get('/adminpanel', AdminScheduleController::class);
