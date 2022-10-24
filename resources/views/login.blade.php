@@ -9,9 +9,6 @@
 </head>
 
 <body>
-    <nav>
-
-    </nav>
 
     @include('errors')
     <form method="post" action="login">

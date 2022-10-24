@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <img class="view-mobile" src="/assets/yogaclasses-mobile.webp" />
 
     <h1>{{ $entry->classtype }}</h1>
     <div>

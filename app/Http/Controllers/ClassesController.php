@@ -28,7 +28,7 @@ class ClassesController extends Controller
         $query->setContentType('classtype');
 
         $classes = $this->client->getEntries($query);
-        dd($classes);
+        /* dd($classes); */
 
         /*  dd($this->client->getEntries()); */
     }
