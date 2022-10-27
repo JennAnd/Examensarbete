@@ -17,3 +17,11 @@ ul {
     justify-content: space-between;
     margin-right: 10%;
 }
+
+footer {
+    color: white;
+    background-color: #403c3c;
+    height: 250px;
+    width: 100vw;
+    margin-bottom: 0;
+}

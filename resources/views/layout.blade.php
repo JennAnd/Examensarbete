@@ -29,6 +29,8 @@
         </ul>
     </nav>
 
+    <footer></footer>
+
     @yield('content')
 
     <!--   <script src="js/app.js"></script> -->
