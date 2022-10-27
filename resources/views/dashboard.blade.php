@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <p>Hello, {{ $user->firstname . " " . $user->lastname}}!</p>
 <p>{{$user->email}}</p>
 <p>Do you want to <a href="logout">logout?</a></p>
@@ -15,3 +17,4 @@
 </div>
 
 @endforeach
+@endsection

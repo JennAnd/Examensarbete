@@ -10,6 +10,8 @@ use App\Http\Controllers\AdminScheduleController;
 use App\Http\Controllers\SchemeController;
 use App\Http\Controllers\SignUpController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PaymentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +28,29 @@ Route::get('/', function () {
     return view('index');
 });
 
+
 Route::get('/adminpanel', function () {
     return view('adminpanel');
 });
 
 Route::get('/signup', function () {
     return view('signup');
+});
+
+Route::get('/ourproducts', function () {
+    return view('ourproducts');
+});
+
+Route::get('/events', function () {
+    return view('index');
+});
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
+
+Route::get('/memberships', function () {
+    return view('memberships');
 });
 
 
@@ -46,3 +65,5 @@ Route::get('ourclasses/{id}', [ClassesController::class, 'show'])->name('ourclas
 Route::post('make-yogaclass', MakeYogaclassController::class);
 Route::get('/adminpanel', AdminScheduleController::class);
 Route::get('/scheme', SchemeController::class);
+Route::get('/profile', ProfileController::class);
+Route::get('/payments', PaymentsController::class);

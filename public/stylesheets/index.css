@@ -6,6 +6,9 @@ nav {
     position: fixed;
     color: white;
     width: 100vw;
+    height: 75px;
+    background-color: black;
+    margin-top: -22px;
 }
 
 ul {
@@ -13,14 +16,4 @@ ul {
     display: flex;
     justify-content: space-between;
     margin-right: 10%;
-}
-/*
-.menu {
-    display: flex;
-    margin-left: 500%;
-} */
-
-.view-mobile {
-    width: 100vw;
-    height: 100vh;
 }
