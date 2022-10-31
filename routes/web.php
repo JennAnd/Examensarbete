@@ -42,7 +42,7 @@ Route::get('/ourproducts', function () {
 });
 
 Route::get('/events', function () {
-    return view('index');
+    return view('events');
 });
 
 Route::get('/aboutus', function () {
@@ -52,6 +52,8 @@ Route::get('/aboutus', function () {
 Route::get('/memberships', function () {
     return view('memberships');
 });
+
+
 
 
 

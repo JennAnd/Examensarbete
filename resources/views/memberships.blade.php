@@ -2,7 +2,8 @@
 @section('content')
 
 <body>
-    <h1> Our memberships</h1>
+    <img class="memberships-image" src="/assets/memberships.webp" />
+    <h1 class="member-heading"> Our memberships</h1>
 </body>
 
 </html>
