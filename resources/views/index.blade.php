@@ -2,12 +2,7 @@
 @section('content')
 
 <body>
-    <nav>
-        <ul>
-            <li class="logo">LOGGA</li>
-            <li class="menu">MENY</li>
-        </ul>
-    </nav>
+    @include('navbar')
     <img class="view-mobile" src="/assets/landingpage-mobile.webp" />
 
 
