@@ -5,3 +5,8 @@ footer {
     width: 100%;
     margin-bottom: 0;
 }
+
+.landingpage-image {
+    width: 100vw;
+    height: 569px;
+}

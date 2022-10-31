@@ -1,0 +1,13 @@
+.memberships-image {
+    width: 100vw;
+    height: 569px;
+}
+
+.member-heading {
+    font-family: "Gotu";
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    margin-top: -400px;
+}

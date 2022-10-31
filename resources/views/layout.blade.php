@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../stylesheets/navbar.css">
+    <link rel="stylesheet" href="../stylesheets/layout.css">
     <link rel="stylesheet" href="../stylesheets/admin.css">
     <link rel="stylesheet" href="../stylesheets/adminpanel.css">
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
@@ -23,10 +24,24 @@
 </head>
 
 <body>
-    @yield('content')
-    <footer></footer>
+    <<<<<<< HEAD @yield('content') <footer>
+        </footer>
 
-    <!--   <script src="js/app.js"></script> -->
+        =======
+
+        <nav>
+            <ul>
+                <li class="logo">LOGGA</li>
+                <li class="menu">MENY</li>
+            </ul>
+        </nav>
+
+
+
+        @yield('content')
+        <footer></footer>
+        >>>>>>> d542a0974ef1d3a710c62d5339b547f840ddef5c
+        <!--   <script src="js/app.js"></script> -->
 </body>
 
 </html>
