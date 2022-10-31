@@ -1,27 +1,4 @@
-body {
-    margin: auto;
-}
-
-nav {
-    position: fixed;
-    color: white;
+.landingpage-image {
     width: 100vw;
-    height: 75px;
-    background-color: black;
-    margin-top: -22px;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10%;
-}
-
-footer {
-    color: white;
-    background-color: #403c3c;
-    height: 250px;
-    width: 100vw;
-    margin-bottom: 0;
+    height: 569px;
 }

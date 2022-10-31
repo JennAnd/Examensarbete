@@ -1,0 +1,47 @@
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-Regular.woff");
+    font-family: "Raleway";
+}
+
+body {
+    margin: auto;
+}
+
+nav {
+    position: fixed;
+    color: white;
+    width: 100vw;
+    height: 75px;
+    background-color: black;
+    opacity: 0.5;
+    /* border-radius: 20%; */
+    /*  margin-top: -22px; */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+}
+
+/* li {
+    z-index: 10;
+    opacity: 1;
+} */
+
+footer {
+    color: white;
+    background-color: #403c3c;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

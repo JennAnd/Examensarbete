@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/layout.css">
     <link rel="stylesheet" href="../stylesheets/admin.css">
     <link rel="stylesheet" href="../stylesheets/adminpanel.css">
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
@@ -29,10 +30,10 @@
         </ul>
     </nav>
 
-    <footer></footer>
+
 
     @yield('content')
-
+    <footer></footer>
     <!--   <script src="js/app.js"></script> -->
 </body>
 
