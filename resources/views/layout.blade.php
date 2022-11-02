@@ -20,28 +20,36 @@
     <link rel="stylesheet" href="../stylesheets/payments.css">
     <link rel="stylesheet" href="../stylesheets/profile.css">
     <link rel="stylesheet" href="../stylesheets/signup.css">
+    <link rel="stylesheet" href="../stylesheets/aboutus.css">
 
 </head>
 
 <body>
-    <<<<<<< HEAD @yield('content') <footer>
-        </footer>
 
-        =======
+    @yield('content')
+    <footer>
+        <div class="footer-container">
+            <div class="footer-image-container">
+                <img class="logo-footer" src="/assets/mandala.svg" />
+            </div>
 
-        <nav>
-            <ul>
-                <li class="logo">LOGGA</li>
-                <li class="menu">MENY</li>
-            </ul>
-        </nav>
+            <div class="footer-info-container">
+                <p>ABOUT YOGASTÄLLET</p>
+                <p>info</p>
+                <p>more info</p>
+                <p>more info again</p>
+                <p>more info again</p>
+            </div>
+            <div class="footer-opening-hours-container">
+                <p>OPENING HOURS</p>
+                <p>Mon-fri: 06.00-20.00</p>
+                <p>Saturday: 06.00-21.00</p>
+                <p>Sunday: 07.00-19.00</p>
+            </div>
 
-
-
-        @yield('content')
-        <footer></footer>
-        >>>>>>> d542a0974ef1d3a710c62d5339b547f840ddef5c
-        <!--   <script src="js/app.js"></script> -->
+        </div>
+    </footer>
+    <!--   <script src="js/app.js"></script> -->
 </body>
 
 </html>

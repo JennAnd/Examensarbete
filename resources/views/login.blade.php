@@ -2,6 +2,8 @@
 @section('content')
 
 <body>
+    @include('navbar')
+    <img class="login-image" src="/assets/loginpage.webp" />
     <h1> Log in </h1>
 
     @include('errors')

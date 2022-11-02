@@ -2,7 +2,7 @@
 @section('content')
 
 <body>
-    <img class="view-mobile" src="/assets/yogaclasses-mobile.webp" />
+    <img class="our-classes-image" src="/assets/our-classes.webp" />
     <h1> Our classes </h1>
     <h1>{{ $entry->classtype }}</h1>
     <div>

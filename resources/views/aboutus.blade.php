@@ -3,21 +3,21 @@
 
 <body>
     @include('navbar')
-    <img class="our-products-image" src="/assets/our-products.webp" />
-    <h1 class="our-products-heading"> Our products</h1>
-    <div class="our-products-container">
+    <img class="about-us-image" src="/assets/about-us-pose.webp" />
+    <div class="about-us-container">
         <div class="mandala-section">
             <img src="/assets/line.svg" />
             <img src="/assets/mandala.svg" />
             <img src="/assets/line.svg" />
         </div>
-
         <div class="mandala-section">
             <img src="/assets/line.svg" />
             <img src="/assets/mandala.svg" />
             <img src="/assets/line.svg" />
         </div>
     </div>
+
+
 </body>
 
 </html>

@@ -1,0 +1,21 @@
+body {
+    background-color: #746858;
+}
+
+.events-image {
+    width: 100vw;
+    height: 413px;
+}
+
+.events-heading {
+    font-family: "Gotu";
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    margin-top: -400px;
+}
+
+.events-container {
+    height: 500px;
+}

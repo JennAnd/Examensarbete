@@ -1,3 +1,21 @@
 body {
-    color: black;
+    background-color: #746858;
+}
+
+.our-classes-image {
+    width: 100vw;
+    height: 413px;
+}
+
+.our-classes-heading {
+    font-family: "Gotu";
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    margin-top: -400px;
+}
+
+.our-classes-container {
+    height: 500px;
 }

@@ -1,0 +1,21 @@
+body {
+    background-color: #746858;
+}
+
+.our-products-image {
+    width: 100vw;
+    height: 413px;
+}
+
+.our-products-heading {
+    font-family: "Gotu";
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    margin-top: -400px;
+}
+
+.our-products-container {
+    height: 500px;
+}
