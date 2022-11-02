@@ -12,6 +12,7 @@ body {
     margin: auto;
 }
 
+<<<<<<< Updated upstream
 nav {
     position: fixed;
     color: white;
@@ -33,6 +34,8 @@ ul {
     opacity: 1;
 } */
 
+=======
+>>>>>>> Stashed changes
 footer {
     color: white;
     background-color: #403c3c;
