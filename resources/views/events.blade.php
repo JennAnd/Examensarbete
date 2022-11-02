@@ -11,6 +11,12 @@
             <img src="/assets/mandala.svg" />
             <img src="/assets/line.svg" />
         </div>
+
+        <div class="event-boxes">
+            <div class="event-single-box"></div>
+            <div class="event-single-box"></div>
+            <div class="event-single-box"></div>
+        </div>
         <div class="mandala-section">
             <img src="/assets/line.svg" />
             <img src="/assets/mandala.svg" />
@@ -18,18 +24,7 @@
         </div>
     </div>
 
-    @foreach ($yogaclasses as $yogaclass)
-    <h1> Upcoming events</h1>
-    <div>
-        <p>{{$yogaclass->class_name}}</p>
-        <p>{{$yogaclass->length}} min</p>
-        <p>{{$yogaclass->teacher}}</p>
-        <p>{{$yogaclass->date}}</p>
-        <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
-        <p> Available: {{$yogaclass->available}}</p>
-    </div>
-    <p>log in to book</p>
-    @endforeach
+
 
 
 </body>
