@@ -19,3 +19,18 @@ body {
 .our-products-container {
     height: 500px;
 }
+
+.product-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    height: 700px;
+    gap: 20px;
+    margin-bottom: 300px;
+    margin-top: 89px;
+}
+.product-single-box {
+    width: 401px;
+    height: 561px;
+    left: 89px;
+    border: 1px solid black;
+}

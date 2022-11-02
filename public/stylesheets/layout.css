@@ -28,27 +28,31 @@ ul {
     margin-right: 10%;
 }
 
-/* li {
-    z-index: 10;
-    opacity: 1;
-} */
-
 footer {
     color: white;
     background-color: #403c3c;
-    height: 200px;
-    /*  position: absolute; */
+    height: 250px;
     left: 0;
     bottom: 0;
     width: 100%;
+    margin-top: 800px;
 }
 
 .footer-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 8rem;
+    gap: 3rem;
     padding-top: 90px;
-    font-size: small;
+    font-size: 10px;
     font-family: "Raleway";
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+@media only screen and (min-width: 600px) {
+    .footer-container {
+        gap: 7rem;
+        font-size: 14px;
+    }
 }

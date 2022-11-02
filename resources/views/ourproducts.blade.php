@@ -12,6 +12,12 @@
             <img src="/assets/line.svg" />
         </div>
 
+        <div class="product-boxes">
+            <div class="product-single-box"></div>
+            <div class="product-single-box"></div>
+            <div class="product-single-box"></div>
+        </div>
+
         <div class="mandala-section">
             <img src="/assets/line.svg" />
             <img src="/assets/mandala.svg" />
