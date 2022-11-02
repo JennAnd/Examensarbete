@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    @include('navbar')
     @yield('content')
     <footer>
         <div class="footer-container">

@@ -20,6 +20,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->foreign('yogaclass_id')->references('id')->on('yogaclasses')
                 ->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

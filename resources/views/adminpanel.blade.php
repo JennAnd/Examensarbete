@@ -1,8 +1,4 @@
-@extends('layout')
-@section('content')
-
 <body>
-    @include('navbar')
     <h1>Adminpanel</h1>
     <form method="post" action="make-yogaclass">
         @csrf
@@ -47,18 +43,9 @@
         <p> Available: {{$yogaclass->available}}</p>
         <p>Reserved: {{$yogaclass->reserved}}</p>
     </div>
-    <div>
-        <p>{{$yogaclass->class_name}}</p>
-        <p>{{$yogaclass->length}} min</p>
-        <p>{{$yogaclass->teacher}}</p>
-        <p>{{$yogaclass->date}}</p>
-        <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
-        <p> Available: {{$yogaclass->available}}</p>
-        <p>Reserved: {{$yogaclass->reserved}}</p>
-    </div>
+
     @endforeach
 
 </body>
 
 </html>
-@endsection

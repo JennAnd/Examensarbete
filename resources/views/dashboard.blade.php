@@ -1,10 +1,9 @@
-@extends('layout')
-@section('content')
 <p>Hello, {{ $user->firstname . " " . $user->lastname}}!</p>
 <p>{{$user->email}}</p>
 <p>Do you want to <a href="logout">logout?</a></p>
 
 @foreach ($yogaclasses as $yogaclass)
+<!-- @if (något med att useryogaclass inte får vara samma som yogaclass->id) -->
 
 <div>
     <p>{{$yogaclass->class_name}}</p>
@@ -23,4 +22,3 @@
 </div>
 
 @endforeach
-@endsection

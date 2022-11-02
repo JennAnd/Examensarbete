@@ -1,6 +1,3 @@
-@extends('layout')
-@section('content')
-
 <body>
     <h1> Sign up </h1>
 
@@ -30,4 +27,3 @@
 </body>
 
 </html>
-@endsection
