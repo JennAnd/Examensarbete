@@ -8,7 +8,6 @@
 } */
 
 .landingpage-image {
-    width: 100vw;
-    height: 730px;
-    object-fit: cover;
+    width: 100%;
+    height: 569px;
 }
