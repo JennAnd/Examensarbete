@@ -12,30 +12,6 @@ body {
     margin: auto;
 }
 
-<<<<<<< Updated upstream
-nav {
-    position: fixed;
-    color: white;
-    width: 100vw;
-    height: 75px;
-    background-color: black;
-    opacity: 0.5;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10%;
-}
-
-/* li {
-    z-index: 10;
-    opacity: 1;
-} */
-
-=======
->>>>>>> Stashed changes
 footer {
     color: white;
     background-color: #403c3c;

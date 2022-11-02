@@ -25,7 +25,6 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
 
     @yield('content')
     <footer>
@@ -51,10 +50,6 @@
         </div>
     </footer>
     <!--   <script src="js/app.js"></script> -->
-=======
-    @yield('content')
-    <footer></footer>
->>>>>>> Stashed changes
 </body>
 
 </html>

@@ -11,9 +11,15 @@
     <p>{{$yogaclass->length}} min</p>
     <p>{{$yogaclass->teacher}}</p>
     <p>{{$yogaclass->date}}</p>
+    <p>{{$yogaclass->id}}</p>
     <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
     <p> Available: {{$yogaclass->available}}</p>
-    <button>Book</button>
+
+    <form method="POST" action="book">
+        @csrf
+        <input type="hidden" value="<?= $yogaclass->id ?>" name="id">
+        <button>Book</button>
+    </form>
 </div>
 
 @endforeach

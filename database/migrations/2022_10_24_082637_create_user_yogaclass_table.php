@@ -14,8 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('user_yogaclass', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->integer('yogaclass_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('yogaclass_id');
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('cascade');
+            $table->foreign('yogaclass_id')->references('id')->on('yogaclasses')
+                ->onDelete('cascade');
         });
     }
 
