@@ -25,7 +25,12 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
     @include('navbar')
+=======
+
+
+>>>>>>> Stashed changes
     @yield('content')
     <footer>
         <div class="footer-container">
@@ -50,6 +55,10 @@
         </div>
     </footer>
     <!--   <script src="js/app.js"></script> -->
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 </body>
 
 </html>
