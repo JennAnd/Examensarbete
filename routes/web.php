@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
@@ -9,11 +9,15 @@ use App\Http\Controllers\MakeYogaclassController;
 use App\Http\Controllers\AdminScheduleController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CancelBookedYogaclassController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\MembershipsController;
+use App\Http\Controllers\OurProductsController;
 use App\Http\Controllers\SchemeController;
 use App\Http\Controllers\SignUpController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PaymentsController;
+use Illuminate\Foundation\Console\AboutCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,21 +43,6 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/ourproducts', function () {
-    return view('ourproducts');
-});
-
-Route::get('/events', function () {
-    return view('events');
-});
-
-Route::get('/aboutus', function () {
-    return view('aboutus');
-});
-
-Route::get('/memberships', function () {
-    return view('memberships');
-});
 
 
 
@@ -73,3 +62,7 @@ Route::get('/profile', ProfileController::class);
 Route::get('/payments', PaymentsController::class);
 Route::post('book', BookingController::class);
 Route::post('/cancelbooked', CancelBookedYogaclassController::class);
+Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');
+Route::get('events', [EventController::class, 'index'])->name('events');
+Route::get('ourproducts', [OurProductsController::class, 'index'])->name('ourproducts');
+Route::get('memberships', [MembershipsController::class, 'index'])->name('memberships');

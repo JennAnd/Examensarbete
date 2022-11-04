@@ -4,7 +4,9 @@ body {
 
 .our-classes-image {
     width: 100vw;
-    height: 413px;
+    height: 513px;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
 
 .our-classes-heading {

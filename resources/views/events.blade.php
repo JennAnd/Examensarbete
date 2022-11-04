@@ -1,9 +1,8 @@
 @extends('layout')
 @section('content')
 
-@include('navbar')
 <img class="events-image" src="/assets/events.webp" />
-<h1 class="events-heading"> Our products</h1>
+<h1 class="events-heading"> Our events</h1>
 <div class="events-container">
     <div class="mandala-section">
         <img src="/assets/line.svg" />
@@ -12,9 +11,12 @@
     </div>
 
     <div class="event-boxes">
-        <div class="event-single-box"></div>
-        <div class="event-single-box"></div>
-        <div class="event-single-box"></div>
+        @foreach ($events as $event)
+        <div class="event-single-box">
+            <p> {{$event->eventname}}</p>
+            <p> {{$event->eventinfo}}</p>
+        </div>
+        @endforeach
     </div>
     <div class="mandala-section">
         <img src="/assets/line.svg" />

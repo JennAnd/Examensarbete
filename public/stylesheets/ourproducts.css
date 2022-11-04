@@ -4,7 +4,10 @@ body {
 
 .our-products-image {
     width: 100vw;
-    height: 413px;
+    height: 513px;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(0.5);
 }
 
 .our-products-heading {
@@ -14,10 +17,6 @@ body {
     z-index: 2;
     color: white;
     margin-top: -400px;
-}
-
-.our-products-container {
-    height: 500px;
 }
 
 .product-boxes {

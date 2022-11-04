@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Contentful\Delivery\Client as DeliveryClient;
 
-class ClassesController extends Controller
+class EventController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -25,27 +25,12 @@ class ClassesController extends Controller
     public function index()
     {
         $query = new \Contentful\Delivery\Query();
-        $query->setContentType('classtype');
+        $query->setContentType('events');
 
-        $classes = $this->client->getEntries($query);
-        // dd($classes);
+        $events = $this->client->getEntries($query);
 
-        // dd($this->client->getEntries());
-
-        return view('ourclasses', [
-            'classes' => $classes
-        ]);
-    }
-    public function show($id)
-    {
-        $entry = $this->client->getEntry($id);
-
-        if (!$entry) {
-            abort(404);
-        }
-
-        return view('ourclasses', [
-            'entry' => $entry
+        return view('events', [
+            'events' => $events
         ]);
     }
 }

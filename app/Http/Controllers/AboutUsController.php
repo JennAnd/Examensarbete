@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Contentful\Delivery\Client as DeliveryClient;
 
-class ClassesController extends Controller
+class AboutUsController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -25,27 +25,20 @@ class ClassesController extends Controller
     public function index()
     {
         $query = new \Contentful\Delivery\Query();
-        $query->setContentType('classtype');
+        $query->setContentType('aboutUs');
 
-        $classes = $this->client->getEntries($query);
-        // dd($classes);
+        $profiles = $this->client->getEntries($query);
 
-        // dd($this->client->getEntries());
+        // dd($this->client->getEntries($query));
 
-        return view('ourclasses', [
-            'classes' => $classes
-        ]);
-    }
-    public function show($id)
-    {
-        $entry = $this->client->getEntry($id);
+        // $newclient = new DeliveryClient('<space_id>', '<content_delivery_api_key>');
 
-        if (!$entry) {
-            abort(404);
-        }
+        // $asset = $newclient->getAsset('<asset_id>');
 
-        return view('ourclasses', [
-            'entry' => $entry
+        // $resultUrl = $asset->getFile()->getUrl();
+
+        return view('aboutus', [
+            'profiles' => $profiles
         ]);
     }
 }
