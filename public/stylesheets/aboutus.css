@@ -8,9 +8,9 @@ body {
     object-fit: cover;
 }
 
-.about-us-container {
+/* .about-us-container {
     height: 1100px;
-}
+} */
 
 .about-us-boxes {
     display: flex;

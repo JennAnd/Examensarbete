@@ -14,18 +14,18 @@ body {
     position: absolute;
     z-index: 2;
     color: white;
-    margin-top: -200px;
+    margin-top: 40px;
     justify-content: center;
 }
 
-.events-container {
+/* .events-container {
     height: 500px;
 }
-
+ */
 .event-boxes {
     display: flex;
     flex-wrap: wrap;
-    height: 700px;
+    /*  height: 700px; */
     gap: 20px;
     margin-bottom: 300px;
     margin-top: 89px;

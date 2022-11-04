@@ -24,14 +24,11 @@
 
 </head>
 
+
 <body>
-<<<<<<< Updated upstream
-    @include('navbar')
-=======
 
-
->>>>>>> Stashed changes
     @yield('content')
+
     <footer>
         <div class="footer-container">
             <div class="footer-image-container">
@@ -51,14 +48,9 @@
                 <p>Saturday: 06.00-21.00</p>
                 <p>Sunday: 07.00-19.00</p>
             </div>
-
         </div>
     </footer>
-    <!--   <script src="js/app.js"></script> -->
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 </body>
 
 </html>

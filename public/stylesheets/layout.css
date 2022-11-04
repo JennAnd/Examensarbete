@@ -9,17 +9,18 @@
 }
 
 body {
-    margin: auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 footer {
     color: white;
     background-color: #403c3c;
     height: 250px;
-    left: 0;
-    bottom: 0;
+    /*  left: 0; */
     width: 100%;
-    margin-top: 800px;
+    margin-top: auto;
 }
 
 .footer-container {
