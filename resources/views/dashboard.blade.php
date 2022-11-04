@@ -32,7 +32,7 @@
         <p> {{$bookedYogaclass->yogaclass_id}}</p>
         @endforeach
     </div>
-    <!-- if (något med att useryogaclass inte får vara samma som yogaclass->id) -->
+
     <div class="yogaclasses">
         <h2>Yogaclasses</h2>
         @foreach ($yogaclasses as $yogaclass)

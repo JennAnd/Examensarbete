@@ -17,6 +17,7 @@ class BookingController extends Controller
      */
     public function __invoke(Request $request)
     {
+
         $user = Auth::user();
         $yogaclassId = (int)$request->get('id');
         // var_dump($user->id);

@@ -24,9 +24,8 @@
 
 </head>
 
-
 <body>
-
+    @include('navbar')
     @yield('content')
 
     <footer>
@@ -50,7 +49,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

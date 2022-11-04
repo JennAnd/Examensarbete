@@ -24,6 +24,7 @@ class DashboardController extends Controller
         $yogaclasses = Yogaclass::select('*')
             ->get();
         $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->get();
+        // $availableYogaclasses = Yogaclass::select('*')->
 
 
         return view('dashboard', [
