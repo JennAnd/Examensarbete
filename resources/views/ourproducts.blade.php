@@ -4,12 +4,8 @@
 <img class="our-products-image" src="/assets/our-products.webp" />
 <h1 class="our-products-heading"> Our products</h1>
 <div class="our-products-container">
-    <div class="mandala-section">
-        <img src="/assets/line.svg" />
-        <img src="/assets/mandala.svg" />
-        <img src="/assets/line.svg" />
-    </div>
 
+    @include('mandala')
     <div class="product-boxes">
         @foreach ($products as $product)
         <div class="product-single-box">
@@ -19,11 +15,7 @@
         @endforeach
     </div>
 
-    <div class="mandala-section">
-        <img src="/assets/line.svg" />
-        <img src="/assets/mandala.svg" />
-        <img src="/assets/line.svg" />
-    </div>
+    @include('mandala')
 </div>
 
 @endsection

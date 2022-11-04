@@ -1,0 +1,43 @@
+.mandala-decor {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.mandala {
+    width: 30px;
+}
+
+hr {
+    width: 130px;
+    height: 1px;
+    color: black;
+    background-color: black;
+    border: none;
+}
+
+@media only screen and (min-width: 700px) {
+    .mandala-decor {
+        gap: 30px;
+    }
+
+    .mandala {
+        width: 50px;
+    }
+
+    hr {
+        width: 260px;
+    }
+}
+
+@media only screen and (min-width: 1064px) {
+    .mandala {
+        width: 50px;
+    }
+
+    hr {
+        width: 500px;
+    }
+}
