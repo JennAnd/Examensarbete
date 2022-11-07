@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\UserYogaclass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
-class CancelBookedYogaclassController extends Controller
+class BuyMembershipController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -18,19 +17,17 @@ class CancelBookedYogaclassController extends Controller
     public function __invoke(Request $request)
     {
 
-        // Cancel booked yogaclass
-        $user =  Auth::user();
-        $yogaclassId = (int)$request->get('id');
-
-        UserYogaclass::select('*')->where('yogaclass_id', $yogaclassId)->delete();
-
-        // CHANGE TOTAL AMOUNT CLASSES LEFT
+        // Change amount of classes this user have in account
+        $user = Auth::user();
         $userId = $user->id;
         $currentTotalClasses = $user->total_classes;
         $thisUser = User::find($userId);
-        $thisUser->total_classes = $currentTotalClasses + 1;
+        $thisUser->total_classes = $currentTotalClasses + (int)$request->input('amount_classes');
         $thisUser->update();
 
-        return redirect('dashboard');
+        // Make invoice
+
+
+        return redirect('profile');
     }
 }
