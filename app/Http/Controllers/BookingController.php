@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\UserYogaclass;
+use App\Models\Yogaclass;
 
 class BookingController extends Controller
 {
@@ -18,6 +19,7 @@ class BookingController extends Controller
     public function __invoke(Request $request)
     {
 
+        // TO BOOK A CLASS
         $user = Auth::user();
         $yogaclassId = (int)$request->get('id');
         // var_dump($user->id);
@@ -29,6 +31,23 @@ class BookingController extends Controller
         ]);
 
         $book->save();
+
+        // CHANGE TOTAL AMOUNT CLASSES LEFT
+
+        $userId = $user->id;
+        $currentTotalClasses = $user->total_classes;
+        $thisUser = User::find($userId);
+        $thisUser->total_classes = $currentTotalClasses - 1;
+        $thisUser->update();
+
+        // Change Yogaclass availability and reserved
+        $yogaclass = Yogaclass::find($yogaclassId);
+        $currentAvailable = $yogaclass->available;
+        $currentReserved = $yogaclass->reserved;
+        $yogaclass->available = $currentAvailable - 1;
+        $yogaclass->reserved = $currentReserved + 1;
+        $yogaclass->update();
+
         return redirect('dashboard');
     }
 }

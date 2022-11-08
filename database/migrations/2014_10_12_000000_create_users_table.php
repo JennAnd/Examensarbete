@@ -20,6 +20,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('total_classes')->default(0);
+            $table->string('address')->nullable();
+            $table->integer('postal_code')->nullable();
+            $table->string('city')->nullable();
+            $table->string('country')->nullable();
+            $table->boolean('is_admin')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
