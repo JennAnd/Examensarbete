@@ -22,8 +22,8 @@ class DashboardController extends Controller
         var_dump($id);
 
         $yogaclasses = Yogaclass::select('*')
-            ->get();
-        $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->get();
+            ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
+        $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->join('yogaclasses', 'user_yogaclass.yogaclass_id', '=', 'yogaclasses.id')->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
         // $availableYogaclasses = Yogaclass::select('*')->
 
 

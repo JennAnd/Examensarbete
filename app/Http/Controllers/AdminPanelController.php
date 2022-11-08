@@ -18,7 +18,7 @@ class AdminPanelController extends Controller
     {
 
         $yogaclasses = Yogaclass::select('*')
-            ->get();
+            ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
 
 
         $memberships = Membership::select('*')->get();
