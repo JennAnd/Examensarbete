@@ -4,11 +4,7 @@
 <img class="events-image" src="/assets/events.webp" />
 <h1 class="events-heading"> Our events</h1>
 <div class="events-container">
-    <div class="mandala-section">
-        <img src="/assets/line.svg" />
-        <img src="/assets/mandala.svg" />
-        <img src="/assets/line.svg" />
-    </div>
+    @include('mandala')
 
     <div class="event-boxes">
         @foreach ($events as $event)
@@ -18,11 +14,7 @@
         </div>
         @endforeach
     </div>
-    <div class="mandala-section">
-        <img src="/assets/line.svg" />
-        <img src="/assets/mandala.svg" />
-        <img src="/assets/line.svg" />
-    </div>
+    @include('mandala')
 </div>
 
 @endsection
