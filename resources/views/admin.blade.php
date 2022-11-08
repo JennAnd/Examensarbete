@@ -1,7 +1,11 @@
 @extends('layout')
 @section('content')
 @include('errors')
-<form method="post" action="login">
+
+<h1>
+    Admin login
+</h1>
+<form method="post" action="login-admin">
     @csrf
     <div>
         <label for="email">Email</label>

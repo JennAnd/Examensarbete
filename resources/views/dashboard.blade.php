@@ -2,6 +2,14 @@
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
 </head>
 
+<div class="side-nav">
+    <ul>
+        <li><a href="/dashboard">Översikt</a></li>
+        <li><a href="/profile">My profile</a></li>
+        <li><a href="/payments">Payments</a></li>
+    </ul>
+</div>
+
 <p>Hello, {{ $user->firstname . " " . $user->lastname}}!</p>
 <p>{{$user->email}}</p>
 <p>Do you want to <a href="logout">logout?</a></p>
@@ -49,7 +57,11 @@
             <form method="POST" action="book">
                 @csrf
                 <input type="hidden" value="<?= $yogaclass->id ?>" name="id">
+                @if ($user->total_classes > 0 && $yogaclass->available > 0)
                 <button>Book</button>
+                @else
+                <button disabled>Book</button>
+                @endif
             </form>
         </div>
 

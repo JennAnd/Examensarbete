@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Membership;
 use App\Models\Yogaclass;
 use Illuminate\Http\Request;
 
@@ -20,6 +21,10 @@ class AdminScheduleController extends Controller
             ->get();
 
 
-        return view('adminpanel', ['yogaclasses' => $yogaclasses]);
+        $memberships = Membership::select('*')->get();
+        return view('adminpanel', [
+            'yogaclasses' => $yogaclasses,
+            'memberships' => $memberships
+        ]);
     }
 }

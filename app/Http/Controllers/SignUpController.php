@@ -21,6 +21,10 @@ class SignUpController extends Controller
             'lastname' => $request->get('lastname'),
             'email' => $request->get('email'),
             'password' => Hash::make($request['password']),
+            'address' => $request->get('address'),
+            'postal_code' => $request->get('postal_code'),
+            'city' => $request->get('city'),
+            'country' => $request->get('country'),
 
         ]);
 
