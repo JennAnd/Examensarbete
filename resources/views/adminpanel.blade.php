@@ -1,5 +1,16 @@
 <body>
     <h1>Adminpanel</h1>
+
+    <div class="side-nav">
+        <ul>
+            <li><a href="/adminpanel">Översikt</a></li>
+            <li><a href="/invoices">Invoices</a></li>
+        </ul>
+    </div>
+
+    <p>Do you want to <a href="logout">logout?</a></p>
+
+    </nav>
     <form method="post" action="make-yogaclass">
         @csrf
         <div>
@@ -43,11 +54,27 @@
         <p> Available: {{$yogaclass->available}}</p>
         <p>Reserved: {{$yogaclass->reserved}}</p>
     </div>
-
+    <form action="delete-yogaclass" method="POST">
+        @csrf
+        <input type="hidden" value="<?= $yogaclass->id ?>" name="yogaclass_id">
+        <button>Delete yogaclass</button>
+    </form>
     @endforeach
 
     <h1>Memberships</h1>
     <h2>Här visas alla memberships</h2>
+
+    @foreach ($memberships as $membership)
+    <div>
+        <p>{{$membership->type}}</p>
+        <p>{{$membership->price}} USD</p>
+    </div>
+    <form action="delete-membership" method="POST">
+        @csrf
+        <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
+        <button>Delete membership</button>
+    </form>
+    @endforeach
 
     <h2>Här kan man skapa memberships</h2>
     <form action="make-membership" method="post">

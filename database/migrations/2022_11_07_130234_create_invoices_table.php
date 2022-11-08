@@ -24,6 +24,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->date('due_date');
             $table->integer('total_amount');
+            $table->boolean('paid')->default(0);
         });
     }
 

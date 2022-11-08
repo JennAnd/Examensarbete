@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Yogaclass;
 use Illuminate\Http\Request;
 
-class MakeYogaclassController extends Controller
+class YogaclassController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -36,5 +36,13 @@ class MakeYogaclassController extends Controller
 
         $yogaclass->save();
         return redirect('adminpanel');
+    }
+
+    public function deleteYogaclass(Request $request)
+    {
+        $yogaclassId = $request->get('yogaclass_id');
+        Yogaclass::select('*')->where('id', $yogaclassId)->delete();
+
+        return redirect()->back();
     }
 }

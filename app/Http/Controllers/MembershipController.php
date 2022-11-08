@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Membership;
 use Illuminate\Http\Request;
 
-class MakeMembershipController extends Controller
+class MembershipController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -25,5 +25,13 @@ class MakeMembershipController extends Controller
 
         $membership->save();
         return redirect('adminpanel');
+    }
+
+    public function deleteMembership(Request $request)
+    {
+        $membershipId = $request->get('membership_id');
+        Membership::select('*')->where('id', $membershipId)->delete();
+
+        return redirect()->back();
     }
 }

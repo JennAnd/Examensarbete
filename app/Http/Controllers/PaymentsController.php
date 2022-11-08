@@ -61,4 +61,15 @@ class PaymentsController extends Controller
             'clicked_invoice' => $clickedInvoice
         ]);
     }
+
+    public function confirmPayment(Request $request)
+    {
+        // PUT, change invoice from unpaid to paid boolean.
+        $invoiceId = $request->get('invoice_id');
+        $paidInvoice = Invoice::find($invoiceId);
+        $paidInvoice->paid = 1;
+        $paidInvoice->update();
+
+        return redirect('invoices');
+    }
 }

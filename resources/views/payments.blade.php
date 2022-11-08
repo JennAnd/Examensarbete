@@ -18,6 +18,10 @@
         <p>
             <a href="/payments/{{$invoice->id}}"> {{$invoice->created_at}}</a>
         </p>
+        @if ($invoice->paid)
+        <p>✔</p>
+        @endif
+        <p></p>
 
 
 
