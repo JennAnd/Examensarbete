@@ -21,6 +21,8 @@ class ProfileController extends Controller
 
         $user = Auth::user();
         $total_classes = $user->total_classes;
+
+
         return view('profile', [
             'memberships' => $memberships,
             'total_classes' => $total_classes,

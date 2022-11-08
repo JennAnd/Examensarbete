@@ -64,6 +64,7 @@ Route::get('/adminpanel', AdminScheduleController::class)->middleware('admin');
 Route::get('/scheme', SchemeController::class);
 Route::get('/profile', ProfileController::class);
 Route::get('/payments', PaymentsController::class);
+Route::get('/payments/{id}', [PaymentsController::class, 'showClickedInvoice']);
 Route::post('book', BookingController::class);
 Route::post('/cancelbooked', CancelBookedYogaclassController::class);
 Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');

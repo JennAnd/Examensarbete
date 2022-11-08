@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Invoice;
+use App\Models\Membership;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -25,9 +27,23 @@ class BuyMembershipController extends Controller
         $thisUser->total_classes = $currentTotalClasses + (int)$request->input('amount_classes');
         $thisUser->update();
 
+        // Fetch membership_price based on membership_id
+        $membershipId = $request->get('membership_id');
+        $membership = Membership::find($membershipId);
+        $membershipPrice = $membership->price;
+        $totalPrice = $membershipPrice * 1.2;
         // Make invoice
+        $d = strtotime('+30 Days');
+        $dueDate = date("Y-m-d", $d);
+        $invoice = new Invoice([
+            'user_id' => $userId,
+            'membership_id' => $request->get('membership_id'),
+            'due_date' => $dueDate,
+            'total_amount' => $totalPrice,
 
+        ]);
+        $invoice->save();
 
-        return redirect('profile');
+        return redirect('payments');
     }
 }

@@ -27,6 +27,7 @@
         <form method="POST" action="buy-membership">
             @csrf
             <input type="hidden" value="<?= $membership->amount_classes ?>" name="amount_classes">
+            <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
             <button>Buy</button>
         </form>
     </div>
