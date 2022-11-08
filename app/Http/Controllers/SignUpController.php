@@ -16,6 +16,17 @@ class SignUpController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $this->validate($request, [
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+            'address' => 'required|string',
+            'postal_code' => 'required|integer',
+            'city' => 'required|string',
+            'country' => 'required|string',
+        ]);
+
         $user = new User([
             'firstname' => $request->get('firstname'),
             'lastname' => $request->get('lastname'),

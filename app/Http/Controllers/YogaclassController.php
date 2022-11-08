@@ -15,14 +15,6 @@ class YogaclassController extends Controller
      */
     public function __invoke(Request $request)
     {
-        // $this->validate($request, [
-        //     'class_name' => 'required|string',
-        //     'teacher' => 'required|string',
-        //     'date' => 'required|date',
-        //     'time' => 'required|time',
-        //     'class-length' => 'required|string',
-        //     'available' => 'required|integer',
-        // ]);
 
         $yogaclass = new Yogaclass([
             'class_name' => $request->get('class_name'),

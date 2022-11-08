@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Membership;
 use App\Models\Yogaclass;
 use Illuminate\Http\Request;
 
-class SchemeController extends Controller
+class AdminPanelController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -15,10 +16,15 @@ class SchemeController extends Controller
      */
     public function __invoke(Request $request)
     {
+
         $yogaclasses = Yogaclass::select('*')
             ->get();
 
 
-        return view('scheme', ['yogaclasses' => $yogaclasses]);
+        $memberships = Membership::select('*')->get();
+        return view('adminpanel', [
+            'yogaclasses' => $yogaclasses,
+            'memberships' => $memberships
+        ]);
     }
 }

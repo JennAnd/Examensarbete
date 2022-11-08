@@ -21,8 +21,8 @@
             <input name="password" id="password" type="password" minlength="8" required />
         </div>
         <div>
-            <label for="confirm_password">Password (8 characters minimum)</label>
-            <input name="confirm_password" id="confirm_password" type="password" required />
+            <label for="password_confirmation">Confirm password</label>
+            <input name="password_confirmation" id="password_confirmation" type="password" required />
         </div>
         <div>
             <label for="address">Address</label>
