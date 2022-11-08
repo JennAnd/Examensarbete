@@ -14,6 +14,11 @@
         </div>
         @endforeach
     </div>
+    <h3>For reservation and more information about our events, contact us <a href="mailto:john@example.com">John </a>
+    </h3>
+    <form>
+
+    </form>
     @include('mandala')
 </div>
 
