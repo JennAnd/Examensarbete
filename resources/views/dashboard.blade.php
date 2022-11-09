@@ -9,6 +9,10 @@
         <li><a href="/payments">Payments</a></li>
     </ul>
 </div>
+{{date('Y-m-d')}}
+{{date('h:i:s')}}
+{{time()}}
+{{strtotime('now')}}
 
 @if(session()->has('message'))
 <div class="alert alert-success">
@@ -48,7 +52,9 @@
 
     <div class="yogaclasses">
         <h2>Yogaclasses</h2>
+
         @foreach ($yogaclasses as $yogaclass)
+
         <div>
             <p>{{$yogaclass->class_name}}</p>
             <p>{{$yogaclass->length}} min</p>
@@ -56,6 +62,8 @@
             <p>{{$yogaclass->date}}</p>
             <p>yogaclass id: {{$yogaclass->id}}</p>
             <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
+            <p>{{strtotime($yogaclass->time)}}</p>
+            <p>{{strtotime($yogaclass->date)}}</p>
             <p> Available: {{$yogaclass->available}}</p>
 
             <form method="POST" action="book">

@@ -31,6 +31,18 @@ class DashboardController extends Controller
         // Hämta alla pass som INTE är bokade
         // $notBookedYogaclasses = Yogaclass::select('*')->where('user_id', '=', $id)->join('user_yogaclass', 'yogaclass.id', '=', 'user_yogaclass.yogaclass_id')->get();
 
+        // Delete classes that expired
+        foreach ($yogaclasses as $yogaclass) {
+            if (strtotime('now') >= strtotime($yogaclass->time)) {
+                $expiredYogaclass = Yogaclass::find($yogaclass->id);
+                $expiredYogaclass->delete();
+            }
+        }
+
+        // Fetch again after deleted yoga class
+        $yogaclasses = Yogaclass::select('*')
+            ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
+
         return view('dashboard', [
             'user' => $user,
             'yogaclasses' => $yogaclasses,
