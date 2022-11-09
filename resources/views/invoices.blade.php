@@ -37,7 +37,7 @@
             <form action="confirm-payment" method="POST">
                 @csrf
                 <input type="hidden" value="<?= $invoice->id ?>" name="invoice_id">
-                <button>Confirm as paid</button>
+                <button type="submit" onclick="return confirm('Are you sure you want to confirm this invoice as paid?')">Confirm as paid</button>
             </form>
             @else
             <p>✔</p>

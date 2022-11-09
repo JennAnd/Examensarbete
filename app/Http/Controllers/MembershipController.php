@@ -24,7 +24,7 @@ class MembershipController extends Controller
         ]);
 
         $membership->save();
-        return redirect('adminpanel');
+        return redirect('adminpanel')->with('message', "You have created a membership.");
     }
 
     public function deleteMembership(Request $request)
@@ -32,6 +32,6 @@ class MembershipController extends Controller
         $membershipId = $request->get('membership_id');
         Membership::select('*')->where('id', $membershipId)->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('message', "You have deleted a membership.");
     }
 }

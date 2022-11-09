@@ -27,7 +27,7 @@ class YogaclassController extends Controller
         ]);
 
         $yogaclass->save();
-        return redirect('adminpanel');
+        return redirect('adminpanel')->with('message', "You have created a yoga class.");
     }
 
     public function deleteYogaclass(Request $request)
@@ -35,6 +35,6 @@ class YogaclassController extends Controller
         $yogaclassId = $request->get('yogaclass_id');
         Yogaclass::select('*')->where('id', $yogaclassId)->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('message', "You have deleted a yoga class.");
     }
 }

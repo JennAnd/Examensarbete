@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Contentful\Delivery\Client as DeliveryClient;
 
-class ClassesController extends Controller
+class OurClassesController extends Controller
 {
     /**
      * Handle the incoming request.

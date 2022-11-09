@@ -10,8 +10,13 @@
     </ul>
 </div>
 
+@if(session()->has('message'))
+<div class="alert alert-success">
+    {{ session()->get('message') }}
+</div>
+@endif
+
 <p>Hello, {{ $user->firstname . " " . $user->lastname}}!</p>
-<p>{{$user->email}}</p>
 <p>Do you want to <a href="logout">logout?</a></p>
 
 <div class="booked-yogaclasses">
@@ -31,7 +36,7 @@
         <form method="POST" action="cancelbooked">
             @csrf
             <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
-            <button>Cancel</button>
+            <button type="submit" onclick="return confirm('Do you want to cancel this yoga class?')">Cancel</button>
         </form>
         @endif
         @endforeach
@@ -57,7 +62,7 @@
                 @csrf
                 <input type="hidden" value="<?= $yogaclass->id ?>" name="id">
                 @if ($user->total_classes > 0 && $yogaclass->available > 0)
-                <button>Book</button>
+                <button type="submit" onclick="return confirm('Do you want to book?')">Book</button>
                 @else
                 <button disabled>Book</button>
                 @endif

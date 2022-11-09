@@ -10,6 +10,12 @@
 
     <p>Do you want to <a href="logout">logout?</a></p>
 
+    @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+    @endif
+
     </nav>
     <form method="post" action="make-yogaclass">
         @csrf

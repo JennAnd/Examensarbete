@@ -28,7 +28,7 @@
             @csrf
             <input type="hidden" value="<?= $membership->amount_classes ?>" name="amount_classes">
             <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
-            <button>Buy</button>
+            <button type="submit" onclick="return confirm('Are you sure you want to buy this membership? You will be sent an invoice.')">Buy</button>
         </form>
     </div>
 

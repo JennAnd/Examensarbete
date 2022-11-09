@@ -40,7 +40,7 @@ class SignUpController extends Controller
         ]);
 
         $user->save();
-        return redirect('login');
+        return redirect('login')->with('message', "You've successfully created an account. Please, login.");
 
         // $user = User::create(['firstname' => $request['firstname'], 'lastname' => $request['lastname'], 'email' => $request['email'], 'password' => Hash::make($request['password'])]);
         // return redirect('dashboard');

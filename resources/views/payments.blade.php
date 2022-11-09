@@ -3,7 +3,11 @@
 
 <body>
     <h1> Payments </h1>
-
+    @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+    @endif
     <div class="side-nav">
         <ul>
             <li><a href="/dashboard">Översikt</a></li>
