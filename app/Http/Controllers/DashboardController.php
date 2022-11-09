@@ -26,6 +26,9 @@ class DashboardController extends Controller
         $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->join('yogaclasses', 'user_yogaclass.yogaclass_id', '=', 'yogaclasses.id')->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
         // $availableYogaclasses = Yogaclass::select('*')->
 
+        // Flytta bokade pass från schema till klasser när den är bokad
+        // Hämta alla pass som INTE är bokade
+        // $notBookedYogaclasses = Yogaclass::select('*')->where('user_id', '=', $id)->join('user_yogaclass', 'yogaclass.id', '=', 'user_yogaclass.yogaclass_id')->get();
 
         return view('dashboard', [
             'user' => $user,

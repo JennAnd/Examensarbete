@@ -17,6 +17,11 @@ class PaymentsController extends Controller
      */
     public function __invoke(Request $request)
     {
+        // Default id so it's not undefined
+        $id = 1;
+        $membership = Membership::find($id);
+        $VAT = 1;
+
         $user = Auth::user();
         $userId = $user->id;
         $invoices = Invoice::select('*')->where('user_id', '=', $userId)->orderBy('created_at', 'DESC')->get();
@@ -26,6 +31,7 @@ class PaymentsController extends Controller
             $VAT = $membership->price * 0.2;
             $id = $latest->id;
         }
+
 
         $clickedInvoice = Invoice::find($id);
 

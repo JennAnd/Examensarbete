@@ -44,7 +44,6 @@
     <div class="yogaclasses">
         <h2>Yogaclasses</h2>
         @foreach ($yogaclasses as $yogaclass)
-
         <div>
             <p>{{$yogaclass->class_name}}</p>
             <p>{{$yogaclass->length}} min</p>
