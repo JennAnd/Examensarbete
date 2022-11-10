@@ -1,26 +1,28 @@
-@extends('layout')
-@section('content')
-@include('errors')
+<head>
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+</head>
+<div class="admin-container">
+    <img src="/assets/adminpage.webp" alt="">
 
-<h1>
-    Admin login
-</h1>
-<form method="post" action="login-admin">
-    @csrf
-    <div>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
-    </div>
-    <button type="submit">Login</button>
-</form>
+    <div class="admin-login">
 
-<h1>HELLO Spain! San fulgencio 300</h1>
-<p>hej jag låtsasatt koda för en video som hanna tar hehhe, ovanför vattnet så det är lite farligt</p>
+        <form method="post" action="login-admin">
+            @csrf
+            <div class="input-column">
+                <label for="email">Username</label>
+                <input name="email" id="email" type="email" />
+            </div>
+            <div class="input-column">
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password" />
+            </div>
+            <button class="admin-button" type="submit">Login</button>
+        </form>
+        <div>
+            @include('errors')
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
-@endsection

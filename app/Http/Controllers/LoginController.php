@@ -47,6 +47,11 @@ class LoginController extends Controller
                 Auth::logout();
                 return redirect('/');
             }
+        } else {
+
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ])->onlyInput('email');
         }
     }
 }
