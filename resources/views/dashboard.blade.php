@@ -10,6 +10,8 @@
             <li><a href="/dashboard">Översikt</a></li>
             <li><a href="/profile">My profile</a></li>
             <li><a href="/payments">Payments</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/logout">Logout</a></li>
         </ul>
     </div>
     {{date('Y-m-d')}}
@@ -67,7 +69,7 @@
 
                     <form method="POST" action="book">
                         @csrf
-                        <input type="hidden" value="<?= $yogaclass->id ?>" name="id">
+                        <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
                         @if ($user->total_classes > 0 && $yogaclass->available > 0)
                         <button type="submit" onclick="return confirm('Do you want to book?')">Book</button>
                         @else

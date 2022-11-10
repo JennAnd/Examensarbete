@@ -45,7 +45,7 @@
         </div>
     </footer>
 
-    <script src="navbar.js"></script>
+    <script src="/scripts/navbar.js"></script>
 </body>
 
 </html>

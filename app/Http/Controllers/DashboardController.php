@@ -24,12 +24,7 @@ class DashboardController extends Controller
 
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
-        // $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->join('yogaclasses', 'user_yogaclass.yogaclass_id', '=', 'yogaclasses.id')->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
         $bookedYogaclasses = Auth::user()->yogaclasses;
-        // dd($bookedYogaclasses);
-
-        // Hämta alla yogaclasses där yogaclass.id inte är lika med user_yogaclass.yogaclass_id OCH user_yogaclass.user_id inte är lika med inloggad id.
-
         // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
         $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->get();
         // dd($bookedYogaclasses->only('id')->toArray());
@@ -96,7 +91,7 @@ class DashboardController extends Controller
         // Cancel booked yogaclass
         $user =  Auth::user();
         $yogaclassId = (int)$request->get('id');
-
+        // dd($yogaclassId);
         UserYogaclass::select('*')->where('yogaclass_id', $yogaclassId)->delete();
 
         // CHANGE TOTAL AMOUNT CLASSES LEFT
@@ -106,6 +101,15 @@ class DashboardController extends Controller
         $thisUser->total_classes = $currentTotalClasses + 1;
         $thisUser->update();
 
-        return redirect('dashboard')->with('message', "Your yogaclass is cancelled.");
+        // Change Yogaclass availability and reserved
+        $yogaclass = Yogaclass::find($yogaclassId);
+        $currentAvailable = $yogaclass->available;
+        $currentReserved = $yogaclass->reserved;
+        $yogaclass->available = $currentAvailable + 1;
+        $yogaclass->reserved = $currentReserved - 1;
+        $yogaclass->update();
+
+
+        return redirect('dashboard')->with('message', "Your yoga class is cancelled.");
     }
 }
