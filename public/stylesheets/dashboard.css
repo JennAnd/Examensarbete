@@ -7,3 +7,7 @@
     width: 300px;
     border: 1px solid #dcccb6;
 }
+
+.overview {
+    display: flex;
+}

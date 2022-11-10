@@ -24,12 +24,15 @@ class DashboardController extends Controller
 
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
-        $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->join('yogaclasses', 'user_yogaclass.yogaclass_id', '=', 'yogaclasses.id')->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
-        // $availableYogaclasses = Yogaclass::select('*')->
+        // $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->join('yogaclasses', 'user_yogaclass.yogaclass_id', '=', 'yogaclasses.id')->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
+        $bookedYogaclasses = Auth::user()->yogaclasses;
+        // dd($bookedYogaclasses);
 
-        // Flytta bokade pass från schema till klasser när den är bokad
-        // Hämta alla pass som INTE är bokade
-        // $notBookedYogaclasses = Yogaclass::select('*')->where('user_id', '=', $id)->join('user_yogaclass', 'yogaclass.id', '=', 'user_yogaclass.yogaclass_id')->get();
+        // Hämta alla yogaclasses där yogaclass.id inte är lika med user_yogaclass.yogaclass_id OCH user_yogaclass.user_id inte är lika med inloggad id.
+
+        // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
+        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->get();
+        // dd($bookedYogaclasses->only('id')->toArray());
 
         // Delete classes that expired
         foreach ($yogaclasses as $yogaclass) {
@@ -46,9 +49,12 @@ class DashboardController extends Controller
         return view('dashboard', [
             'user' => $user,
             'yogaclasses' => $yogaclasses,
-            'bookedYogaclasses' => $bookedYogaclasses
+            'bookedYogaclasses' => $bookedYogaclasses,
+            'notBookedYogaclasses' => $notBookedYogaclasses
         ]);
     }
+
+
     public function bookYogaclass(Request $request)
     {
 
