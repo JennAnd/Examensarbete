@@ -16,3 +16,7 @@ body {
 .overview {
     display: flex;
 }
+
+.dashboard-body {
+    margin-top: 100px;
+}
