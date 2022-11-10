@@ -1,16 +1,23 @@
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-Regular.woff");
+    font-family: "Raleway";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-ExtraLight.woff");
+    font-family: "Raleway Light";
+}
+
+.profile-body {
+    margin-top: 100px;
+}
+
 body {
     margin: auto;
     display: flex;
-}
-
-.side-nav {
-    margin-top: 90px;
-}
-
-h1 {
-    margin-top: 90px;
-}
-
-h2 {
-    margin-top: 120px;
 }
