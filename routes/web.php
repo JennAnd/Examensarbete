@@ -50,8 +50,8 @@ Route::post('login-admin', [LoginController::class, 'loginAdmin']);
 Route::post('signup', SignUpController::class)->middleware('guest');
 Route::get('logout', LogoutController::class);
 
-Route::get('ourclasses', [OurClassesController::class, 'index'])->name('ourclasses')->middleware('guest');
-Route::get('ourclasses/{id}', [OurClassesController::class, 'show'])->name('ourclasses.show')->middleware('guest');
+Route::get('ourclasses', [OurClassesController::class, 'index'])->name('ourclasses');
+Route::get('ourclasses/{id}', [OurClassesController::class, 'show'])->name('ourclasses.show');
 
 Route::get('/profile', ProfileController::class)->middleware('auth');
 Route::post('buy-membership', [ProfileController::class, 'buyMembership']);
@@ -73,6 +73,7 @@ Route::get('invoices', InvoiceController::class)->name('invoices')->middleware('
 
 Route::post('delete-membership', [MembershipController::class, 'deleteMembership']);
 Route::post('make-membership', MembershipController::class);
+Route::get('/memberships', [MembershipController::class, 'showMemberships']);
 
 Route::post('delete-yogaclass', [YogaclassController::class, 'deleteYogaclass']);
 Route::post('make-yogaclass', YogaclassController::class);

@@ -3,11 +3,7 @@
 
 <img class="about-us-image" src="/assets/about-us-pose.webp" />
 <div class="about-us-container">
-    <div class="mandala-section">
-        <img src="/assets/line.svg" />
-        <img src="/assets/mandala.svg" />
-        <img src="/assets/line.svg" />
-    </div>
+    @include('mandala')
 
     @foreach ($profiles as $profile)
     <div class="about-us-boxes">
@@ -19,11 +15,7 @@
     </div>
     @endforeach
 
-    <div class="mandala-section">
-        <img src="/assets/line.svg" />
-        <img src="/assets/mandala.svg" />
-        <img src="/assets/line.svg" />
-    </div>
+    @include('mandala')
 </div>
 
 

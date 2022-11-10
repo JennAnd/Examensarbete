@@ -34,4 +34,13 @@ class MembershipController extends Controller
 
         return redirect()->back()->with('message', "You have deleted a membership.");
     }
+
+    public function showMemberships()
+    {
+        $memberships = Membership::select('*')->get();
+
+        return view('memberships', [
+            'memberships' => $memberships,
+        ]);
+    }
 }

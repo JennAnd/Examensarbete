@@ -2,6 +2,7 @@
 @section('content')
 
 <body>
+
     <h1> Profile </h1>
 
     <div class="side-nav">

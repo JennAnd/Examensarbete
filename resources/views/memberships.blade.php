@@ -7,9 +7,9 @@
 
     @foreach ($memberships as $membership)
     <div>
-        <p>{{$membership->membershipType}}</p>
-        <p>{{$membership->membershipPrice}}</p>
-        <p>{{$membership->membershipInfo}}</p>
+        <p>{{$membership->type}}</p>
+        <p>{{$membership->price}}</p>
+        <p>Valid thru:</p>
     </div>
     @endforeach
 </body>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../stylesheets/navbar.css">
+    <link rel="stylesheet" href="../stylesheets/profilenavbar.css">
     <link rel="stylesheet" href="../stylesheets/layout.css">
     <link rel="stylesheet" href="../stylesheets/admin.css">
     <link rel="stylesheet" href="../stylesheets/adminpanel.css">
@@ -50,6 +51,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="navbar.js"></script>
 </body>
 
 </html>
