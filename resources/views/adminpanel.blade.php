@@ -1,3 +1,6 @@
+@include('profilenavbar')
+<link rel="stylesheet" href="../stylesheets/adminpanel.css">
+
 <body>
     <h1>Adminpanel</h1>
 

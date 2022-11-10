@@ -1,5 +1,8 @@
+<link rel="stylesheet" href="../stylesheets/payments.css">
+@include('profilenavbar')
+
 <body>
-    @include('profilenavbar')
+
     <h1> Payments </h1>
     @if(session()->has('message'))
     <div class="alert alert-success">

@@ -29,7 +29,12 @@ nav li a {
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     color: white;
-    font-family: "Gotu";
+    font-family: "Raleway Light";
+    font-size: 18px;
+}
+
+li {
+    list-style-type: none;
 }
 
 nav div {

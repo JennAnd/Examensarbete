@@ -1,5 +1,5 @@
-@extends('layout')
-@section('content')
+<link rel="stylesheet" href="../stylesheets/profile.css">
+@include('profilenavbar')
 
 <body>
 
@@ -38,4 +38,3 @@
 </body>
 
 </html>
-@endsection

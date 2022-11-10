@@ -1,3 +1,5 @@
+@include('profilenavbar')
+
 <head>
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
 </head>

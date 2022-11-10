@@ -8,6 +8,11 @@
     font-family: "Raleway";
 }
 
+@font-face {
+    src: url("/fonts/NunitoSans-ExtraLight.woff");
+    font-family: "Raleway Light";
+}
+
 body {
     display: flex;
     min-height: 100vh;

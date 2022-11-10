@@ -1,3 +1,8 @@
+body {
+    margin: auto;
+    display: flex;
+}
+
 .yogaclasses {
     width: 300px;
     border: 1px solid #dcccb6;
