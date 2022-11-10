@@ -50,13 +50,24 @@ class PaymentsController extends Controller
 
         $user = Auth::user();
         $userId = $user->id;
-        $clickedInvoice = Invoice::find($id);
+        //if där id från get tillhör nuvaranade user, annars ska det ej hittas
+
         $invoices = Invoice::select('*')->where('user_id', '=', $userId)->orderBy('created_at', 'DESC')->get();
         $latestInvoice = Invoice::select('*')->where('user_id', '=', $userId)->orderBy('created_at', 'DESC')->limit(1)->get();
         foreach ($latestInvoice as $latest) {
             $membership = Membership::find($latest->membership_id);
             $VAT = $membership->price * 0.2;
         }
+
+        $getInvoice = Invoice::find($id);
+        if ($getInvoice->user_id == $userId) {
+            $clickedInvoice = $getInvoice;
+        } else {
+            foreach ($latestInvoice as $latest) {
+                $clickedInvoice = $latest;
+            }
+        }
+
 
         return view('payments', [
             'user' => $user,
