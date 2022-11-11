@@ -45,10 +45,14 @@ body {
 }
 
 .our-classes-end-section {
-    color: rgb(232, 232, 224);
+    color: black;
     font-family: "Raleway Light";
     text-align: center;
     font-size: 18px;
+}
+
+.our-classes-end-section a {
+    color: black;
 }
 
 /* @media screen and (min-width: 500px) {

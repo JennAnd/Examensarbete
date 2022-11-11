@@ -16,6 +16,7 @@
     @include('lotus')
 </div>
 @endforeach
-<p class="our-classes-end-section">Lorem ipsum dolor sit amet Lorem ipsum</p>
+<p class="our-classes-end-section">If you want to try out our yoga classes, please <a href="/signup">sign up</a> or <a href="/login">log in. </a></p>
+
 @include('mandala')
 @endsection

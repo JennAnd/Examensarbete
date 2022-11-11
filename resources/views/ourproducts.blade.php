@@ -9,12 +9,15 @@
     <div class="product-boxes">
         @foreach ($products as $product)
         <div class="product-single-box">
-            <p> {{$product->productType}}</p>
-            <p> {{$product->productPrice}}</p>
+            <div class="box-brightness">
+                <p class="product-name"> {{$product->productType}}</p>
+                <p class="product-price"> {{$product->productPrice}}</p>
+            </div>
         </div>
         @endforeach
     </div>
-
+    <p class="our-products-end-section">If you are interested in buying any of our products, please visit our yoga studio.
+    </p>
     @include('mandala')
 </div>
 
