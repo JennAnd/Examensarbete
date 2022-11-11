@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-Regular.woff");
+    font-family: "Raleway";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-ExtraLight.woff");
+    font-family: "Raleway Light";
+}
+
+.logo {
+    margin-bottom: 70px;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    height: 150vh;
+    filter: brightness(0.5);
+}
+
+.signup-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.user-signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+}
+
+.signup-button {
+    color: white;
+    background-color: #ec904e;
+    width: 130px;
+    height: 40px;
+    font-family: "Raleway Light";
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.signup-button:hover {
+    background-color: #974e19;
+    cursor: pointer;
+}
+
+.signup-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    font-family: "Raleway Light";
+}
+
+.signup-box h1 {
+    margin-bottom: 40px;
+}
+
+form p {
+    font-family: "Raleway Light";
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ec904e;
+}
+
+@media screen and (min-width: 600px) {
+    form {
+        display: flex;
+        gap: 15px;
+    }
+
+    img {
+        height: 100vh;
+    }
+}
