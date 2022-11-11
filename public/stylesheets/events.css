@@ -14,26 +14,53 @@ body {
     display: flex;
     position: absolute;
     z-index: 2;
-    color: white;
-    margin-top: 40px;
-    justify-content: center;
+    color: rgb(232, 232, 224);
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-/* .events-container {
-    height: 500px;
-}
- */
 .event-boxes {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    /*  height: 700px; */
-    gap: 20px;
-    margin-bottom: 300px;
+    gap: 80px;
+    margin-bottom: 180px;
     margin-top: 89px;
 }
+
 .event-single-box {
-    width: 401px;
-    height: 561px;
-    left: 89px;
+    width: 325px;
+    height: 475px;
     border: 1px solid black;
+    text-align: center;
+}
+
+.box-brightness {
+    width: 325px;
+    height: 170px;
+    margin-top: 305px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 20px;
+}
+
+.event-name {
+    font-family: "Raleway";
+    color: rgb(232, 232, 224);
+}
+
+.event-info {
+    font-family: "Raleway Light";
+    color: rgb(232, 232, 224);
+}
+
+.events-end-section {
+    font-family: "Raleway Light";
+    text-align: center;
+    font-size: 18px;
+}
+
+.events-end-section a {
+    color: black;
 }

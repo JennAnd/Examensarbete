@@ -4,7 +4,7 @@
 
 
 <img class="memberships-image" src="/assets/memberships.webp" />
-<h1 class="memberships-heading"> Memberships</h1>
+<h1 class="memberships-heading">Our memberships</h1>
 @include('mandala')
 
 @foreach ($memberships as $membership)
