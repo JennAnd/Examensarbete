@@ -36,7 +36,7 @@
 
         <h2>Faktura preview</h2>
         @if (count($invoices) > 0)
-        <div>
+        <div class="invoice-preview">
             <h2>Invoice {{$clicked_invoice->id}}</h2>
 
             <img />

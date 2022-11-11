@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../stylesheets/layout.css">
     <link rel="stylesheet" href="../stylesheets/events.css">
     <link rel="stylesheet" href="../stylesheets/index.css">
-    <link rel="stylesheet" href="../stylesheets/login.css">
     <link rel="stylesheet" href="../stylesheets/memberships.css">
     <link rel="stylesheet" href="../stylesheets/ourclasses.css">
     <link rel="stylesheet" href="../stylesheets/ourproducts.css">
