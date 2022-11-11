@@ -3,7 +3,6 @@
     <a href="/">
         LOGO
     </a>
-
     <!-- Mobile nav -->
     <div class="nav-items">
         <li>

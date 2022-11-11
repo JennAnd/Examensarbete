@@ -1,17 +1,11 @@
 <link rel="stylesheet" href="../stylesheets/profile.css">
 @include('profilenavbar')
+@include('sidenav')
 
 <body>
     <div class="profile-body">
         <h1> Profile </h1>
 
-        <div class="side-nav">
-            <ul>
-                <li><a href="/dashboard">Översikt</a></li>
-                <li><a href="/profile">My profile</a></li>
-                <li><a href="/payments">Payments</a></li>
-            </ul>
-        </div>
 
 
         <h2>Your membership</h2>

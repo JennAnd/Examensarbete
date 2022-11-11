@@ -1,5 +1,7 @@
 /*--- MOBILE ---*/
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -48,6 +50,15 @@ nav div {
     display: none;
 }
 
+.nav-items {
+    display: none;
+    text-align: center;
+}
+
+.nav-items-show {
+    text-align: center;
+}
+
 /*--- Desktop ---*/
 
 @media screen and (min-width: 1040px) {
@@ -67,5 +78,13 @@ nav div {
 
     div li {
         margin-left: 2rem;
+    }
+
+    .nav-items {
+        display: none;
+    }
+    .nav-items-show {
+        display: none;
+        text-align: center;
     }
 }
