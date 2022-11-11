@@ -1,9 +1,12 @@
 .memberships-image {
     width: 100%;
-
     object-fit: cover;
     object-position: bottom;
     filter: brightness(0.5);
+}
+
+.membership-container {
+    position: relative;
 }
 
 .member-heading {
@@ -12,5 +15,8 @@
     position: absolute;
     z-index: 2;
     color: white;
-    margin-top: -400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

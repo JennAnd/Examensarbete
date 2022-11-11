@@ -2,6 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+}
+
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-Regular.woff");
+    font-family: "Raleway";
+}
+
+@font-face {
+    src: url("/fonts/NunitoSans-ExtraLight.woff");
+    font-family: "Raleway Light";
+}
+
+.logo {
+    margin-bottom: 70px;
 }
 
 img {
@@ -36,10 +56,7 @@ input {
     width: 250px;
     height: 30px;
     border: none;
-}
-
-label {
-    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
 }
 
 .login-button {
@@ -47,14 +64,35 @@ label {
     background-color: #ec904e;
     width: 130px;
     height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway Light";
     border: none;
     border-radius: 5px;
     font-size: large;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .login-button:hover {
     background-color: #974e19;
     cursor: pointer;
+}
+
+.login-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    font-family: "Raleway Light";
+}
+
+.login-box h1 {
+    margin-bottom: 40px;
+}
+
+form p {
+    font-family: "Raleway Light";
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ec904e;
 }
