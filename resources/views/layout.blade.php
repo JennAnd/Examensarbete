@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../stylesheets/ourproducts.css">
     <link rel="stylesheet" href="../stylesheets/aboutus.css">
     <link rel="stylesheet" href="../stylesheets/mandala-decor.css">
+    <link rel="stylesheet" href="../stylesheets/lotus-decor.css">
 
 </head>
 

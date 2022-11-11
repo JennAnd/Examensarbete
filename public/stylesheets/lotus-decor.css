@@ -1,4 +1,4 @@
-.mandala-decor {
+.lotus-decor {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
@@ -7,7 +7,7 @@
     gap: 20px;
 }
 
-.mandala {
+.lotus {
     width: 30px;
 }
 
@@ -20,11 +20,11 @@ hr {
 }
 
 @media only screen and (min-width: 700px) {
-    .mandala-decor {
+    .lotus-decor {
         gap: 30px;
     }
 
-    .mandala {
+    .lotus {
         width: 50px;
     }
 
@@ -34,7 +34,7 @@ hr {
 }
 
 @media only screen and (min-width: 1064px) {
-    .mandala {
+    .lotus {
         width: 50px;
     }
 

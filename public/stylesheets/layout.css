@@ -24,7 +24,7 @@ body {
 }
 
 footer {
-    color: white;
+    color: rgb(232, 232, 224);
     background-color: #403c3c;
     height: 250px;
     /*  left: 0; */
@@ -39,7 +39,7 @@ footer {
     gap: 3rem;
     padding-top: 90px;
     font-size: 10px;
-    font-family: "Raleway";
+    font-family: "Raleway Light";
     padding-left: 2%;
     padding-right: 2%;
 }
