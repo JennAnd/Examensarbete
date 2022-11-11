@@ -1,38 +1,27 @@
-@include('profilenavbar')
-
 <head>
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
 </head>
-
+@include('profilenavbar')
+<!-- @include('sidenav') -->
 <div class="dashboard-body">
-    <div class="side-nav">
-        <ul>
-            <li><a href="/dashboard">Översikt</a></li>
-            <li><a href="/profile">My profile</a></li>
-            <li><a href="/payments">Payments</a></li>
-            <li><a href="/messages">Messages</a></li>
-            <li><a href="/logout">Logout</a></li>
-        </ul>
-    </div>
-    {{date('Y-m-d')}}
-    {{date('h:i:s')}}
-    {{time()}}
-    {{strtotime('now')}}
-
-    @if(session()->has('message'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
-    </div>
-    @endif
-
-    <p>Hello, {{ $user->firstname . " " . $user->lastname}}!</p>
-    <p>Do you want to <a href="logout">logout?</a></p>
-
-    <div class="overview">
-        <div class="booked-yogaclasses">
+    <div class="grid-container">
+        <div class="item1">
+            <p>Hello, {{ $user->firstname . " " . $user->lastname}}!</p>
+            <p> @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+            @endif
+            </p>
+        </div>
+        <div class="item2">Menu</div>
+        <div class="item3-header">
+            Your booked yogaclasses
+        </div>
+        <div class="item3">
+            <!-- Booked yoga classes -->
             <h2>Your booked yogaclasses</h2>
             @foreach ($bookedYogaclasses as $yogaclass)
-
             <div>
                 <p>{{$yogaclass->class_name}}</p>
                 <p>{{$yogaclass->length}} min</p>
@@ -46,38 +35,37 @@
                     <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
                     <button type="submit" onclick="return confirm('Do you want to cancel this yoga class?')">Cancel</button>
                 </form>
-
-                @endforeach
             </div>
+            @endforeach
         </div>
-        <div>
-            <div class="yogaclasses">
-                <h2>Yogaclasses</h2>
+        <div class="item4-header">
+            NOT BOOKED HEADER
+        </div>
 
-                @foreach ($notBookedYogaclasses as $yogaclass)
+        <div class="item4">
+            <!-- Not booked yoga classes -->
+            <h2>Yogaclasses</h2>
+            @foreach ($notBookedYogaclasses as $yogaclass)
+            <div>
+                <p>{{$yogaclass->class_name}}</p>
+                <p>{{$yogaclass->length}} min</p>
+                <p>{{$yogaclass->teacher}}</p>
+                <p>{{$yogaclass->date}}</p>
+                <p>yogaclass id: {{$yogaclass->id}}</p>
+                <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
+                <p>{{strtotime($yogaclass->time)}}</p>
+                <p>{{strtotime($yogaclass->date)}}</p>
+                <p> Available: {{$yogaclass->available}}</p>
 
-                <div>
-                    <p>{{$yogaclass->class_name}}</p>
-                    <p>{{$yogaclass->length}} min</p>
-                    <p>{{$yogaclass->teacher}}</p>
-                    <p>{{$yogaclass->date}}</p>
-                    <p>yogaclass id: {{$yogaclass->id}}</p>
-                    <p>{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
-                    <p>{{strtotime($yogaclass->time)}}</p>
-                    <p>{{strtotime($yogaclass->date)}}</p>
-                    <p> Available: {{$yogaclass->available}}</p>
-
-                    <form method="POST" action="book">
-                        @csrf
-                        <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
-                        @if ($user->total_classes > 0 && $yogaclass->available > 0)
-                        <button type="submit" onclick="return confirm('Do you want to book?')">Book</button>
-                        @else
-                        <button disabled>Book</button>
-                        @endif
-                    </form>
-                </div>
-
+                <form method="POST" action="book">
+                    @csrf
+                    <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
+                    @if ($user->total_classes > 0 && $yogaclass->available > 0)
+                    <button type="submit" onclick="return confirm('Do you want to book?')">Book</button>
+                    @else
+                    <button disabled>Book</button>
+                    @endif
+                </form>
                 @endforeach
             </div>
         </div>

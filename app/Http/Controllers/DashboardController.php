@@ -20,7 +20,7 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $id = $user->id;
-        var_dump($id);
+
 
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
