@@ -6,7 +6,7 @@
         <div class="side-nav">
             <ul>
                 <li><a href="/adminpanel">Översikt</a></li>
-                <li><a href="/admin-memberships">Memberships</a></li>
+                <li><a href="/adminmemberships">Memberships</a></li>
                 <li><a href="/invoices">Invoices</a></li>
                 <li><a href="logout">Logout</a></li>
             </ul>

@@ -1,22 +1,59 @@
 .memberships-image {
     width: 100%;
+    height: 513px;
     object-fit: cover;
     object-position: bottom;
     filter: brightness(0.5);
 }
 
-.membership-container {
-    position: relative;
-}
-
-.member-heading {
+.memberships-heading {
     font-family: "Gotu";
     display: flex;
-    position: absolute;
     z-index: 2;
-    color: white;
+    color: rgb(232, 232, 224);
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.memberships-container {
+    position: relative;
+    margin-top: 30px;
+    width: 280px;
+    height: 113px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: "Raleway Light";
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(232, 232, 224);
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.membership-type {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.membership-price {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.membership-validation {
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.membership-end-section {
+    font-family: "Raleway Light";
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.membership-end-section a {
+    color: black;
 }

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Membership;
-use App\Models\Yogaclass;
 use Illuminate\Http\Request;
+use App\Models\Membership;
 
-class AdminPanelController extends Controller
+class AdminMembershipsController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -17,13 +16,8 @@ class AdminPanelController extends Controller
     public function __invoke(Request $request)
     {
 
-        $yogaclasses = Yogaclass::select('*')
-            ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
-
-
         $memberships = Membership::select('*')->get();
         return view('adminmemberships', [
-            'yogaclasses' => $yogaclasses,
             'memberships' => $memberships
         ]);
     }

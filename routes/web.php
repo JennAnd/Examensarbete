@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\YogaclassController;
 use App\Http\Controllers\AdminPanelController;
+use App\Http\Controllers\AdminMembershipsController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\MembershipController;
@@ -33,6 +34,7 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/admin', function () {
     return view('admin');
 });
@@ -49,6 +51,7 @@ Route::post('login', LoginController::class);
 Route::post('login-admin', [LoginController::class, 'loginAdmin']);
 Route::post('signup', SignUpController::class)->middleware('guest');
 Route::get('logout', LogoutController::class);
+Route::get('adminmemberships', AdminMembershipsController::class);
 
 Route::get('ourclasses', [OurClassesController::class, 'index'])->name('ourclasses');
 Route::get('ourclasses/{id}', [OurClassesController::class, 'show'])->name('ourclasses.show');
