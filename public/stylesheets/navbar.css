@@ -17,7 +17,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(232, 232, 224);
 }
 .shorter-nav {
     height: 4rem;
@@ -27,7 +27,7 @@ nav li a {
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    color: white;
+    color: rgb(232, 232, 224);
     font-family: "Raleway Light";
     font-size: 18px;
 }
