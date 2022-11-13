@@ -22,7 +22,7 @@ class AdminPanelController extends Controller
 
 
         $memberships = Membership::select('*')->get();
-        return view('adminmemberships', [
+        return view('adminpanel', [
             'yogaclasses' => $yogaclasses,
             'memberships' => $memberships
         ]);

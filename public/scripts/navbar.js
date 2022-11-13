@@ -11,7 +11,7 @@ function showNavItems() {
         nav.style.height = "50px";
     } else {
         navItems.style.display = "block";
-        nav.style.height = "200px";
+        nav.style.height = "250px";
     }
 }
 

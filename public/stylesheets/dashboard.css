@@ -13,21 +13,19 @@
 }
 .item2 {
     grid-area: menu;
+    background-color: #dcccb6;
 }
 .item3 {
-    grid-area: main;
+    grid-area: booked;
+
+    border: 3px solid #dcccb6;
+    margin: 50px;
 }
 .item4 {
-    grid-area: right;
-}
-.item5 {
-    grid-area: footer;
-}
-.item3-header {
-    grid-area: booked-header;
-}
-.item4-header {
-    grid-area: notbooked-header;
+    grid-area: notbooked;
+
+    border: 3px solid #dcccb6;
+    margin: 50px;
 }
 
 .grid-container {
@@ -35,18 +33,13 @@
     grid-template-areas:
         "menu"
         "header"
-        "booked-header"
-        "main"
-        "notbooked-header"
-        "right";
-    gap: 10px;
-    background-color: #2196f3;
-    padding: 10px;
+        "booked"
+        "notbooked";
+
     padding-top: 50px;
 }
 
 .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
@@ -62,36 +55,33 @@ body {
 }
 
 h2 {
-    font-size: 10px;
+    font-size: 20px;
 }
 
-/* .yogaclasses {
-    width: 300px;
-    border: 1px solid #dcccb6;
+.yogaclass {
+    background-color: #fbf3e9;
 }
 
-.booked-yogaclasses {
-    width: 300px;
-    border: 1px solid #dcccb6;
-} */
+.yogaclass p {
+    font-family: "Raleway";
+    font-size: 14px;
+}
+
+.button-booked {
+    background-color: #ec904e;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.button-booked:hover {
+    background-color: #ab6635;
+}
 
 @media screen and (min-width: 1040px) {
     .grid-container {
-        display: grid;
         grid-template-areas:
             "menu header header header header"
-            "menu booked-header booked-header notbooked-header notbooked-header"
-            "menu main main right right";
-        gap: 10px;
-        background-color: #2196f3;
-        padding: 10px;
-        padding-top: 50px;
-    }
-
-    .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
+            "menu booked booked notbooked notbooked";
     }
 }

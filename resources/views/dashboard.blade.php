@@ -2,7 +2,6 @@
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
 </head>
 @include('profilenavbar')
-<!-- @include('sidenav') -->
 <div class="dashboard-body">
     <div class="grid-container">
         <div class="item1">
@@ -14,15 +13,15 @@
             @endif
             </p>
         </div>
-        <div class="item2">Menu</div>
-        <div class="item3-header">
-            Your booked yogaclasses
+        <div class="item2">
+            @include('sidenav')
         </div>
+
         <div class="item3">
             <!-- Booked yoga classes -->
             <h2>Your booked yogaclasses</h2>
             @foreach ($bookedYogaclasses as $yogaclass)
-            <div>
+            <div class="yogaclass">
                 <p>{{$yogaclass->class_name}}</p>
                 <p>{{$yogaclass->length}} min</p>
                 <p>{{$yogaclass->teacher}}</p>
@@ -33,14 +32,12 @@
                 <form method="POST" action="cancelbooked">
                     @csrf
                     <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
-                    <button type="submit" onclick="return confirm('Do you want to cancel this yoga class?')">Cancel</button>
+                    <button class="button-booked" type="submit" onclick="return confirm('Do you want to cancel this yoga class?')">Cancel</button>
                 </form>
             </div>
             @endforeach
         </div>
-        <div class="item4-header">
-            NOT BOOKED HEADER
-        </div>
+
 
         <div class="item4">
             <!-- Not booked yoga classes -->
