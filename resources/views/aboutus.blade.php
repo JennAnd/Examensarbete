@@ -10,8 +10,9 @@
     @include('mandala')
 
     @foreach ($profiles as $profile)
+    <!-- <div class="about-us-boxes"> -->
     <div class="about-us-boxes">
-        <div class="about-us-single-box-round">
+        <div class="about-us-single-box-round" style="background-image: url('{{$profile->aboutusimage->getFile()->getUrl()}}'); background-size: cover;">
         </div>
 
         <div class="about-us-single-box">

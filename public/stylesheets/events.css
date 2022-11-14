@@ -27,7 +27,7 @@ body {
     flex-wrap: wrap;
     gap: 80px;
     margin-bottom: 180px;
-    margin-top: 89px;
+    margin-top: 150px;
 }
 
 .event-single-box {
@@ -41,8 +41,8 @@ body {
     width: 325px;
     height: 170px;
     margin-top: 305px;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 10px;
 }
 
 .event-name {
@@ -53,6 +53,14 @@ body {
 .event-info {
     font-family: "Raleway Light";
     color: rgb(232, 232, 224);
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.event-date {
+    font-family: "Raleway";
+    color: rgb(232, 232, 224);
+    margin-top: 6px;
 }
 
 .events-end-section {

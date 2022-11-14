@@ -13,6 +13,7 @@
                 <!-- Get image from contentful -->
                 <h2 class="event-name"> {{$event->eventname}}</h2>
                 <p class="event-info"> {{$event->eventinfo}}</p>
+                <p class="event-date"> {{$event->eventDate}}</p>
 
             </div>
         </div>

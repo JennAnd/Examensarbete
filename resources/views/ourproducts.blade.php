@@ -8,11 +8,13 @@
     @include('mandala')
     <div class="product-boxes">
         @foreach ($products as $product)
-        <div class="product-single-box">
+
+        <div class="product-single-box" style="background-image: url('{{$product->productImage->getFile()->getUrl()}}'); background-size: cover;">
             <div class="box-brightness">
                 <p class="product-name"> {{$product->productType}}</p>
                 <p class="product-price"> {{$product->productPrice}}</p>
             </div>
+
         </div>
         @endforeach
     </div>
