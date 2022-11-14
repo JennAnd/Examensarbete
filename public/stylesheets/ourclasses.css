@@ -24,10 +24,27 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Yoga classes */
+
+.yogaclasses-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/* .grid-items {
+    background-color: aqua;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+} */
 .yogaclasses-container {
     color: rgb(232, 232, 224);
     font-family: "Raleway Light";
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .yogaclasses-container-without-lotus {
@@ -35,13 +52,9 @@ body {
     text-align: center;
 }
 
-.yogaclass-type {
-    margin-left: 30px;
-}
-
 .yogaclass-info {
     font-size: 14px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .our-classes-end-section {
@@ -55,9 +68,23 @@ body {
     color: black;
 }
 
-/* @media screen and (min-width: 500px) {
-    .yogaclasses-container-without-lotus {
+.our-classes-hr {
+    margin: 40px;
+    /* width: 70%; */
+}
+@media only screen and (min-width: 768px) {
+    /* .yogaclasses-container-without-lotus {
         display: flex;
         flex-wrap: wrap;
+    } */
+
+    /* .yogaclasses-container {
+        display: none;
+    } */
+
+    .yogaclasses-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
-} */
+}
