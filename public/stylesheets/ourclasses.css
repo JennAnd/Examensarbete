@@ -70,7 +70,7 @@ body {
 
 .our-classes-hr {
     margin: 40px;
-    /* width: 70%; */
+    width: 80%;
 }
 @media only screen and (min-width: 768px) {
     /* .yogaclasses-container-without-lotus {
@@ -86,5 +86,12 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+    }
+}
+
+@media only screen and (min-width: 1064px) {
+    .our-classes-hr {
+        margin: 40px;
+        width: 130%;
     }
 }

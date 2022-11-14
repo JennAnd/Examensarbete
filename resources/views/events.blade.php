@@ -8,10 +8,12 @@
 
     <div class="event-boxes">
         @foreach ($events as $event)
-        <div class="event-single-box">
+        <div class="event-single-box" style="background-image: url('{{$event->eventimage->getFile()->getUrl()}}'); background-size: cover;">
             <div class="box-brightness">
+                <!-- Get image from contentful -->
                 <h2 class="event-name"> {{$event->eventname}}</h2>
                 <p class="event-info"> {{$event->eventinfo}}</p>
+
             </div>
         </div>
         @endforeach
