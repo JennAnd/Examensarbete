@@ -37,14 +37,14 @@ body {
 
 .about-us-boxes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-us-single-box {
     width: 340px;
     height: 200px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -62,17 +62,28 @@ body {
 }
 
 @media only screen and (min-width: 500px) {
-    .about-us-single-box-round {
+    /* .about-us-single-box-round {
         margin-right: 90px;
     }
     .about-us-single-box {
         margin-top: 90px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 768px) {
     .about-us-heading-box {
         left: 25%;
+    }
+
+    .about-us-boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-us-single-box {
+        margin-top: 90px;
+        margin-left: 60px;
     }
 }
 

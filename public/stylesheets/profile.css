@@ -1,9 +1,4 @@
 @font-face {
-    src: url("/fonts/Gotu-Regular.woff");
-    font-family: "Gotu";
-}
-
-@font-face {
     src: url("/fonts/NunitoSans-Regular.woff");
     font-family: "Raleway";
 }
@@ -13,10 +8,86 @@
     font-family: "Raleway Light";
 }
 
-.profile-body {
-    margin-top: 100px;
+.item1 {
+    grid-area: header;
+}
+.item2 {
+    grid-area: menu;
+    background-color: #dcccb6;
+}
+.item3 {
+    grid-area: booked;
+
+    border: 3px solid #dcccb6;
+    margin: 50px;
+}
+.item4 {
+    grid-area: notbooked;
+
+    border: 3px solid #dcccb6;
+    margin: 50px;
+}
+
+.item5 {
+    grid-area: empty;
+    background-color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "header"
+        "booked"
+        "notbooked";
+
+    padding-top: 50px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
 }
 
 body {
     margin: auto;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.yogaclass {
+    background-color: #fbf3e9;
+}
+
+.yogaclass p {
+    font-family: "Raleway";
+    font-size: 14px;
+}
+
+.button-booked {
+    background-color: #ec904e;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.button-booked:hover {
+    background-color: #ab6635;
+}
+
+@media screen and (min-width: 1040px) {
+    .grid-container {
+        grid-template-areas:
+            "menu header header header header"
+            "menu booked booked notbooked notbooked"
+            "menu empty empty empty empty";
+    }
 }

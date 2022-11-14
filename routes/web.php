@@ -51,32 +51,32 @@ Route::post('login', LoginController::class);
 Route::post('login-admin', [LoginController::class, 'loginAdmin']);
 Route::post('signup', SignUpController::class)->middleware('guest');
 Route::get('logout', LogoutController::class);
-Route::get('adminmemberships', AdminMembershipsController::class);
+Route::get('adminmemberships', AdminMembershipsController::class)->name('adminmemberships');
 
 Route::get('ourclasses', [OurClassesController::class, 'index'])->name('ourclasses');
 Route::get('ourclasses/{id}', [OurClassesController::class, 'show'])->name('ourclasses.show');
 
-Route::get('/profile', ProfileController::class)->middleware('auth');
+Route::get('/profile', ProfileController::class)->middleware('auth')->name('profile');
 Route::post('buy-membership', [ProfileController::class, 'buyMembership']);
-Route::get('/adminpanel', AdminPanelController::class)->middleware('admin');
+Route::get('/adminpanel', AdminPanelController::class)->middleware('admin')->name('adminpanel');
 
-Route::get('/payments', PaymentsController::class)->middleware('auth');
+Route::get('/payments', PaymentsController::class)->middleware('auth')->name('payments');
 Route::get('/payments/{id}', [PaymentsController::class, 'showClickedInvoice'])->middleware('auth');
 Route::post('confirm-payment', [PaymentsController::class, 'confirmPayment']);
 
 Route::post('book', [DashboardController::class, 'bookYogaclass']);
 Route::post('/cancelbooked', [DashboardController::class, 'cancelBookedYogaclass']);
-Route::get('dashboard', DashboardController::class)->middleware('auth');
+Route::get('dashboard', DashboardController::class)->middleware('auth')->name('dashboard');
 
 Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('events', [EventController::class, 'index'])->name('events');
 Route::get('ourproducts', [OurProductsController::class, 'index'])->name('ourproducts');
-Route::get('invoices', InvoiceController::class)->name('invoices')->middleware('auth');
+Route::get('invoices', InvoiceController::class)->middleware('auth')->name('invoices');
 
 
 Route::post('delete-membership', [MembershipController::class, 'deleteMembership']);
 Route::post('make-membership', MembershipController::class);
-Route::get('/memberships', [MembershipController::class, 'showMemberships']);
+Route::get('/memberships', [MembershipController::class, 'showMemberships'])->name('memberships');
 
 Route::post('delete-yogaclass', [YogaclassController::class, 'deleteYogaclass']);
 Route::post('make-yogaclass', YogaclassController::class);

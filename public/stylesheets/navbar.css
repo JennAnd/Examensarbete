@@ -53,6 +53,9 @@ nav div {
     display: none;
 }
 
+.active {
+    text-decoration: underline;
+}
 /*--- Desktop ---*/
 
 @media screen and (min-width: 1040px) {

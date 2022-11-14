@@ -6,22 +6,26 @@
     <!-- Mobile nav -->
     <div class="nav-items">
         <li>
-            <a href="/aboutus">About us</a>
+            <a href="{{route('aboutus')}}" class="{{ (request()->is('aboutus')) ? 'active' : '' }}">About us</a>
         </li>
         <li>
-            <a href="/ourclasses">Our classes</a>
+            <a href="{{route('ourclasses')}}" class="{{ (request()->is('ourclasses')) ? 'active' : '' }}">Our classes</a>
         </li>
         <li>
-            <a href="/memberships">Memberships</a>
+            <a href="{{route('memberships')}}" class="{{ (request()->is('memberships')) ? 'active' : '' }}">Memberships</a>
         </li>
         <li>
-            <a href="/events">Events</a>
+            <a href="{{route('events')}}" class="{{ (request()->is('events')) ? 'active' : '' }}">Events</a>
         </li>
         <li>
-            <a href="/ourproducts">Our products</a>
+            <a href="{{route('ourproducts')}}" class="{{ (request()->is('ourproducts')) ? 'active' : '' }}">Our products</a>
         </li>
         <li>
+            @if (Auth::user())
+            <a href="{{route('dashboard')}}" class="{{ (request()->is('dashboard')) ? 'active' : '' }}">My pages</a>
+            @else
             <a href="/login">Login</a>
+            @endif
         </li>
     </div>
 
@@ -39,22 +43,26 @@
 
     <div class="nav-items-desktop">
         <li>
-            <a href="/aboutus">About us</a>
+            <a href="{{route('aboutus')}}" class="{{ (request()->is('aboutus')) ? 'active' : '' }}">About us</a>
         </li>
         <li>
-            <a href="/ourclasses">Our classes</a>
+            <a href="{{route('ourclasses')}}" class="{{ (request()->is('ourclasses')) ? 'active' : '' }}">Our classes</a>
         </li>
         <li>
-            <a href="/memberships">Memberships</a>
+            <a href="{{route('memberships')}}" class="{{ (request()->is('memberships')) ? 'active' : '' }}">Memberships</a>
         </li>
         <li>
-            <a href="/events">Events</a>
+            <a href="{{route('events')}}" class="{{ (request()->is('events')) ? 'active' : '' }}">Events</a>
         </li>
         <li>
-            <a href="/ourproducts">Our products</a>
+            <a href="{{route('ourproducts')}}" class="{{ (request()->is('ourproducts')) ? 'active' : '' }}">Our products</a>
         </li>
         <li>
+            @if (Auth::user())
+            <a href="{{route('dashboard')}}" class="{{ (request()->is('dashboard')) ? 'active' : '' }}">My pages</a>
+            @else
             <a href="/login">Login</a>
+            @endif
         </li>
     </div>
 </nav>

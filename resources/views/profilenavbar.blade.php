@@ -23,7 +23,11 @@
             <a href="/ourproducts">Our products</a>
         </li>
         <li>
+            @if (Auth::user())
+            <a href="{{route('dashboard')}}" class="{{ (request()->is('dashboard')) ? 'active' : '' }}">My pages</a>
+            @else
             <a href="/login">Login</a>
+            @endif
         </li>
     </div>
 
@@ -57,7 +61,11 @@
             <a href="/ourproducts">Our products</a>
         </li>
         <li>
+            @if (Auth::user())
+            <a href="{{route('dashboard')}}" class="{{ (request()->is('dashboard')) ? 'active' : '' }}">My pages</a>
+            @else
             <a href="/login">Login</a>
+            @endif
         </li>
     </div>
 
