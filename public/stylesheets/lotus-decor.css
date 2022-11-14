@@ -11,13 +11,13 @@
     width: 30px;
 }
 
-hr {
+/* hr {
     width: 130px;
     height: 1px;
     color: black;
     background-color: black;
     border: none;
-}
+} */
 
 @media only screen and (min-width: 700px) {
     .lotus-decor {
@@ -28,9 +28,9 @@ hr {
         width: 50px;
     }
 
-    hr {
+    /*     hr {
         width: 260px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 1064px) {
@@ -38,7 +38,7 @@ hr {
         width: 50px;
     }
 
-    hr {
+    /*     hr {
         width: 500px;
-    }
+    } */
 }
