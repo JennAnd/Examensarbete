@@ -49,6 +49,10 @@ nav div {
     text-align: center;
 }
 
+.go-back {
+    display: none;
+}
+
 /*--- Desktop ---*/
 
 @media screen and (min-width: 1040px) {
