@@ -13,9 +13,9 @@
     font-family: "Gotu";
 }
 
-.welcome-message {
-    font-family: "Gotu";
-    margin-top: 20px;
+.session-message {
+    font-size: 16px;
+    font-family: "Raleway";
 }
 
 .item1 {
@@ -50,7 +50,8 @@
         "menu"
         "header"
         "booked"
-        "notbooked";
+        "notbooked"
+        "filler";
 
     padding-top: 50px;
 }
@@ -136,13 +137,13 @@ h2 {
     font-size: 20px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .yogaclasses-heading {
         text-align: left;
         margin-left: 20px;
         margin-bottom: 20px;
     }
-}
+} */
 
 @media screen and (min-width: 1040px) {
     .grid-container {

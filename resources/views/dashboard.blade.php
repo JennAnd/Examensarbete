@@ -6,12 +6,12 @@
     <div class="grid-container">
         <div class="item1">
 
-            <p> @if(session()->has('message'))
-            <div class="alert alert-success">
+            @if(session()->has('message'))
+            <div class="session-message">
                 {{ session()->get('message') }}
             </div>
             @endif
-            </p>
+
         </div>
         <div class="item2">
             @include('sidenav')
@@ -52,7 +52,6 @@
                 <div class="yogaclass-details">
                     <p class="yogaclass-time">{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
                     <p class="yogaclass-title">{{$yogaclass->class_name}}, {{$yogaclass->length}} min</p>
-
                     <p>{{$yogaclass->teacher}}</p>
 
                 </div>
@@ -71,8 +70,9 @@
                     <button disabled class="button-booked-disabled">+</button>
                     @endif
                 </form>
-                @endforeach
             </div>
+            @endforeach
+
         </div>
     </div>
 </div>
