@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-<img class="about-us-image" src="/assets/about-us-pose.webp" />
+<img class="about-us-image" src="/assets/about-us.webp" />
 <div class="about-us-heading-box">
     <h1 class="about-us-heading">About Yoga name</h1>
     <p class="about-us-heading-info">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amett Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>

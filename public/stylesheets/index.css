@@ -1,15 +1,54 @@
-/* footer {
-    color: white;
-    background-color: #403c3c;
-    height: 250px;
-    width: 100%;
-    margin-bottom: 0;
-    margin-top: 0;
-} */
+.landingpage-container {
+    position: relative;
+}
 
 .landingpage-image {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     filter: brightness(0.4);
+    position: absolute;
+}
+
+.landingpage-text {
+    color: rgb(232, 232, 224);
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 40px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing-page-heading {
+    font-size: 26px;
+    text-align: center;
+    font-family: "Gotu";
+}
+
+.landing-page-under-heading {
+    font-size: 18px;
+    text-align: center;
+    font-family: "Raleway Light";
+}
+
+.landingpage-button {
+    color: rgb(232, 232, 224);
+    background-color: #b15d22;
+    width: 180px;
+    height: 40px;
+    font-family: "Raleway";
+    margin-top: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.landingpage-button:hover {
+    background-color: #974e19;
+    cursor: pointer;
 }

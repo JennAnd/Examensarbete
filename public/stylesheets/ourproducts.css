@@ -48,8 +48,16 @@ body {
     color: rgb(232, 232, 224);
 }
 
+.box-brightness-small {
+    width: 325px;
+    height: 80px;
+    margin-top: 395px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+}
+
 .our-products-end-section {
-    font-family: "Raleway Light";
+    font-family: "Raleway";
     text-align: center;
     font-size: 18px;
     margin-top: 20px;

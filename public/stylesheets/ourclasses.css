@@ -59,9 +59,10 @@ body {
 
 .our-classes-end-section {
     color: black;
-    font-family: "Raleway Light";
+    font-family: "Raleway";
     text-align: center;
     font-size: 18px;
+    margin-top: 20px;
 }
 
 .our-classes-end-section a {

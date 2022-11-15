@@ -10,8 +10,8 @@
         @foreach ($products as $product)
 
         <div class="product-single-box" style="background-image: url('{{$product->productImage->getFile()->getUrl()}}'); background-size: cover;">
-            <div class="box-brightness">
-                <p class="product-name"> {{$product->productType}}</p>
+            <div class="box-brightness-small">
+                <h3 class="product-name"> {{$product->productType}}</h3>
                 <p class="product-price"> {{$product->productPrice}}</p>
             </div>
 
