@@ -5,13 +5,11 @@
 <div class="dashboard-body">
     <div class="grid-container">
         <div class="item1">
-
             @if(session()->has('message'))
             <div class="session-message">
                 {{ session()->get('message') }}
             </div>
             @endif
-
         </div>
         <div class="item2">
             @include('sidenav')
@@ -72,7 +70,7 @@
                 </form>
             </div>
             @endforeach
-
         </div>
     </div>
+    <img class="dashboard-image" src="assets/dashboard-image.webp" alt="">
 </div>

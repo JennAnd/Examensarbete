@@ -13,13 +13,21 @@
     font-family: "Gotu";
 }
 
+.dashboard-body {
+    background-color: white;
+}
+
 .session-message {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Raleway";
+    z-index: 3;
+    background-color: #fbf3e9;
+    padding: 10px;
 }
 
 .item1 {
     grid-area: header;
+    /* background-color: #fbf3e9; */
 }
 .item2 {
     grid-area: menu;
@@ -28,18 +36,16 @@
 
 .filler-item {
     grid-area: filler;
-    background-color: white;
+    /* background-color: rgb(147, 80, 80); */
     width: 100px;
 }
 .item3 {
     grid-area: booked;
-
     border: 2px solid #dcccb6;
     margin: 50px;
 }
 .item4 {
     grid-area: notbooked;
-
     border: 2px solid #dcccb6;
     margin: 50px;
 }
@@ -52,7 +58,6 @@
         "booked"
         "notbooked"
         "filler";
-
     padding-top: 50px;
 }
 
@@ -92,6 +97,7 @@ h2 {
 .yogaclasses-heading {
     font-family: "Raleway Light";
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .yogaclass-details {
@@ -115,16 +121,16 @@ h2 {
 }
 
 .button-booked {
-    background-color: #ec904e;
+    background-color: #c27b49;
     border: none;
     width: 30px;
     height: 30px;
     border-radius: 100%;
     color: rgb(232, 232, 224);
-    font-size: 20px;
+    font-size: 18px;
 }
 .button-booked:hover {
-    background-color: #ab6635;
+    background-color: #b15d22;
 }
 
 .button-booked-disabled {
@@ -134,7 +140,7 @@ h2 {
     height: 30px;
     border-radius: 100%;
     color: rgb(96, 96, 96);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* @media screen and (min-width: 768px) {
@@ -145,13 +151,33 @@ h2 {
     }
 } */
 
+.dashboard-image {
+    display: none;
+}
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
-            "menu filler header header header header"
+            "header header header header header header"
             "menu filler booked booked notbooked notbooked";
     }
     .item2 {
-        margin-top: 50px;
+        margin-top: 45px;
+        width: 220px;
+    }
+
+    /* .item3 {
+        margin-bottom: 320px;
+    } */
+
+    .dashboard-image {
+        display: block;
+        width: 300px;
+        border: 5px solid #746858;
+        filter: brightness(0.7);
+        filter: grayscale(0.4);
+        position: absolute;
+        bottom: 100;
+        left: 20;
     }
 }

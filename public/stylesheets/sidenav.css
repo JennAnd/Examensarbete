@@ -7,10 +7,10 @@
 
 .side-nav a:hover {
     font-weight: bolder;
-    font-size: 14px;
+    font-size: 17px;
 }
 
-.active {
+.active-profile {
     font-weight: bolder;
 }
 
