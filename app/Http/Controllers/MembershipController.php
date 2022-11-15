@@ -24,7 +24,7 @@ class MembershipController extends Controller
         ]);
 
         $membership->save();
-        return redirect('adminpanel')->with('message', "You have created a membership.");
+        return redirect('adminmemberships')->with('message', "You have created a membership.");
     }
 
     public function deleteMembership(Request $request)

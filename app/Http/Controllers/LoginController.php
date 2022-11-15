@@ -15,6 +15,8 @@ class LoginController extends Controller
      */
     public function __invoke(Request $request)
     {
+
+
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -22,8 +24,10 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            $userName = Auth::user()->firstname;
+            // dd($userName);
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('dashboard')->with('message', "Welcome, $userName!");
         }
 
         return back()->withErrors([

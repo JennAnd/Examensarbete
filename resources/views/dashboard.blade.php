@@ -25,7 +25,6 @@
                     <p class="yogaclass-time">{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
                     <p class="yogaclass-title">{{$yogaclass->class_name}}, {{$yogaclass->length}} min</p>
                     <p>{{$yogaclass->teacher}}</p>
-
                 </div>
                 <div>
                     <p>{{$yogaclass->reserved}}</p>
@@ -51,14 +50,11 @@
                     <p class="yogaclass-time">{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
                     <p class="yogaclass-title">{{$yogaclass->class_name}}, {{$yogaclass->length}} min</p>
                     <p>{{$yogaclass->teacher}}</p>
-
                 </div>
                 <div>
                     <p>{{$yogaclass->available}}</p>
                     <p>available</p>
                 </div>
-
-
                 <form method="POST" action="book">
                     @csrf
                     <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
@@ -72,5 +68,5 @@
             @endforeach
         </div>
     </div>
-    <img class="dashboard-image" src="assets/dashboard-image.webp" alt="">
+    <img class="dashboard-image" src="assets/events.webp" alt="">
 </div>

@@ -5,28 +5,48 @@
 <div class="profile-body">
     <div class="grid-container">
         <div class="item1">
-            <h1> Profile </h1>
+
         </div>
         <div class="item2">
             @include('sidenav')
         </div>
+        <div class="filler-item"></div>
         <div class="item3">
-            <h2>Your membership</h2>
-            <p>Saldo: {{$total_classes}}</p>
+            <h2 class="profile-heading">Your membership</h2>
+
+            <div class="balance">
+                <p class="contact-info"><b>Balance</b></p>
+                <p>{{$total_classes}} classes</p>
+
+            </div>
+            <div class="profile-info">
+                <div class="contact-info">
+                    <p><b>Contact info</b></p>
+                    <button class="button-edit-contact">Edit</button>
+                </div>
+                <p>{{$user->firstname}} {{$user->lastname}}</p>
+                <p>{{$user->email}}</p>
+                <p>{{$user->address}}</p>
+                <p>{{$user->postal_code}}</p>
+                <p>{{$user->city}}</p>
+                <p>{{$user->country}}</p>
+            </div>
 
         </div>
 
         <div class="item4">
-            <h2>Buy a membership</h2>
+            <h2 class="profile-heading">Buy a membership</h2>
             @foreach ($memberships as $membership)
-            <div>
-                <p>{{$membership->type}}</p>
-                <p>{{$membership->price}}</p>
+            <div class="created-membership">
+                <div>
+                    <p class="created-title">{{$membership->type}}</p>
+                    <p class="created-price">{{$membership->price}} USD</p>
+                </div>
                 <form method="POST" action="buy-membership">
                     @csrf
                     <input type="hidden" value="<?= $membership->amount_classes ?>" name="amount_classes">
                     <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
-                    <button type="submit" onclick="return confirm('Are you sure you want to buy this membership? You will be sent an invoice.')">Buy</button>
+                    <button class="button-buy" type="submit" onclick="return confirm('Are you sure you want to buy this membership? You will be sent an invoice.')">Buy</button>
                 </form>
             </div>
             @endforeach
@@ -34,4 +54,5 @@
         </div>
         <!-- <div class="item5"></div> -->
     </div>
+    <img class="profile-image" src="assets/memberships.webp" alt="">
 </div>

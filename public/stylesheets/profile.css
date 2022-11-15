@@ -8,6 +8,62 @@
     font-family: "Raleway Light";
 }
 
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
+.profile-heading {
+    font-family: "Raleway Light";
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-info,
+.balance {
+    background-color: #fbf3e9;
+    text-align: left;
+    padding: 20px;
+    font-family: "Gotu";
+    font-size: 14px;
+    margin: 20px;
+}
+
+.contact-info {
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.created-membership {
+    background-color: #fbf3e9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: "Gotu";
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.created-title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+.created-price {
+    font-size: 14px;
+}
+.filler-item {
+    grid-area: filler;
+    /* background-color: rgb(147, 80, 80); */
+    width: 100px;
+}
+
 .item1 {
     grid-area: header;
 }
@@ -18,20 +74,20 @@
 .item3 {
     grid-area: booked;
 
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
 }
 .item4 {
     grid-area: notbooked;
 
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
 }
 
-.item5 {
+/* .item5 {
     grid-area: empty;
     color: rgb(232, 232, 224);
-}
+} */
 
 .grid-container {
     display: grid;
@@ -39,8 +95,8 @@
         "menu"
         "header"
         "booked"
-        "notbooked";
-
+        "notbooked"
+        "filler";
     padding-top: 50px;
 }
 
@@ -59,35 +115,43 @@ body {
     margin: auto;
 }
 
-h2 {
-    font-size: 20px;
-}
-
-.yogaclass {
-    background-color: #fbf3e9;
-}
-
-.yogaclass p {
-    font-family: "Raleway";
-    font-size: 14px;
-}
-
-.button-booked {
-    background-color: #b15d22;
+.button-buy,
+.button-edit-contact {
+    background-color: #c27b49;
     border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
+    color: rgb(232, 232, 224);
+    font-size: 14px;
+    font-family: "Raleway";
+    padding: 5px 10px;
+    border-radius: 5px;
 }
-.button-booked:hover {
-    background-color: #ab6635;
+
+.button-buy:hover,
+.button-edit-contact:hover {
+    background-color: #b15d22;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
-            "menu header header header header"
-            "menu booked booked notbooked notbooked"
-            "menu empty empty empty empty";
+            "header header header header header header"
+            "menu filler booked booked notbooked notbooked";
+    }
+    .item2 {
+        margin-top: 45px;
+        width: 220px;
+    }
+
+    .profile-image {
+        display: block;
+        width: 350px;
+        height: 220px;
+        object-fit: cover;
+        border: 3px solid #b1782d;
+        filter: grayscale(0.4);
+        position: absolute;
+        bottom: 150;
+        left: 30;
     }
 }

@@ -28,6 +28,7 @@ class ProfileController extends Controller
         return view('profile', [
             'memberships' => $memberships,
             'total_classes' => $total_classes,
+            'user' => $user
         ]);
     }
 
