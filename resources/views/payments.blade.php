@@ -59,14 +59,26 @@
                     </div>
                 </div>
 
-                <div>
-                    <p>Invoice date: {{date("Y-m-d")}}</p>
-                    <p>Invoice number: #000{{$clicked_invoice->id}}
-                    </p>
-                    <p>Client reference: {{$user->id}}
-                    </p>
-                    <p>Due date: {{$clicked_invoice->due_date}}</p>
-                    <p>Terms: 30 days</p>
+                <div class="invoice-details">
+
+                    <div class="invoice-details-one">
+                        <p>Invoice date: </p>
+                        <p>Invoice number:</p>
+                        <p>Client reference:
+                        </p>
+                        <p>Due date: </p>
+                        <p>Terms: </p>
+                    </div>
+                    <div class="invoice-details-two">
+                        <p>{{date("Y-m-d")}}</p>
+                        <p> #000{{$clicked_invoice->id}}
+                        </p>
+                        <p>{{$user->id}}
+                        </p>
+                        <p> {{$clicked_invoice->due_date}}</p>
+                        <p>30 days</p>
+                    </div>
+
                 </div>
 
                 <hr>
