@@ -73,13 +73,11 @@
 }
 .item3 {
     grid-area: booked;
-
     border: 2px solid #dcccb6;
     margin: 50px;
 }
 .item4 {
     grid-area: notbooked;
-
     border: 2px solid #dcccb6;
     margin: 50px;
 }

@@ -8,6 +8,16 @@
     font-family: "Raleway Light";
 }
 
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+.filler-item {
+    grid-area: filler;
+    /* background-color: rgb(147, 80, 80); */
+    width: 100px;
+}
+
 .item1 {
     grid-area: header;
 }
@@ -17,20 +27,16 @@
 }
 .item3 {
     grid-area: booked;
-
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
 }
 .item4 {
     grid-area: notbooked;
-
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
-}
-
-.item5 {
-    grid-area: empty;
-    color: rgb(232, 232, 224);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid-container {
@@ -39,7 +45,8 @@
         "menu"
         "header"
         "booked"
-        "notbooked";
+        "notbooked"
+        "filler";
 
     padding-top: 50px;
 }
@@ -63,17 +70,62 @@ h2 {
     font-size: 20px;
 }
 
-@media screen and (min-width: 1040px) {
-    .grid-container {
-        grid-template-areas:
-            "menu header header header header"
-            "menu booked booked notbooked notbooked"
-            "menu empty empty empty empty";
-    }
+.payments-heading {
+    font-family: "Raleway Light";
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.invoice {
+    background-color: #fbf3e9;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: "Gotu";
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.invoice:hover {
+    background-color: #f6d9b4;
+}
+
+.invoice a {
+    text-decoration: none;
+    color: black;
 }
 
 .invoice-preview {
-    border: 3px solid black;
-    padding: 50px;
-    width: 700px;
+    font-size: 12px;
+}
+
+.invoice-header,
+.invoice-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0.5px solid rgb(177, 177, 177);
+}
+@media screen and (min-width: 1040px) {
+    .grid-container {
+        grid-template-areas:
+            "header header header header header header"
+            "menu filler booked booked notbooked notbooked";
+    }
+
+    .item2 {
+        margin-top: 45px;
+        width: 220px;
+    }
+
+    .invoice-preview {
+        padding: 20px;
+
+        border: 1px solid black;
+    }
 }

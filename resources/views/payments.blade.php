@@ -5,7 +5,6 @@
 <div class="payments-body">
     <div class="grid-container">
         <div class="item1">
-            <h1> Payments </h1>
             @if(session()->has('message'))
             <div class="alert alert-success">
                 {{ session()->get('message') }}
@@ -15,10 +14,11 @@
         <div class="item2">
             @include('sidenav')
         </div>
+        <div class="filler-item"></div>
         <div class="item3">
-            <h2>Här är alla fakturor</h2>
+            <h2 class="payments-heading">Här är alla fakturor</h2>
             @foreach ($invoices as $invoice)
-            <div>
+            <div class="invoice">
                 <p>
                     <a href="/payments/{{$invoice->id}}"> {{$invoice->created_at}}</a>
                 </p>
@@ -33,28 +33,35 @@
         </div>
 
         <div class="item4">
-            <h2>Faktura preview</h2>
+            <h2 class="payments-heading">Faktura preview</h2>
             @if (count($invoices) > 0)
             <div class="invoice-preview">
-                <h2>Invoice {{$clicked_invoice->id}}</h2>
-
-                <img />
+                <div class="invoice-header">
+                    <h2>Invoice</h2>
+                    <img src="/assets/mandala.svg" />
+                </div>
                 <hr>
-                <h3>Company name</h3>
-                <p>Address line 1</p>
-                <p>Postal code and city</p>
-                <p>Country</p>
-                <p>Telefonnummer</p>
 
-                <h3>To</h3>
-                <p>{{$user->firstname . " " . $user->lastname}}</p>
-                <p>{{$user->address}}</p>
-                <p>{{$user->postal_code . " " . $user->city}}</p>
-                <p>{{$user->country}}</p>
+                <div class="invoice-contact">
+                    <div>
+                        <h3>Company name</h3>
+                        <p>Address line 1</p>
+                        <p>Postal code and city</p>
+                        <p>Country</p>
+                        <p>Telefonnummer</p>
+                    </div>
+                    <div>
+                        <h3>To</h3>
+                        <p>{{$user->firstname . " " . $user->lastname}}</p>
+                        <p>{{$user->address}}</p>
+                        <p>{{$user->postal_code . " " . $user->city}}</p>
+                        <p>{{$user->country}}</p>
+                    </div>
+                </div>
 
                 <div>
                     <p>Invoice date: {{date("Y-m-d")}}</p>
-                    <p>Invoice number: #{{$clicked_invoice->id}}
+                    <p>Invoice number: #000{{$clicked_invoice->id}}
                     </p>
                     <p>Client reference: {{$user->id}}
                     </p>
