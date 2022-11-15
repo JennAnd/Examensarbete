@@ -57,6 +57,11 @@ nav div {
     display: none;
 }
 
+.hamburger {
+    display: block;
+    z-index: 2;
+}
+
 .active {
     text-decoration: underline;
     font-weight: bolder;
