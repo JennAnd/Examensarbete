@@ -13,13 +13,12 @@
 .landingpage-text {
     color: rgb(232, 232, 224);
     position: absolute;
-    margin-top: 360px;
-    margin-left: 40px;
+
     width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 50%;
+    top: 520px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -51,4 +50,21 @@
 .landingpage-button:hover {
     background-color: #974e19;
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .landingpage-text {
+        align-items: flex-start;
+        left: 290px;
+        width: 450px;
+    }
+
+    .landing-page-heading {
+        text-align: left;
+        font-size: 32px;
+    }
+
+    .landing-page-under-heading {
+        text-align: left;
+    }
 }

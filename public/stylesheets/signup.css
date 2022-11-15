@@ -23,6 +23,10 @@
     margin-bottom: 70px;
 }
 
+.signup-box h1 {
+    font-family: "Gotu";
+}
+
 img {
     width: 100%;
     object-fit: cover;
@@ -33,7 +37,7 @@ img {
 .signup-container {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(232, 232, 224);
 }
 
 .user-signup {
@@ -59,11 +63,11 @@ input {
 }
 
 .signup-button {
-    color: white;
-    background-color: #ec904e;
+    color: rgb(232, 232, 224);
+    background-color: #b15d22;
     width: 130px;
     height: 40px;
-    font-family: "Raleway Light";
+    font-family: "Raleway";
     border: none;
     border-radius: 5px;
     font-size: large;

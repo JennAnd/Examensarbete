@@ -40,7 +40,7 @@ body {
 } */
 .yogaclasses-container {
     color: rgb(232, 232, 224);
-    font-family: "Raleway Light";
+
     /* text-align: center; */
     display: flex;
     flex-direction: column;
@@ -52,8 +52,13 @@ body {
     text-align: center;
 }
 
+.yogaclass-type {
+    font-family: "Gotu";
+}
+
 .yogaclass-info {
     font-size: 14px;
+    font-family: "Raleway Light";
     /* margin-left: 30px; */
 }
 

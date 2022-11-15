@@ -32,6 +32,10 @@ nav li a {
     font-size: 18px;
 }
 
+nav a:hover {
+    font-weight: bolder;
+}
+
 li {
     list-style-type: none;
 }
@@ -55,6 +59,7 @@ nav div {
 
 .active {
     text-decoration: underline;
+    font-weight: bolder;
 }
 /*--- Desktop ---*/
 

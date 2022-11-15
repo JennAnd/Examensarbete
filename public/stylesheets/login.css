@@ -33,7 +33,7 @@ img {
 .login-container {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(232, 232, 224);
 }
 
 .user-login {
@@ -59,11 +59,11 @@ input {
 }
 
 .login-button {
-    color: white;
-    background-color: #ec904e;
+    color: rgb(232, 232, 224);
+    background-color: #b15d22;
     width: 130px;
     height: 40px;
-    font-family: "Raleway Light";
+    font-family: "Raleway";
     border: none;
     border-radius: 5px;
     font-size: large;
@@ -84,6 +84,7 @@ input {
 
 .login-box h1 {
     margin-bottom: 40px;
+    font-family: "Gotu";
 }
 
 form p {

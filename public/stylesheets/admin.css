@@ -33,7 +33,7 @@ h1 {
 .admin-container {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(232, 232, 224);
 }
 
 .admin-login {
@@ -63,8 +63,8 @@ label {
 }
 
 .admin-button {
-    color: white;
-    background-color: #ec904e;
+    color: rgb(232, 232, 224);
+    background-color: #b15d22;
     width: 130px;
     height: 40px;
     font-family: "Raleway Light";

@@ -30,7 +30,7 @@
 
 .item5 {
     grid-area: empty;
-    background-color: white;
+    color: rgb(232, 232, 224);
 }
 
 .grid-container {

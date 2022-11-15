@@ -15,7 +15,6 @@ body {
     width: 348px;
     height: 200px;
     background-color: rgba(0, 0, 0, 0.4);
-    font-family: "Raleway Light";
     text-align: center;
     padding-top: 20px;
     color: rgb(232, 232, 224);
@@ -27,12 +26,14 @@ body {
 .about-us-heading {
     font-size: 26px;
     margin-bottom: 6px;
+    font-family: "Gotu";
 }
 
 .about-us-heading-info {
     font-size: 14px;
     padding-left: 8px;
     padding-right: 8px;
+    font-family: "Raleway Light";
 }
 
 .about-us-boxes {
@@ -58,7 +59,7 @@ body {
 }
 
 .about-us-name {
-    font-family: "Raleway";
+    font-family: "Gotu";
 }
 
 .about-us-info {

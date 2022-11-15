@@ -30,7 +30,7 @@
 
 .item5 {
     grid-area: empty;
-    background-color: white;
+    color: rgb(232, 232, 224);
 }
 
 .grid-container {
@@ -73,7 +73,7 @@ h2 {
 }
 
 .button-booked {
-    background-color: #ec904e;
+    background-color: #b15d22;
     border: none;
     width: 30px;
     height: 30px;
