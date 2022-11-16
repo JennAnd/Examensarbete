@@ -1,7 +1,8 @@
 <nav>
     <!--logotype svg-->
     <a href="/">
-        LOGO
+        <img class="nav-logo" src="/assets/logo-white.svg" alt="">
+
     </a>
     <!-- Mobile nav -->
     <div class="nav-items">

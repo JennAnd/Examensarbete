@@ -42,6 +42,7 @@
     grid-area: booked;
     border: 2px solid #dcccb6;
     margin: 50px;
+    max-width: 500px;
 }
 .item4 {
     grid-area: notbooked;
@@ -50,6 +51,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 500px;
+    /* visibility: hidden; */
 }
 
 .grid-container {
@@ -73,14 +76,6 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-body {
-    margin: auto;
-}
-
-h2 {
-    font-size: 20px;
 }
 
 .payments-heading {
@@ -111,24 +106,33 @@ h2 {
     color: black;
 }
 
-.invoice-preview {
-    font-size: 12px;
+.invoice-header p {
+    font-size: 40px;
+    font-family: "Gotu";
 }
 
 .invoice-header,
-.invoice-contact {
+.invoice-contact,
+.invoice-sub-header,
+.invoice-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
+    font-size: 12px;
+    font-family: "Raleway";
+    margin-top: 15px;
 }
 
 .invoice-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
+    width: 65%;
     gap: 20px;
+    background-color: #fbf3e9;
+    padding: 10px;
+    font-family: "Raleway";
 }
 
 .invoice-details-one {
@@ -139,8 +143,41 @@ h2 {
     text-align: left;
 }
 hr {
-    border: 0.5px solid rgb(177, 177, 177);
+    border: 1px solid rgb(235, 232, 232);
 }
+
+.invoice-table {
+    width: 100%;
+    font-family: "Raleway";
+    border: 1px solid #dcccb6;
+    margin: 10px 0;
+}
+
+th {
+    font-size: 14px;
+    border-bottom: 1px solid #dcccb6;
+}
+td {
+    text-align: center;
+    font-size: 12px;
+}
+
+.invoice-total-one {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.invoice-total-two {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.invoice-preview {
+    width: 80%;
+}
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
@@ -156,11 +193,5 @@ hr {
     .item3 {
         height: 500px;
         overflow-y: scroll;
-    }
-
-    .invoice-preview {
-        padding: 20px;
-
-        border: 1px solid black;
     }
 }

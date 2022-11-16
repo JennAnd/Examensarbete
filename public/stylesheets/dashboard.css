@@ -48,7 +48,6 @@
 
 .filler-item {
     grid-area: filler;
-    /* background-color: rgb(147, 80, 80); */
     width: 100px;
 }
 .item3 {

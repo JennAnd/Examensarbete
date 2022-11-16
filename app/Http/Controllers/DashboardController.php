@@ -26,7 +26,7 @@ class DashboardController extends Controller
             ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
         $bookedYogaclasses = Auth::user()->yogaclasses;
         // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
-        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->get();
+        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('time', 'ASC')->get();
         // dd($bookedYogaclasses->only('id')->toArray());
 
         // Delete classes that expired

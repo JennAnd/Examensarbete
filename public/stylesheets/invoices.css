@@ -20,12 +20,25 @@
     background-color: #dcccb6;
 }
 
+.session-message {
+    font-size: 18px;
+    font-family: "Raleway";
+    z-index: 3;
+    background-color: #fbf3e9;
+    padding: 10px;
+}
+
 .item1 {
     grid-area: header;
 }
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
+}
+
+.filler-item {
+    grid-area: filler;
+    width: 100px;
 }
 .item3 {
     grid-area: invoices;
@@ -34,18 +47,13 @@
     margin: 50px;
 }
 
-.item5 {
-    grid-area: empty;
-    background-color: rgb(232, 232, 224);
-}
-
 .grid-container {
     display: grid;
     grid-template-areas:
         "menu"
         "header"
-        "invoices";
-
+        "invoices"
+        "filler";
     padding-top: 50px;
 }
 
@@ -71,10 +79,15 @@ h2 {
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
-            "menu header header"
-            "menu invoices invoices"
-            "menu empty empty";
+            "header header header header"
+            "menu filler invoices invoices";
     }
+
+    .item2 {
+        margin-top: 45px;
+        width: 220px;
+    }
+
     .item3 {
         height: 500px;
         overflow-y: scroll;

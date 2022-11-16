@@ -20,14 +20,15 @@
 }
 
 .logo {
-    margin-bottom: 70px;
+    width: 80px;
+    margin-bottom: 40px;
 }
 
 .signup-box h1 {
     font-family: "Gotu";
 }
 
-img {
+.signup-image {
     width: 100%;
     object-fit: cover;
     height: 150vh;
@@ -106,7 +107,7 @@ a {
         gap: 15px;
     }
 
-    img {
+    .signup-image {
         height: 100vh;
     }
 }

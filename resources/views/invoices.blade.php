@@ -5,7 +5,11 @@
 <div class="adminpanel-body">
     <div class="grid-container">
         <div class="item1">
-            <h1> Invoices </h1>
+            @if(session()->has('message'))
+            <div class="session-message">
+                {{ session()->get('message') }}
+            </div>
+            @endif
         </div>
         <div class="item2">
             @include('admin-sidenav')
@@ -14,7 +18,6 @@
             <h2>
                 All invoices
             </h2>
-
 
             <table>
                 <tr>

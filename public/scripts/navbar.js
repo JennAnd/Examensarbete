@@ -11,7 +11,7 @@ function showNavItems() {
 
     if (navItems.style.display === "block") {
         navItems.style.display = "none";
-        nav.style.height = "50px";
+        nav.style.height = "70px";
         goBack.style.display = "none";
         hamburger.style.display = "block";
     } else {
@@ -28,7 +28,7 @@ function changeNavWidth() {
     var nav = document.querySelector("nav");
     if (window.innerWidth >= 1040) {
         x.style.display = "none";
-        nav.style.height = "50px";
+        nav.style.height = "70px";
         goBack.style.display = "none";
         hamburger.style.display = "block";
     }

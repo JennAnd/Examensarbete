@@ -5,9 +5,8 @@
 <div class="adminmemberships-body">
     <div class="grid-container">
         <div class="item1">
-            <h1> Make memberships</h1>
             @if(session()->has('message'))
-            <div class="alert alert-success">
+            <div class="session-message">
                 {{ session()->get('message') }}
             </div>
             @endif
@@ -18,19 +17,20 @@
         <div class="item3">
 
             <div>
-                <h1>Memberships</h1>
-                <h2>Här visas alla memberships</h2>
+                <h2 class="yogaclasses-heading">Memberships</h2>
 
                 @foreach ($memberships as $membership)
-                <div>
-                    <p>{{$membership->type}}</p>
-                    <p>{{$membership->price}} USD</p>
+                <div class="membership-item">
+                    <div>
+                        <p>{{$membership->type}}</p>
+                        <p>{{$membership->price}} USD</p>
+                    </div>
+                    <form action="delete-membership" method="POST">
+                        @csrf
+                        <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
+                        <button class="adminpanel-button" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                    </form>
                 </div>
-                <form action="delete-membership" method="POST">
-                    @csrf
-                    <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
-                    <button>Delete membership</button>
-                </form>
                 @endforeach
             </div>
             <div>
@@ -40,27 +40,26 @@
         <div class="item4">
 
             <div>
-                <h2>Här kan man skapa memberships</h2>
+                <h2 class="yogaclasses-heading">Create membership</h2>
                 <form action="make-membership" method="post">
                     @csrf
-                    <div>
+                    <div class="input-column">
                         <label for="type">Membership type</label>
                         <input name="type" id="type" type="text" required />
                     </div>
-                    <div>
+                    <div class="input-column">
                         <label for="price">Price</label>
-                        <input name="price" id="price" type="text" required />
-                        <p>USD</p>
+                        <input name="price" id="price" type="text" required placeholder="USD" />
                     </div>
-                    <div>
+                    <div class="input-column">
                         <label for="amount_classes">Amount classes</label>
                         <input name="amount_classes" id="amount_classes" type="text" required />
                     </div>
-                    <button type="submit">Add membership</button>
+                    <button type="submit" class="adminpanel-button">Add</button>
                 </form>
             </div>
 
         </div>
-        <!-- <div class="item5"></div> -->
+
     </div>
 </div>

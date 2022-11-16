@@ -35,7 +35,7 @@
         </div>
 
         <div class="item4">
-            <h2 class="profile-heading">Buy a membership</h2>
+            <h2 class="profile-heading">Buy classes</h2>
             @foreach ($memberships as $membership)
             <div class="created-membership">
                 <div>

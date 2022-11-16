@@ -2,7 +2,7 @@
 <nav>
     <!--logotype svg-->
     <a href="/">
-        LOGO
+        <img class="profile-nav-logo" src="assets/logo-white.svg" alt="">
     </a>
 
     <!-- Mobile nav -->

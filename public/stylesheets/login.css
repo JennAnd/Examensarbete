@@ -20,10 +20,11 @@
 }
 
 .logo {
-    margin-bottom: 70px;
+    width: 80px;
+    margin-bottom: 40px;
 }
 
-img {
+.login-image {
     width: 100%;
     object-fit: cover;
     height: 100vh;

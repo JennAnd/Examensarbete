@@ -87,6 +87,6 @@ class PaymentsController extends Controller
         $paidInvoice->paid = 1;
         $paidInvoice->update();
 
-        return redirect('invoices');
+        return redirect('invoices')->with('message', "You have confirmed a payment.");
     }
 }

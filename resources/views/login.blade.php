@@ -4,7 +4,7 @@
     <div class="login-container">
         <img class="login-image" src="/assets/loginpage.webp" />
         <div class="user-login">
-            <h2 class="logo"><a href="/">LOGO</a></h2>
+            <a href="/"><img class="logo" src="assets/logo-white.svg" alt=""></a>
             <div class="login-box">
                 <h1> Log in </h1>
                 @if(session()->has('message'))

@@ -8,6 +8,11 @@
     font-family: "Raleway Light";
 }
 
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -20,6 +25,14 @@
     background-color: #dcccb6;
 }
 
+.session-message {
+    font-size: 18px;
+    font-family: "Raleway";
+    z-index: 3;
+    background-color: #fbf3e9;
+    padding: 10px;
+}
+
 .item1 {
     grid-area: header;
 }
@@ -27,22 +40,21 @@
     grid-area: menu;
     background-color: #dcccb6;
 }
+
+.filler-item {
+    grid-area: filler;
+    width: 100px;
+}
 .item3 {
     grid-area: booked;
 
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
 }
 .item4 {
     grid-area: notbooked;
-
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
-}
-
-.item5 {
-    grid-area: empty;
-    background-color: rgb(232, 232, 224);
 }
 
 .grid-container {
@@ -51,7 +63,8 @@
         "menu"
         "header"
         "booked"
-        "notbooked";
+        "notbooked"
+        "filler";
 
     padding-top: 50px;
 }
@@ -75,16 +88,102 @@ h2 {
     font-size: 20px;
 }
 
+.yogaclass {
+    background-color: #fbf3e9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: "Gotu";
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.yogaclass-details {
+    text-align: left;
+}
+
+.yogaclass-time {
+    font-size: 16px;
+}
+
+.yogaclass-title {
+    font-size: 14px;
+}
+.yogaclass-date {
+    font-family: "Raleway";
+    font-size: 14px;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.yogaclasses-heading {
+    font-family: "Raleway Light";
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.adminpanel-button {
+    background-color: #c27b49;
+    border: none;
+    color: rgb(232, 232, 224);
+    font-size: 14px;
+    font-family: "Raleway";
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.adminpanel-button:hover {
+    background-color: #b15d22;
+    cursor: pointer;
+}
+.input-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+    background-color: #fbf3e9;
+}
+
+label {
+    font-size: 14px;
+    font-family: "Raleway";
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
-            "menu header header header header"
-            "menu booked booked notbooked notbooked"
-            "menu empty empty empty empty";
+            "header header header header header"
+            "menu filler booked notbooked notbooked";
+    }
+    .item2 {
+        margin-top: 45px;
+        width: 220px;
     }
 
     .item4 {
         height: 500px;
         overflow-y: scroll;
+    }
+
+    .invoice-preview {
+        width: 100%;
     }
 }

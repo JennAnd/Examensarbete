@@ -16,7 +16,7 @@
         </div>
         <div class="filler-item"></div>
         <div class="item3">
-            <h2 class="payments-heading">Här är alla fakturor</h2>
+            <h2 class="payments-heading">Invoice history</h2>
             @foreach ($invoices as $invoice)
             <div class="invoice">
                 <p>
@@ -25,6 +25,7 @@
                 <p> </p>
                 @if ($invoice->paid)
                 <p>✔</p>
+                @else <p></p>
                 @endif
 
             </div>
@@ -33,56 +34,54 @@
         </div>
 
         <div class="item4">
-            <h2 class="payments-heading">Faktura preview</h2>
             @if (count($invoices) > 0)
             <div class="invoice-preview">
                 <div class="invoice-header">
-                    <h2>Invoice</h2>
-                    <img src="/assets/mandala.svg" />
+                    @if ($clicked_invoice->paid)
+                    <p>Invoice (paid)
+                    </p>
+                    @else
+                    <p>Invoice</p>
+                    @endif
+                    <img src="/assets/logo-orange.svg" />
                 </div>
                 <hr>
 
-                <div class="invoice-contact">
-                    <div>
-                        <h3>Company name</h3>
-                        <p>Address line 1</p>
-                        <p>Postal code and city</p>
-                        <p>Country</p>
-                        <p>Telefonnummer</p>
-                    </div>
-                    <div>
-                        <h3>To</h3>
-                        <p>{{$user->firstname . " " . $user->lastname}}</p>
-                        <p>{{$user->address}}</p>
-                        <p>{{$user->postal_code . " " . $user->city}}</p>
-                        <p>{{$user->country}}</p>
-                    </div>
-                </div>
+                <div class="invoice-sub-header">
 
-                <div class="invoice-details">
-
-                    <div class="invoice-details-one">
-                        <p>Invoice date: </p>
-                        <p>Invoice number:</p>
-                        <p>Client reference:
-                        </p>
-                        <p>Due date: </p>
-                        <p>Terms: </p>
-                    </div>
-                    <div class="invoice-details-two">
-                        <p>{{date("Y-m-d")}}</p>
-                        <p> #000{{$clicked_invoice->id}}
-                        </p>
-                        <p>{{$user->id}}
-                        </p>
-                        <p> {{$clicked_invoice->due_date}}</p>
-                        <p>30 days</p>
+                    <div class="invoice-contact">
+                        <div>
+                            <p>To</p>
+                            <p>{{$user->firstname . " " . $user->lastname}}</p>
+                            <p>{{$user->address}}</p>
+                            <p>{{$user->postal_code . " " . $user->city}}</p>
+                            <p>{{$user->country}}</p>
+                        </div>
                     </div>
 
+                    <div class="invoice-details">
+                        <div class="invoice-details-one">
+                            <p>Invoice date </p>
+                            <p>Invoice number</p>
+                            <p>Client reference
+                            </p>
+                            <p>Due date </p>
+                            <p>Terms </p>
+                        </div>
+                        <div class="invoice-details-two">
+                            <p>{{date("Y-m-d")}}</p>
+                            <p> #000{{$clicked_invoice->id}}
+                            </p>
+                            <p>{{$user->id}}
+                            </p>
+                            <p> {{$clicked_invoice->due_date}}</p>
+                            <p>30 days</p>
+                        </div>
+                    </div>
                 </div>
 
                 <hr>
-                <table>
+                <table class="invoice-table">
                     <tr>
                         <th>Description</th>
                         <th>Qty</th>
@@ -98,49 +97,72 @@
                         <td>
                             1
                         </td>
-                        <td>$ {{$membership->price}}
+                        <td>$ {{$membership->price}}.00
 
                         </td>
                         <td>20%</td>
-                        <td>$ {{$VAT}}
+                        <td>$ {{$VAT}}.00
 
                         </td>
-                        <td>$ {{$clicked_invoice->total_amount}} </td>
+                        <td>$ {{$clicked_invoice->total_amount}}.00 </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="invoice-total-one">
+                                <p>Sub total</p>
+                                <p>Total VAT</p>
+                                <p>Total amount</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="invoice-total-two">
+                                <p>${{$membership->price}}.00
+                                </p>
+                                <p>${{$VAT}}.00
+                                </p>
+                                <p>${{$clicked_invoice->total_amount}}.00
+                                </p>
+                            </div>
+
+                        </td>
+
                     </tr>
                 </table>
 
-                <p>Sub total: $ {{$membership->price}}
-
-                </p>
-                <p>Total VAT: $ {{$VAT}}
-
-                </p>
-                <p>Total amount due: $ {{$clicked_invoice->total_amount}}
-
-                </p>
-
                 <hr>
-                <div>
+                <div class="invoice-footer">
                     <div>
-                        <p>Registered address</p>
-                        <p>Adress Line 1</p>
-                        <p>City, Postal Code</p>
-                        <p>Country</p>
-                    </div>
-                    <div>
-                        <p>Contact information</p>
-                        <p>Namn på företaget</p>
-                        <p>Phone number:</p>
-                        <p>Email:</p>
+                        <p>Ananda Yoga</p>
+                        <p>Beraban, Kediri, Tabanan</p>
+                        <p>82121 Bali</p>
+                        <p>Indonesia</p>
+                        <p>info@anandayoga.com</p>
+                        <p>+62 36 123 456 123</p>
                     </div>
                     <div>
                         <p>Payment details</p>
-                        <p>Bank name:</p>
-                        <p>Sort-Code:</p>
-                        <p>Account No.</p>
+                        <div>
+                            <p>Bank name Lorem ipsum</p>
+                            <p>Sort-Code 12-34-56</p>
+                            <p>Account No. 1234 5678 9012</p>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum</p>
+                            <p>12-34-56</p>
+                            <p>1234 5678 9012</p>
+                        </div>
                     </div>
                 </div>
-
             </div>
             @endif
 

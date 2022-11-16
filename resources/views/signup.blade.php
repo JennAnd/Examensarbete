@@ -3,9 +3,9 @@
 
 <body>
     <div class="signup-container">
-        <img class="login-image" src="/assets/loginpage.webp" />
+        <img class="signup-image" src="/assets/loginpage.webp" />
         <div class="user-signup">
-            <h2 class="logo"><a href="/">LOGO</a></h2>
+            <a href="/"><img class="logo" src="assets/logo-white.svg" alt=""></a>
             <div class="signup-box">
                 <h1> Sign up </h1>
                 @include('errors')
