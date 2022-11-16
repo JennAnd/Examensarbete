@@ -23,7 +23,7 @@ class YogaclassController extends Controller
             'time' => $request->get('time'),
             'length' => $request->get('class-length'),
             'available' => $request->get('available'),
-            'reserved' => $request->get('reserved'),
+            'reserved' => 0,
         ]);
 
         $yogaclass->save();

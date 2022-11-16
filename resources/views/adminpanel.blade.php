@@ -43,10 +43,7 @@
                         <label for="available">Available spots</label>
                         <input name="available" id="available" type="number" required />
                     </div>
-                    <div>
-                        <label for="reserved">Reserved</label>
-                        <input name="reserved" id="reserved" type="number" required />
-                    </div>
+
                     <button type="submit">Add class</button>
                 </form>
 
