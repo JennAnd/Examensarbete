@@ -8,6 +8,18 @@
     font-family: "Raleway Light";
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fbf3e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dcccb6;
+}
+
 .item1 {
     grid-area: header;
 }
@@ -69,5 +81,10 @@ h2 {
             "menu header header header header"
             "menu booked booked notbooked notbooked"
             "menu empty empty empty empty";
+    }
+
+    .item4 {
+        height: 500px;
+        overflow-y: scroll;
     }
 }

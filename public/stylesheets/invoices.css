@@ -8,6 +8,18 @@
     font-family: "Raleway Light";
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fbf3e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dcccb6;
+}
+
 .item1 {
     grid-area: header;
 }
@@ -62,5 +74,9 @@ h2 {
             "menu header header"
             "menu invoices invoices"
             "menu empty empty";
+    }
+    .item3 {
+        height: 500px;
+        overflow-y: scroll;
     }
 }

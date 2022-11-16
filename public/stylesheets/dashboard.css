@@ -13,6 +13,18 @@
     font-family: "Gotu";
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fbf3e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dcccb6;
+}
+
 .dashboard-body {
     background-color: white;
 }
@@ -164,6 +176,11 @@ h2 {
     .item2 {
         margin-top: 45px;
         width: 220px;
+    }
+    .item4,
+    .item3 {
+        height: 500px;
+        overflow-y: scroll;
     }
 
     /* .item3 {
