@@ -59,6 +59,6 @@ class ProfileController extends Controller
         ]);
         $invoice->save();
 
-        return redirect('payments')->with('message', "You've successfully purchased yoga classes. You can see your invoice to the right and find your yogaclasses in 'My membership'");
+        return redirect('payments')->with('message', "You've successfully purchased yoga classes. You can see your invoice to the right and find your balance in 'My profile'");
     }
 }
