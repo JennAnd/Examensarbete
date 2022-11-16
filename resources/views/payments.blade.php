@@ -22,10 +22,10 @@
                 <p>
                     <a href="/payments/{{$invoice->id}}"> {{$invoice->created_at}}</a>
                 </p>
+                <p> </p>
                 @if ($invoice->paid)
                 <p>✔</p>
                 @endif
-                <p></p>
 
             </div>
             @endforeach
