@@ -15,7 +15,7 @@
             @include('admin-sidenav')
         </div>
         <div class="item3">
-            <h2>
+            <h2 class="all-invoices">
                 All invoices
             </h2>
 
@@ -53,7 +53,7 @@
                         <form action="confirm-payment" method="POST">
                             @csrf
                             <input type="hidden" value="<?= $invoice->id ?>" name="invoice_id">
-                            <button type="submit" onclick="return confirm('Are you sure you want to confirm this invoice as paid?')">Confirm as paid</button>
+                            <button class="invoice-paid-button" type="submit" onclick="return confirm('Are you sure you want to confirm this invoice as paid?')">Comfirm as paid</button>
                         </form>
                         @else
                         <p>✔</p>

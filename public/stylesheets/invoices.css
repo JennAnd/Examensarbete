@@ -8,6 +8,11 @@
     font-family: "Raleway Light";
 }
 
+@font-face {
+    src: url("/fonts/Gotu-Regular.woff");
+    font-family: "Gotu";
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -43,7 +48,7 @@
 .item3 {
     grid-area: invoices;
 
-    border: 3px solid #dcccb6;
+    border: 2px solid #dcccb6;
     margin: 50px;
 }
 
@@ -72,8 +77,38 @@ body {
     margin: auto;
 }
 
-h2 {
-    font-size: 20px;
+table {
+    width: 100%;
+    font-family: "Raleway";
+    border: 1px solid #dcccb6;
+    margin: 10px 0;
+}
+tr {
+    height: 40px;
+}
+
+th {
+    font-size: 14px;
+    border-bottom: 1px solid #dcccb6;
+}
+td {
+    text-align: center;
+    font-size: 14px;
+}
+
+.all-invoices {
+    font-size: 28px;
+    font-family: "Raleway Light";
+}
+
+.invoice-paid-button {
+    background-color: #c27b49;
+    border: none;
+    color: rgb(232, 232, 224);
+    font-size: 14px;
+    font-family: "Raleway";
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 @media screen and (min-width: 1040px) {
