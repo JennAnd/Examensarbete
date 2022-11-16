@@ -26,9 +26,9 @@ img {
     filter: brightness(0.5);
 }
 
-h1 {
+/* h1 {
     color: red;
-}
+} */
 
 .admin-container {
     position: relative;
