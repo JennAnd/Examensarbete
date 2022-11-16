@@ -18,17 +18,19 @@
         <div class="item3">
             <h2 class="payments-heading">Invoice history</h2>
             @foreach ($invoices as $invoice)
-            <div class="invoice">
-                <p>
-                    <a href="/payments/{{$invoice->id}}"> {{$invoice->created_at}}</a>
-                </p>
-                <p> </p>
-                @if ($invoice->paid)
-                <p>✔</p>
-                @else <p></p>
-                @endif
+            <a href="/payments/{{$invoice->id}}">
+                <div class="invoice">
+                    <p>
+                        {{$invoice->created_at}}
+                    </p>
+                    <p> </p>
+                    @if ($invoice->paid)
+                    <p>✔</p>
+                    @else <p></p>
+                    @endif
 
-            </div>
+                </div>
+            </a>
             @endforeach
 
         </div>

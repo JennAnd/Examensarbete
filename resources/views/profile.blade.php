@@ -31,6 +31,46 @@
                 <p>{{$user->city}}</p>
                 <p>{{$user->country}}</p>
             </div>
+            <div class="edit-form">
+
+
+                <form class="edit-contact" method="POST" action="/edit-contact">
+                    @csrf
+                    <div class="edit-contact-heading">
+                        <p class="edit-contact-title"><b>Edit contact info</b></p>
+                        <button class="button-edit-contact" type="submit" class="button-save-contact">Save</button>
+                    </div>
+                    <div class="input-column">
+                        <label for="">First name</label>
+                        <input required type="text" name="firstname" id="firstname" value="<?= $user->firstname ?>">
+                    </div>
+                    <div class="input-column">
+                        <label for="">Last name</label>
+                        <input required type="text" name="lastname" id="lastname" value="<?= $user->lastname ?>">
+                    </div>
+                    <div class="input-column">
+                        <label for="">Email</label>
+                        <input required type="email" name="email" id="email" value="<?= $user->email ?>">
+                    </div>
+                    <div class="input-column">
+                        <label for="">Address</label>
+                        <input required type="text" name="address" id="address" value="<?= $user->address ?>">
+                    </div>
+                    <div class="input-column">
+                        <label for="">Postal Code</label>
+                        <input required type="number" name="postal_code" id="postal_code" value="<?= $user->postal_code ?>">
+                    </div>
+                    <div class="input-column">
+                        <label for="">City</label>
+                        <input required type="text" name="city" id="city" value="<?= $user->city ?>">
+                    </div>
+                    <div class="input-column">
+                        <label for="">Country</label>
+                        <input required type="text" name="country" id="country" value="<?= $user->country ?>">
+                    </div>
+
+                </form>
+            </div>
 
         </div>
 
@@ -56,3 +96,5 @@
     </div>
     <img class="profile-image" src="assets/memberships.webp" alt="">
 </div>
+
+<script src="/scripts/profile.js"></script>

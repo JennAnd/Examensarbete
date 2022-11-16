@@ -78,5 +78,8 @@ Route::post('delete-membership', [MembershipController::class, 'deleteMembership
 Route::post('make-membership', MembershipController::class);
 Route::get('/memberships', [MembershipController::class, 'showMemberships'])->name('memberships');
 
+
 Route::post('delete-yogaclass', [YogaclassController::class, 'deleteYogaclass']);
 Route::post('make-yogaclass', YogaclassController::class);
+
+Route::post('edit-contact', [MembershipController::class, 'editContactInfo']);

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Membership;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MembershipController extends Controller
 {
@@ -42,5 +44,20 @@ class MembershipController extends Controller
         return view('memberships', [
             'memberships' => $memberships,
         ]);
+    }
+
+    public function editContactInfo(Request $request)
+    {
+        $user = User::find(Auth::user()->id);
+        $user->firstname = $request->get('firstname');
+        $user->lastname = $request->get('lastname');
+        $user->email = $request->get('email');
+        $user->address = $request->get('address');
+        $user->postal_code = $request->get('postal_code');
+        $user->city = $request->get('city');
+        $user->country = $request->get('country');
+        $user->update();
+
+        return redirect()->back()->with('message', "You've successfully updated your contact information.");
     }
 }
