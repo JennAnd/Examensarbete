@@ -27,6 +27,7 @@ body {
     font-size: 26px;
     margin-bottom: 6px;
     font-family: "Gotu";
+    padding-left: 8px;
 }
 
 .about-us-heading-info {
@@ -89,6 +90,13 @@ body {
     .about-us-single-box {
         margin-top: 90px;
         margin-left: 60px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .about-us-heading-box {
+        text-align: left;
+        padding-left: 10px;
     }
 }
 

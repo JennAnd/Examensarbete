@@ -3,8 +3,8 @@
 
 <img class="about-us-image" src="/assets/about-us.webp" />
 <div class="about-us-heading-box">
-    <h1 class="about-us-heading">About Yoga name</h1>
-    <p class="about-us-heading-info">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amett Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+    <h1 class="about-us-heading">About Ananda Yoga</h1>
+    <p class="about-us-heading-info">We are two friends who decided to fullfill our dream and opened a yoga studio in 2022 on the beautiful island, Bali, located in Indonesia. If you want to get to know us better, please scroll down the page or come visit us in Bali. </p>
 </div>
 <div class="about-us-container">
     @include('mandala')
