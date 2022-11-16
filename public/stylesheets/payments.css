@@ -55,6 +55,14 @@
     /* visibility: hidden; */
 }
 
+.session-message {
+    font-size: 18px;
+    font-family: "Raleway";
+    z-index: 3;
+    background-color: #fbf3e9;
+    padding: 10px;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas:

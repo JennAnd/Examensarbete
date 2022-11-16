@@ -6,7 +6,7 @@
     <div class="grid-container">
         <div class="item1">
             @if(session()->has('message'))
-            <div class="alert alert-success">
+            <div class="session-message">
                 {{ session()->get('message') }}
             </div>
             @endif
