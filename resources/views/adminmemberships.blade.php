@@ -49,11 +49,11 @@
                     </div>
                     <div class="input-column">
                         <label for="price">Price</label>
-                        <input name="price" id="price" type="text" required placeholder="USD" />
+                        <input name="price" id="price" type="number" required placeholder="USD" />
                     </div>
                     <div class="input-column">
                         <label for="amount_classes">Amount classes</label>
-                        <input name="amount_classes" id="amount_classes" type="text" required />
+                        <input name="amount_classes" id="amount_classes" type="number" required />
                     </div>
                     <button type="submit" class="adminpanel-button">Add</button>
                 </form>
