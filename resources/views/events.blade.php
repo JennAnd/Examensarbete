@@ -19,7 +19,7 @@
         </div>
         @endforeach
     </div>
-    <p class="events-end-section">For reservation and more information about our events, please contact us <a href="mailto:john@example.com">here. </a>
+    <p class="events-end-section">For reservation and more information about our events, please contact us <a href="mailto:info@anandayoga.com">here. </a>
     </p>
     <form>
 

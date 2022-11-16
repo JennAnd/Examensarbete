@@ -12,6 +12,19 @@
     src: url("/fonts/Gotu-Regular.woff");
     font-family: "Gotu";
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fbf3e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dcccb6;
+}
+
 .filler-item {
     grid-area: filler;
     /* background-color: rgb(147, 80, 80); */
@@ -136,6 +149,11 @@ hr {
     .item2 {
         margin-top: 45px;
         width: 220px;
+    }
+
+    .item3 {
+        height: 500px;
+        overflow-y: scroll;
     }
 
     .invoice-preview {
