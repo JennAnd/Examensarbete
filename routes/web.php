@@ -57,6 +57,7 @@ Route::get('ourclasses', [OurClassesController::class, 'index'])->name('ourclass
 Route::get('ourclasses/{id}', [OurClassesController::class, 'show'])->name('ourclasses.show');
 
 Route::get('/profile', ProfileController::class)->middleware('auth')->name('profile');
+Route::get('/profileconfirm', [ProfileController::class, 'profileConfirmView'])->middleware('auth');
 Route::post('buy-membership', [ProfileController::class, 'buyMembership']);
 Route::get('/adminpanel', AdminPanelController::class)->middleware('admin')->name('adminpanel');
 

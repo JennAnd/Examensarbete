@@ -70,7 +70,25 @@ class ProfileController extends Controller
 
             return redirect('payments')->with('message', "You've successfully purchased yoga classes. You can see your invoice to the right and find your balance in 'My profile'");
         } else {
-            return redirect('profile')->with('message', "wrong");
+            return redirect()->back()->with('message', "You've provided the wrong password. Please try again.");
         }
+    }
+
+    public function profileConfirmView()
+    {
+        $memberships = Membership::select('*')
+            ->get();
+
+        $user = Auth::user();
+        $total_classes = $user->total_classes;
+
+        $membership = Membership::find($_GET['hidden-input-id']);
+
+        return view('profileconfirm', [
+            'memberships' => $memberships,
+            'total_classes' => $total_classes,
+            'user' => $user,
+            'membership' => $membership
+        ]);
     }
 }

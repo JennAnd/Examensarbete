@@ -16,6 +16,14 @@
     display: none;
 }
 
+.session-message {
+    font-size: 18px;
+    font-family: "Raleway";
+    z-index: 3;
+    background-color: #fbf3e9;
+    padding: 10px;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -31,7 +39,7 @@
 .profile-heading {
     font-family: "Raleway Light";
     font-size: 24px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .profile-info,
@@ -197,6 +205,18 @@ form {
     display: none;
 } */
 
+.shopping-cart {
+    border: 1px solid #dcccb6;
+    margin: 20px;
+    font-family: "Raleway";
+    padding: 20px;
+    font-size: 14px;
+}
+
+.shopping-cart-total {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
