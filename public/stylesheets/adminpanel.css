@@ -48,13 +48,12 @@
 .item3 {
     grid-area: booked;
     border: 2px solid #dcccb6;
-    margin: 50px;
 }
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;
-    margin: 50px;
-    min-width: 380px;
+
+    min-width: 350px;
 }
 
 .grid-container {
@@ -167,9 +166,14 @@ form {
     align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
     input {
         width: 500px;
+    }
+
+    .item3,
+    .item4 {
+        margin: 50px;
     }
 }
 @media screen and (min-width: 1040px) {
