@@ -62,8 +62,8 @@
     grid-template-areas:
         "menu"
         "header"
-        "booked"
         "notbooked"
+        "booked"
         "filler";
 
     padding-top: 50px;
