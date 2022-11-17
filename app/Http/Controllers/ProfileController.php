@@ -32,8 +32,10 @@ class ProfileController extends Controller
         ]);
     }
 
+
     public function buyMembership(Request $request)
     {
+        //first check if password is correct to this authorised user
 
         // Change amount of classes this user have in account
         $user = Auth::user();

@@ -189,6 +189,10 @@ form {
     display: none;
 }
 
+.password-field {
+    display: flex;
+}
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
