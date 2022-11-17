@@ -52,7 +52,7 @@
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;
-
+    margin-bottom: 50px;
     min-width: 350px;
 }
 
