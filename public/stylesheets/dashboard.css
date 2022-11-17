@@ -134,24 +134,44 @@ h2 {
 .button-booked {
     background-color: #c27b49;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 31px;
+    height: 31px;
+    border-radius: 100%;
+    color: rgb(232, 232, 224);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-booked-2 {
+    background-color: #c27b49;
+    border: none;
+    width: 31px;
+    height: 31px;
     border-radius: 100%;
     color: rgb(232, 232, 224);
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.button-booked:hover {
+.button-booked:hover,
+.button-booked-2:hover {
     background-color: #b15d22;
 }
 
 .button-booked-disabled {
     background-color: rgb(174, 167, 167);
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 31px;
+    height: 31px;
     border-radius: 100%;
-    color: rgb(96, 96, 96);
-    font-size: 18px;
+    color: rgb(232, 232, 224);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* @media screen and (min-width: 768px) {

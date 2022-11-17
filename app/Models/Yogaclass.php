@@ -12,8 +12,7 @@ class Yogaclass extends Model
     protected $fillable = [
         'class_name',
         'teacher',
-        'date',
-        'time',
+        'datetime',
         'length',
         'available',
         'reserved',

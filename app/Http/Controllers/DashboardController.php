@@ -23,24 +23,24 @@ class DashboardController extends Controller
 
 
         $yogaclasses = Yogaclass::select('*')
-            ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
+            ->orderBy('datetime')->get();
         $bookedYogaclasses = Auth::user()->yogaclasses;
         // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
-        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
+        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('datetime')->get();
         // dd($bookedYogaclasses->only('id')->toArray());
 
         // Delete classes that expired
 
-        // foreach ($yogaclasses as $yogaclass) {
-        //     if (strtotime('now') >= strtotime($yogaclass->time)) {
-        //         $expiredYogaclass = Yogaclass::find($yogaclass->id);
-        //         $expiredYogaclass->delete();
-        //     }
-        // }
+        foreach ($yogaclasses as $yogaclass) {
+            if (strtotime('now') >= strtotime($yogaclass->datetime)) {
+                $expiredYogaclass = Yogaclass::find($yogaclass->id);
+                $expiredYogaclass->delete();
+            }
+        }
 
         // Fetch again after deleted yoga class
         $yogaclasses = Yogaclass::select('*')
-            ->orderBy('date', 'ASC')->orderBy('time', 'ASC')->get();
+            ->orderBy('datetime')->get();
 
         return view('dashboard', [
             'user' => $user,

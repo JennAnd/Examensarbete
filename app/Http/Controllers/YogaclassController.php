@@ -19,8 +19,7 @@ class YogaclassController extends Controller
         $yogaclass = new Yogaclass([
             'class_name' => $request->get('class_name'),
             'teacher' => $request->get('teacher'),
-            'date' => $request->get('date'),
-            'time' => $request->get('time'),
+            'datetime' => $request->get('datetime'),
             'length' => $request->get('class-length'),
             'available' => $request->get('available'),
             'reserved' => 0,

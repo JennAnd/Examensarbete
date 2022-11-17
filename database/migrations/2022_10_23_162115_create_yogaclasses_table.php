@@ -19,8 +19,7 @@ return new class extends Migration
             $table->timestamps();
             $table->text('class_name');
             $table->text('teacher');
-            $table->date('date');
-            $table->time('time');
+            $table->datetime('datetime');
             $table->integer('available');
             $table->integer('reserved');
             $table->integer('length');

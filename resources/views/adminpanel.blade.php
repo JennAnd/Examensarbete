@@ -28,14 +28,18 @@
                         <label for="teacher">Teacher</label>
                         <input name="teacher" id="teacher" type="text" required />
                     </div>
-                    <div class="input-column">
+                    <!-- <div class="input-column">
                         <label for="date">Date</label>
                         <input name="date" id="date" type="date" required />
-                    </div>
+                    </div> -->
                     <div class="input-column">
+                        <label for="date">Date</label>
+                        <input name="datetime" id="datetime" type="datetime-local" required />
+                    </div>
+                    <!-- <div class="input-column">
                         <label for="time">Time</label>
                         <input name="time" id="time" type="time" required />
-                    </div>
+                    </div> -->
                     <div class="input-column">
                         <label for="class-length">Length</label>
                         <input name="class-length" id="class-length" type="number" required />
@@ -56,10 +60,10 @@
             <div class="show-yogaclasses">
                 <h2 class="yogaclasses-heading">Yogaclasses</h2>
                 @foreach ($yogaclasses as $yogaclass)
-                <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->date));}}</p>
+                <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>
                 <div class="yogaclass">
                     <div class="yogaclass-details">
-                        <p class="yogaclass-time">{{ $cleantime = substr($yogaclass->time,0,-3)}}</p>
+                        <p class="yogaclass-time">{{date("H:i", strtotime($yogaclass->datetime));}} </p>
                         <p class="yogaclass-title">{{$yogaclass->class_name}}, {{$yogaclass->length}} min</p>
                         <p>{{$yogaclass->teacher}}</p>
                     </div>
