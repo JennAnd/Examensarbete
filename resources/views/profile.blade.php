@@ -5,7 +5,11 @@
 <div class="profile-body">
     <div class="grid-container">
         <div class="item1">
-
+            @if(session()->has('message'))
+            <div class="session-message">
+                {{ session()->get('message') }}
+            </div>
+            @endif
         </div>
         <div class="item2">
             @include('sidenav')
@@ -14,38 +18,22 @@
         <div class="item3">
             <h2 class="profile-heading">Your membership</h2>
             <h2 class="profile-heading">Please confirm your password to purchase.</h2>
-            <div>
-                <form action="">
+            <div class="buy-membership-form">
+                <form action="buy-membership" method="post">
+                    @csrf
                     <input class="hidden-value" type="hidden" value="">
                     <div class="input-column">
                         <label for="">Password</label>
                         <div class="password-field">
-                            <input type="password">
-                            <button type="submit" class="button-edit-contact">Confirm</button>
-                        </div>
-                    </div>
-                    <div class="input-column">
-                        <label for="">Testd</label>
-                        <div>
-                            <input class="test-input" type="text" value="hej">
+                            <input type="password" name="password" id="password">
                             <button type="submit" class="button-edit-contact">Confirm</button>
                         </div>
                     </div>
                     @if (isset($_GET["hidden-input-amount"] ))
-                    <div>
-                        {{ $_GET['hidden-input-amount'] }}
-                    </div>
-                    @else
-                    <div>hello</div>
+                    <input type="hidden" name="amount_classes" id="amount_classes" value="<?= $_GET['hidden-input-amount'] ?>">
                     @endif
-
                     @if (isset($_GET["hidden-input-id"] ))
-                    <div>
-
-                        {{ $_GET['hidden-input-id'] }}
-                    </div>
-                    @else
-                    <div>hello</div>
+                    <input type="hidden" name="membership_id" id="membership_id" value="<?= $_GET['hidden-input-id'] ?>">
                     @endif
                 </form>
             </div>
@@ -115,8 +103,7 @@
                     <p class="created-title">{{$membership->type}}</p>
                     <p class="created-price">{{$membership->price}} USD</p>
                 </div>
-                <div class="hidden-membership-amount">{{$membership->amount_classes}}</div>
-                <div class="hidden-membership-id">{{$membership->id}}</div>
+
                 <form action="profile" method="get">
                     <input class="hidden-input-amount" name="hidden-input-amount" id="hidden-input-amount" type="hidden" value="<?= $membership->amount_classes ?>">
                     <input class="hidden-input-id" name="hidden-input-id" id="hidden-input-id" type="hidden" value="<?= $membership->id ?>">

@@ -1,23 +1,23 @@
-// const form = document.querySelector(".edit-form");
-// const editButton = document.querySelector(".button-edit-contact");
-// const contactBox = document.querySelector(".profile-info");
-// const buyButtons = document.querySelectorAll(".button-buy");
-// const testInput = document.querySelector(".test-input");
-// const hiddenAmounts = document.querySelectorAll(".hidden-membership-amount");
-// const hiddenInputAmounts = document.querySelectorAll(".hidden-input-amount");
-// editButton.addEventListener("click", showForm);
+const form = document.querySelector(".edit-form");
+const editButton = document.querySelector(".button-edit-contact");
+const contactBox = document.querySelector(".profile-info");
+const buyButtons = document.querySelectorAll(".button-buy");
+const testInput = document.querySelector(".test-input");
+const hiddenAmounts = document.querySelectorAll(".hidden-membership-amount");
+const hiddenInputAmounts = document.querySelectorAll(".hidden-input-amount");
+const passwordForm = document.querySelector(".buy-membership-form");
 
-// function showForm() {
-//     form.style.display = "block";
-//     contactBox.style.display = "none";
-// }
+editButton.addEventListener("click", showForm);
+
+function showForm() {
+    form.style.display = "block";
+    contactBox.style.display = "none";
+}
 
 // buyButtons.forEach((buyButton) => {
-//     buyButton.addEventListener("click", sendValue);
+//     buyButton.addEventListener("click", showPasswordForm);
 // });
 
-// function sendValue() {
-//     hiddenAmounts.forEach((hiddenAmount) => {
-//         testInput.value = hiddenAmount.textContent;
-//     });
+// function showPasswordForm() {
+//     passwordForm.style.display = "block";
 // }

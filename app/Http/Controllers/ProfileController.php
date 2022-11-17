@@ -7,6 +7,7 @@ use App\Models\Membership;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -36,31 +37,40 @@ class ProfileController extends Controller
     public function buyMembership(Request $request)
     {
         //first check if password is correct to this authorised user
+        $passwordToCheck = $request->get('password');
+        $userId = Auth::user()->id;
+        $user = User::find($userId);
+        if (Hash::check($passwordToCheck, $user->password)) {
+            // Success
 
-        // Change amount of classes this user have in account
-        $user = Auth::user();
-        $userId = $user->id;
-        $currentTotalClasses = $user->total_classes;
-        $thisUser = User::find($userId);
-        $thisUser->total_classes = $currentTotalClasses + (int)$request->input('amount_classes');
-        $thisUser->update();
 
-        // Fetch membership_price based on membership_id
-        $membershipId = $request->get('membership_id');
-        $membership = Membership::find($membershipId);
-        $membershipPrice = $membership->price;
-        $totalPrice = $membershipPrice * 1.2;
-        // Make invoice
-        $d = strtotime('+30 Days');
-        $dueDate = date("Y-m-d", $d);
-        $invoice = new Invoice([
-            'user_id' => $userId,
-            'membership_id' => $request->get('membership_id'),
-            'due_date' => $dueDate,
-            'total_amount' => $totalPrice,
-        ]);
-        $invoice->save();
+            // Change amount of classes this user have in account
+            $user = Auth::user();
+            $userId = $user->id;
+            $currentTotalClasses = $user->total_classes;
+            $thisUser = User::find($userId);
+            $thisUser->total_classes = $currentTotalClasses + (int)$request->input('amount_classes');
+            $thisUser->update();
 
-        return redirect('payments')->with('message', "You've successfully purchased yoga classes. You can see your invoice to the right and find your balance in 'My profile'");
+            // Fetch membership_price based on membership_id
+            $membershipId = $request->get('membership_id');
+            $membership = Membership::find($membershipId);
+            $membershipPrice = $membership->price;
+            $totalPrice = $membershipPrice * 1.2;
+            // Make invoice
+            $d = strtotime('+30 Days');
+            $dueDate = date("Y-m-d", $d);
+            $invoice = new Invoice([
+                'user_id' => $userId,
+                'membership_id' => $request->get('membership_id'),
+                'due_date' => $dueDate,
+                'total_amount' => $totalPrice,
+            ]);
+            $invoice->save();
+
+            return redirect('payments')->with('message', "You've successfully purchased yoga classes. You can see your invoice to the right and find your balance in 'My profile'");
+        } else {
+            return redirect('profile')->with('message', "wrong");
+        }
     }
 }
