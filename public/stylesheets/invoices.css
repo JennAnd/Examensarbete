@@ -109,6 +109,7 @@ td {
     font-family: "Raleway";
     padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 1040px) {
