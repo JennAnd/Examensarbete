@@ -10,11 +10,3 @@ function showForm() {
     form.style.display = "block";
     contactBox.style.display = "none";
 }
-
-// buyButtons.forEach((buyButton) => {
-//     buyButton.addEventListener("click", showPasswordForm);
-// });
-
-// function showPasswordForm() {
-//     buyForm.style.display = "none";
-// }

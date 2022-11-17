@@ -46,6 +46,12 @@ Route::get('/signup', function () {
 })->middleware('guest');
 
 //Login, logout and signup
+
+
+// Middleware Auth
+// Middleware Admin
+// Middleware Guest
+
 Route::view('/login', 'login')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
 Route::post('login-admin', [LoginController::class, 'loginAdmin']);
