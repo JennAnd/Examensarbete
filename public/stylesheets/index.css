@@ -13,7 +13,7 @@
 .landingpage-text {
     color: rgb(232, 232, 224);
     position: absolute;
-
+    opacity: 0;
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -21,8 +21,18 @@
     top: 520px;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation-name: fading-in;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
 }
-
+@keyframes fading-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
 .landing-page-heading {
     font-size: 26px;
     text-align: center;
