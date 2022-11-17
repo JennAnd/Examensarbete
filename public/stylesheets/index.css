@@ -55,6 +55,11 @@
     border: none;
     border-radius: 5px;
     font-size: large;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .landingpage-button:hover {
