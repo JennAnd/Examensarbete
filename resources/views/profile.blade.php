@@ -5,7 +5,11 @@
 <div class="profile-body">
     <div class="grid-container">
         <div class="item1">
-
+            @if(session()->has('message'))
+            <div class="session-message">
+                {{ session()->get('message') }}
+            </div>
+            @endif
         </div>
         <div class="item2">
             @include('sidenav')
@@ -13,7 +17,26 @@
         <div class="filler-item"></div>
         <div class="item3">
             <h2 class="profile-heading">Your membership</h2>
-
+            <h2 class="profile-heading">Please confirm your password to purchase.</h2>
+            <div class="buy-membership-form">
+                <form action="buy-membership" method="post">
+                    @csrf
+                    <input class="hidden-value" type="hidden" value="">
+                    <div class="input-column">
+                        <label for="">Password</label>
+                        <div class="password-field">
+                            <input type="password" name="password" id="password">
+                            <button type="submit" class="button-edit-contact">Confirm</button>
+                        </div>
+                    </div>
+                    @if (isset($_GET["hidden-input-amount"] ))
+                    <input type="hidden" name="amount_classes" id="amount_classes" value="<?= $_GET['hidden-input-amount'] ?>">
+                    @endif
+                    @if (isset($_GET["hidden-input-id"] ))
+                    <input type="hidden" name="membership_id" id="membership_id" value="<?= $_GET['hidden-input-id'] ?>">
+                    @endif
+                </form>
+            </div>
             <div class="balance">
                 <p class="contact-info"><b>Balance</b></p>
                 <p>{{$total_classes}} classes</p>
@@ -32,8 +55,6 @@
                 <p>{{$user->country}}</p>
             </div>
             <div class="edit-form">
-
-
                 <form class="edit-contact" method="POST" action="/edit-contact">
                     @csrf
                     <div class="edit-contact-heading">
@@ -82,11 +103,11 @@
                     <p class="created-title">{{$membership->type}}</p>
                     <p class="created-price">{{$membership->price}} USD</p>
                 </div>
-                <form method="POST" action="buy-membership">
-                    @csrf
-                    <input type="hidden" value="<?= $membership->amount_classes ?>" name="amount_classes">
-                    <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
-                    <button class="button-buy" type="submit" onclick="return confirm('Are you sure you want to buy this membership? You will be sent an invoice.')">Buy</button>
+
+                <form action="profile" method="get">
+                    <input class="hidden-input-amount" name="hidden-input-amount" id="hidden-input-amount" type="hidden" value="<?= $membership->amount_classes ?>">
+                    <input class="hidden-input-id" name="hidden-input-id" id="hidden-input-id" type="hidden" value="<?= $membership->id ?>">
+                    <button type="submit" class="button-buy">Buy</button>
                 </form>
             </div>
             @endforeach
@@ -95,6 +116,7 @@
         <!-- <div class="item5"></div> -->
     </div>
     <img class="profile-image" src="assets/memberships.webp" alt="">
+
 </div>
 
 <script src="/scripts/profile.js"></script>

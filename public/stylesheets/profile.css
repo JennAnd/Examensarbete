@@ -189,6 +189,14 @@ form {
     display: none;
 }
 
+.password-field {
+    display: flex;
+}
+
+/* .buy-membership-form {
+    display: none;
+} */
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
