@@ -49,12 +49,12 @@ class LoginController extends Controller
                 return redirect()->intended('adminpanel');
             } else {
                 Auth::logout();
-                return redirect('/');
+                return redirect('/login')->with('message', 'Please login here instead.');
             }
         } else {
 
             return back()->withErrors([
-                'email' => 'The provided credentials do not match our records.',
+                'email' => 'Sign in to your account with your full login information',
             ])->onlyInput('email');
         }
     }
