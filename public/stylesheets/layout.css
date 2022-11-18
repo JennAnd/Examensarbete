@@ -34,19 +34,32 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    padding-top: 90px;
-    font-size: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 10px;
+    font-size: 12px;
     font-family: "Raleway Light";
-    padding-left: 2%;
-    padding-right: 2%;
+}
+
+.footer-info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 @media only screen and (min-width: 600px) {
     .footer-container {
+        flex-direction: row;
         gap: 7rem;
         font-size: 14px;
+        padding-top: 90px;
+        padding-left: 2%;
+        padding-right: 2%;
+        justify-content: center;
+    }
+
+    .footer-info-container {
+        gap: 4rem;
     }
 }

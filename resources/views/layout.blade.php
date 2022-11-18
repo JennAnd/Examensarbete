@@ -28,20 +28,21 @@
             <div class="footer-image-container">
                 <img class="logo-footer" src="/assets/logo-white.svg" />
             </div>
-
             <div class="footer-info-container">
-                <p><b>CONTACT</b></p>
-                <p>Ananda Yoga</p>
-                <p>Beraban, Kediri, Tabanan Regency</p>
-                <p>Bali 82121, Indonesia</p>
-                <p>info@anandayoga.com</p>
-                <p>+62 36 123 456 123</p>
-            </div>
-            <div class="footer-opening-hours-container">
-                <p>OPENING HOURS</p>
-                <p>Mon-fri: 06.00-20.00</p>
-                <p>Saturday: 06.00-21.00</p>
-                <p>Sunday: 07.00-19.00</p>
+                <div>
+                    <p><b>CONTACT</b></p>
+                    <p>Ananda Yoga</p>
+                    <p>Beraban, Kediri, Tabanan Regency</p>
+                    <p>Bali 82121, Indonesia</p>
+                    <p>info@anandayoga.com</p>
+                    <p>+62 36 123 456 123</p>
+                </div>
+                <div>
+                    <p><b>OPENING HOURS</b></p>
+                    <p>Mon-fri: 06.00-20.00</p>
+                    <p>Saturday: 06.00-21.00</p>
+                    <p>Sunday: 07.00-19.00</p>
+                </div>
             </div>
         </div>
     </footer>
