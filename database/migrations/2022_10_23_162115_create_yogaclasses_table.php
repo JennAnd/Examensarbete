@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('teacher');
             $table->datetime('datetime');
             $table->integer('available');
-            $table->integer('reserved');
+            $table->integer('reserved')->default(0);
             $table->integer('length');
         });
     }

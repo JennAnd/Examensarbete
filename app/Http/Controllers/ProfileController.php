@@ -65,6 +65,12 @@ class ProfileController extends Controller
                 'membership_id' => $request->get('membership_id'),
                 'due_date' => $dueDate,
                 'total_amount' => $totalPrice,
+                'firstname' => $user->firstname,
+                'lastname' => $user->lastname,
+                'address' => $user->address,
+                'postal_code' => $user->postal_code,
+                'city' => $user->city,
+                'country' => $user->country
             ]);
             $invoice->save();
 
@@ -76,19 +82,22 @@ class ProfileController extends Controller
 
     public function profileConfirmView()
     {
-        $memberships = Membership::select('*')
-            ->get();
-
         $user = Auth::user();
-        $total_classes = $user->total_classes;
 
-        $membership = Membership::find($_GET['hidden-input-id']);
+        if ($user->address) {
+            $memberships = Membership::select('*')
+                ->get();
+            $total_classes = $user->total_classes;
+            $membership = Membership::find($_GET['hidden-input-id']);
 
-        return view('profileconfirm', [
-            'memberships' => $memberships,
-            'total_classes' => $total_classes,
-            'user' => $user,
-            'membership' => $membership
-        ]);
+            return view('profileconfirm', [
+                'memberships' => $memberships,
+                'total_classes' => $total_classes,
+                'user' => $user,
+                'membership' => $membership
+            ]);
+        } else {
+            return redirect()->back()->with('message', "You have to complete your contact information before purchase.");
+        }
     }
 }

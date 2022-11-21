@@ -54,10 +54,10 @@
                     <div class="invoice-contact">
                         <div>
                             <p>To</p>
-                            <p>{{$user->firstname . " " . $user->lastname}}</p>
-                            <p>{{$user->address}}</p>
-                            <p>{{$user->postal_code . " " . $user->city}}</p>
-                            <p>{{$user->country}}</p>
+                            <p>{{$clicked_invoice->firstname . " " . $clicked_invoice->lastname}}</p>
+                            <p>{{$clicked_invoice->address}}</p>
+                            <p>{{$clicked_invoice->postal_code . " " . $clicked_invoice->city}}</p>
+                            <p>{{$clicked_invoice->country}}</p>
                         </div>
                     </div>
 

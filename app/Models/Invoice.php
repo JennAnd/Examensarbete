@@ -14,5 +14,11 @@ class Invoice extends Model
         'membership_id',
         'due_date',
         'total_amount',
+        'firstname',
+        'lastname',
+        'address',
+        'postal_code',
+        'city',
+        'country'
     ];
 }

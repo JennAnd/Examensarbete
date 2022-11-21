@@ -21,7 +21,6 @@ class DashboardController extends Controller
         $user = Auth::user();
         $id = $user->id;
 
-
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('datetime')->get();
         $bookedYogaclasses = Auth::user()->yogaclasses;
@@ -42,11 +41,12 @@ class DashboardController extends Controller
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('datetime')->get();
 
+
         return view('dashboard', [
             'user' => $user,
             'yogaclasses' => $yogaclasses,
             'bookedYogaclasses' => $bookedYogaclasses,
-            'notBookedYogaclasses' => $notBookedYogaclasses
+            'notBookedYogaclasses' => $notBookedYogaclasses,
         ]);
     }
 
