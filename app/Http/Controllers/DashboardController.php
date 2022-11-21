@@ -24,12 +24,10 @@ class DashboardController extends Controller
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('datetime')->get();
         $bookedYogaclasses = Auth::user()->yogaclasses;
-        // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
         $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('datetime')->get();
-        // dd($bookedYogaclasses->only('id')->toArray());
+
 
         // Delete classes that expired
-
         foreach ($yogaclasses as $yogaclass) {
             if (strtotime('now') >= strtotime($yogaclass->datetime)) {
                 $expiredYogaclass = Yogaclass::find($yogaclass->id);
@@ -57,8 +55,7 @@ class DashboardController extends Controller
         // TO BOOK A CLASS
         $user = Auth::user();
         $yogaclassId = (int)$request->get('id');
-        // var_dump($user->id);
-        // var_dump((int)$request->get('id'));
+
 
         $book = new UserYogaclass([
             'yogaclass_id' => $yogaclassId,
@@ -68,7 +65,6 @@ class DashboardController extends Controller
         $book->save();
 
         // CHANGE TOTAL AMOUNT CLASSES LEFT
-
         $userId = $user->id;
         $currentTotalClasses = $user->total_classes;
         $thisUser = User::find($userId);
@@ -92,7 +88,7 @@ class DashboardController extends Controller
         // Cancel booked yogaclass
         $user =  Auth::user();
         $yogaclassId = (int)$request->get('id');
-        // dd($yogaclassId);
+
         UserYogaclass::select('*')->where('yogaclass_id', $yogaclassId)->delete();
 
         // CHANGE TOTAL AMOUNT CLASSES LEFT

@@ -36,6 +36,7 @@
 .item1 {
     grid-area: header;
 }
+
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
@@ -45,11 +46,13 @@
     grid-area: filler;
     width: 100px;
 }
+
 .item3 {
     grid-area: booked;
     border: 2px solid #dcccb6;
     margin: 50px;
 }
+
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;

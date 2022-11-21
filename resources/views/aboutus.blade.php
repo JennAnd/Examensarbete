@@ -10,7 +10,6 @@
     @include('mandala')
 
     @foreach ($profiles as $profile)
-    <!-- <div class="about-us-boxes"> -->
     <div class="about-us-boxes">
         <div class="about-us-single-box-round" style="background-image: url('{{$profile->aboutusimage->getFile()->getUrl()}}'); background-size: cover; filter: brightness(0.8);">
         </div>
@@ -19,13 +18,9 @@
             <h3 class="about-us-name">{{$profile->aboutUsName}}</h3>
             <p class="about-us-info">{{$profile->aboutUsInfo}}</p>
         </div>
-
     </div>
 
     @endforeach
-
     @include('mandala')
 </div>
-
-
 @endsection

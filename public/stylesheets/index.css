@@ -25,6 +25,7 @@
     animation-duration: 6s;
     animation-fill-mode: forwards;
 }
+
 @keyframes fading-in {
     from {
         opacity: 0;
@@ -33,6 +34,7 @@
         opacity: 100;
     }
 }
+
 .landing-page-heading {
     font-size: 26px;
     text-align: center;

@@ -17,6 +17,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -31,23 +32,25 @@ a {
 
 .filler-item {
     grid-area: filler;
-    /* background-color: rgb(147, 80, 80); */
     width: 100px;
 }
 
 .item1 {
     grid-area: header;
 }
+
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
 }
+
 .item3 {
     grid-area: booked;
     border: 2px solid #dcccb6;
     margin: 50px;
     max-width: 500px;
 }
+
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;
@@ -56,7 +59,6 @@ a {
     flex-direction: column;
     align-items: center;
     max-width: 500px;
-    /* visibility: hidden; */
 }
 
 .session-message {
@@ -154,6 +156,7 @@ a {
 .invoice-details-two {
     text-align: left;
 }
+
 hr {
     border: 1px solid rgb(235, 232, 232);
 }
@@ -169,6 +172,7 @@ th {
     font-size: 14px;
     border-bottom: 1px solid #dcccb6;
 }
+
 td {
     text-align: center;
     font-size: 12px;
@@ -186,6 +190,7 @@ td {
     margin-top: 10px;
     font-size: 14px;
 }
+
 .invoice-preview {
     width: 80%;
 }

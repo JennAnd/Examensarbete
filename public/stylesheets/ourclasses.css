@@ -25,23 +25,14 @@ body {
 }
 
 /* Yoga classes */
-
 .yogaclasses-body {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
 }
 
-/* .grid-items {
-    background-color: aqua;
-    height: 400px;
-    width: 400px;
-    border: 1px solid black;
-} */
 .yogaclasses-container {
     color: rgb(232, 232, 224);
-
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +50,6 @@ body {
 .yogaclass-info {
     font-size: 14px;
     font-family: "Raleway Light";
-    /* margin-left: 30px; */
 }
 
 .our-classes-end-section {
@@ -67,7 +57,6 @@ body {
     font-family: "Raleway";
     text-align: center;
     font-size: 18px;
-
     margin: 20px;
 }
 
@@ -80,15 +69,6 @@ body {
     width: 80%;
 }
 @media only screen and (min-width: 768px) {
-    /* .yogaclasses-container-without-lotus {
-        display: flex;
-        flex-wrap: wrap;
-    } */
-
-    /* .yogaclasses-container {
-        display: none;
-    } */
-
     .yogaclasses-body {
         display: grid;
         grid-template-columns: 1fr 1fr;

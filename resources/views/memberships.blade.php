@@ -5,7 +5,6 @@
 <h1 class="memberships-heading">Our memberships</h1>
 @include('mandala')
 
-
 <div class="memberships-body">
     @foreach ($memberships as $membership)
     <div class="memberships-container">

@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../stylesheets/profile.css">
 @include('profilenavbar')
 
-
 <div class="profile-body">
     <div class="grid-container">
         <div class="item1">
@@ -60,7 +59,6 @@
             </div>
         </div>
         <img class="profile-image" src="assets/memberships.webp" alt="">
-
     </div>
 
     <script src="/scripts/profile.js"></script>

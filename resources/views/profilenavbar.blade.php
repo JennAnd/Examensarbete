@@ -68,7 +68,6 @@
             @endif
         </li>
     </div>
-
 </nav>
 
 <script src="/scripts/navbar.js"></script>

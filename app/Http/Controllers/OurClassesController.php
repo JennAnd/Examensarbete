@@ -28,9 +28,7 @@ class OurClassesController extends Controller
         $query->setContentType('classtype');
 
         $classes = $this->client->getEntries($query);
-        // dd($classes);
 
-        // dd($this->client->getEntries());
 
         return view('ourclasses', [
             'classes' => $classes

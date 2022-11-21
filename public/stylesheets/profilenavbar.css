@@ -13,6 +13,7 @@
 .profile-nav-logo {
     width: 40px;
 }
+
 nav {
     position: fixed;
     width: 100%;
@@ -76,7 +77,6 @@ nav div {
 }
 
 /*--- Desktop ---*/
-
 @media screen and (min-width: 1040px) {
     nav {
         padding: 1.5rem 4rem;
@@ -98,6 +98,7 @@ nav div {
     .nav-items {
         display: none;
     }
+
     .nav-items-show {
         display: none;
         text-align: center;

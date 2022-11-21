@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../stylesheets/payments.css">
 @include('profilenavbar')
 
-
 <div class="payments-body">
     <div class="grid-container">
         <div class="item1">
@@ -28,11 +27,9 @@
                     <p>✔</p>
                     @else <p></p>
                     @endif
-
                 </div>
             </a>
             @endforeach
-
         </div>
 
         <div class="item4">
@@ -50,7 +47,6 @@
                 <hr>
 
                 <div class="invoice-sub-header">
-
                     <div class="invoice-contact">
                         <div>
                             <p>To</p>
@@ -100,23 +96,18 @@
                             1
                         </td>
                         <td>$ {{$membership->price}}.00
-
                         </td>
                         <td>20%</td>
                         <td>$ {{$VAT}}.00
-
                         </td>
                         <td>$ {{$clicked_invoice->total_amount}}.00 </td>
                     </tr>
                     <tr>
                         <td>
-
                         </td>
                         <td>
-
                         </td>
                         <td>
-
                         </td>
                         <td></td>
                         <td>
@@ -135,9 +126,7 @@
                                 <p>${{$clicked_invoice->total_amount}}.00
                                 </p>
                             </div>
-
                         </td>
-
                     </tr>
                 </table>
 
@@ -167,8 +156,6 @@
                 </div>
             </div>
             @endif
-
         </div>
-        <!-- <div class="item5"></div> -->
     </div>
 </div>

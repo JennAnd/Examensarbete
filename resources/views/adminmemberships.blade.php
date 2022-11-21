@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../stylesheets/adminmemberships.css">
 @include('profilenavbar')
 
-
 <div class="adminmemberships-body">
     <div class="grid-container">
         <div class="item1">
@@ -34,7 +33,6 @@
                 @endforeach
             </div>
             <div>
-
             </div>
         </div>
         <div class="item4">
@@ -58,8 +56,6 @@
                     <button type="submit" class="adminpanel-button">Add</button>
                 </form>
             </div>
-
         </div>
-
     </div>
 </div>

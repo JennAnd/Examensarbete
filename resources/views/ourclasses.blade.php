@@ -18,8 +18,6 @@
     </div>
 
     @endforeach
-    <!-- <div class="grid-items"></div>
-    <div class="grid-items"></div> -->
 
 </div>
 <p class="our-classes-end-section">If you want to try out our yoga classes, please <a href="/signup">sign up</a> or <a href="/login">log in. </a></p>

@@ -50,7 +50,7 @@ class PaymentsController extends Controller
 
         $user = Auth::user();
         $userId = $user->id;
-        //if där id från get tillhör nuvaranade user, annars ska det ej hittas
+
 
         $invoices = Invoice::select('*')->where('user_id', '=', $userId)->orderBy('created_at', 'DESC')->get();
         $latestInvoice = Invoice::select('*')->where('user_id', '=', $userId)->orderBy('created_at', 'DESC')->limit(1)->get();

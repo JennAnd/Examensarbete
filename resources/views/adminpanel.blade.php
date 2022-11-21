@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../stylesheets/adminpanel.css">
 @include('profilenavbar')
 
-
 <div class="adminpanel-body">
     <div class="grid-container">
         <div class="item1">
@@ -28,18 +27,12 @@
                         <label for="teacher">Teacher</label>
                         <input name="teacher" id="teacher" type="text" required />
                     </div>
-                    <!-- <div class="input-column">
-                        <label for="date">Date</label>
-                        <input name="date" id="date" type="date" required />
-                    </div> -->
+
                     <div class="input-column">
                         <label for="date">Date</label>
                         <input name="datetime" id="datetime" type="datetime-local" required />
                     </div>
-                    <!-- <div class="input-column">
-                        <label for="time">Time</label>
-                        <input name="time" id="time" type="time" required />
-                    </div> -->
+
                     <div class="input-column">
                         <label for="class-length">Length</label>
                         <input name="class-length" id="class-length" type="number" required />
@@ -48,12 +41,9 @@
                         <label for="available">Available spots</label>
                         <input name="available" id="available" type="number" required />
                     </div>
-
                     <button class="adminpanel-button" type="submit">Add class</button>
                 </form>
-
             </div>
-
         </div>
 
         <div class="item4">
@@ -79,13 +69,7 @@
                 </div>
 
                 @endforeach
-
-
-
             </div>
-
-
         </div>
-        <!-- <div class="item5"></div> -->
     </div>
 </div>

@@ -36,6 +36,7 @@
 .item1 {
     grid-area: header;
 }
+
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
@@ -45,10 +46,12 @@
     grid-area: filler;
     width: 50px;
 }
+
 .item3 {
     grid-area: booked;
     border: 2px solid #dcccb6;
 }
+
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;
@@ -112,6 +115,7 @@ h2 {
 .yogaclass-title {
     font-size: 14px;
 }
+
 .yogaclass-date {
     font-family: "Raleway";
     font-size: 14px;
@@ -119,6 +123,7 @@ h2 {
     margin-left: 20px;
     margin-bottom: 5px;
 }
+
 .yogaclasses-heading {
     font-family: "Raleway Light";
     font-size: 24px;
@@ -139,6 +144,7 @@ h2 {
     background-color: #b15d22;
     cursor: pointer;
 }
+
 .input-column {
     display: flex;
     flex-direction: column;
@@ -176,12 +182,14 @@ form {
         margin: 50px;
     }
 }
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
             "header header header header header"
             "menu filler booked notbooked notbooked";
     }
+
     .item2 {
         margin-top: 45px;
         width: 220px;
@@ -191,6 +199,7 @@ form {
     .item4 {
         margin-right: 30px;
     }
+
     .item4 {
         height: 500px;
         overflow-y: scroll;
@@ -204,6 +213,7 @@ form {
     input {
         width: 200px;
     }
+
     .input-column {
         margin-left: 20px;
         margin-right: 20px;

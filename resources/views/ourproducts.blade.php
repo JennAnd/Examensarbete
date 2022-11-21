@@ -14,7 +14,6 @@
                 <h3 class="product-name"> {{$product->productType}}</h3>
                 <p class="product-price"> {{$product->productPrice}}</p>
             </div>
-
         </div>
         @endforeach
     </div>

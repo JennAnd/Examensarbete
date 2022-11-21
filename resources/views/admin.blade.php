@@ -5,7 +5,6 @@
     <img src="/assets/adminpage.webp" alt="">
 
     <div class="admin-login">
-
         <form method="post" action="login-admin">
             @csrf
             <div class="input-column">

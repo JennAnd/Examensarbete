@@ -29,13 +29,6 @@ class AboutUsController extends Controller
 
         $profiles = $this->client->getEntries($query);
 
-        // dd($this->client->getEntries($query));
-
-        // $newclient = new DeliveryClient('<space_id>', '<content_delivery_api_key>');
-
-        // $asset = $newclient->getAsset('<asset_id>');
-
-        // $resultUrl = $asset->getFile()->getUrl();
 
         return view('aboutus', [
             'profiles' => $profiles

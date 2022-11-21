@@ -57,6 +57,7 @@ class ProfileController extends Controller
             $membership = Membership::find($membershipId);
             $membershipPrice = $membership->price;
             $totalPrice = $membershipPrice * 1.2;
+
             // Make invoice
             $d = strtotime('+30 Days');
             $dueDate = date("Y-m-d", $d);

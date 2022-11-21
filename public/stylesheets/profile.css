@@ -12,6 +12,7 @@
     src: url("/fonts/Gotu-Regular.woff");
     font-family: "Gotu";
 }
+
 .profile-image {
     display: none;
 }
@@ -65,8 +66,6 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
     align-items: center;
-    /* padding-top: 16px;
-    padding-bottom: 16px; */
     font-family: "Gotu";
     font-size: 18px;
     margin-left: 20px;
@@ -78,37 +77,36 @@
     font-size: 18px;
     font-weight: bolder;
 }
+
 .created-price {
     font-size: 14px;
 }
+
 .filler-item {
     grid-area: filler;
-    /* background-color: rgb(147, 80, 80); */
     width: 100px;
 }
 
 .item1 {
     grid-area: header;
 }
+
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
 }
+
 .item3 {
     grid-area: booked;
     border: 2px solid #dcccb6;
     margin: 50px;
 }
+
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;
     margin: 50px;
 }
-
-/* .item5 {
-    grid-area: empty;
-    color: rgb(232, 232, 224);
-} */
 
 .grid-container {
     display: grid;
@@ -152,6 +150,7 @@ body {
     background-color: #b15d22;
     cursor: pointer;
 }
+
 .input-column {
     display: flex;
     flex-direction: column;
@@ -181,6 +180,7 @@ form {
     margin: 20px;
     padding: 20px;
 }
+
 .edit-contact-title {
     font-family: "Gotu";
     font-size: 16px;
@@ -201,10 +201,6 @@ form {
     display: flex;
 }
 
-/* .buy-membership-form {
-    display: none;
-} */
-
 .shopping-cart {
     border: 1px solid #dcccb6;
     margin: 20px;
@@ -217,12 +213,14 @@ form {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 @media screen and (min-width: 1040px) {
     .grid-container {
         grid-template-areas:
             "header header header header header header"
             "menu filler booked booked notbooked notbooked";
     }
+
     .item2 {
         margin-top: 45px;
         width: 220px;

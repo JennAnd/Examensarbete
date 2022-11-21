@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="/stylesheets/signup.css">
 
-
 <body>
     <div class="signup-container">
         <img class="signup-image" src="/assets/loginpage.webp" />

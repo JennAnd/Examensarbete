@@ -39,8 +39,8 @@
 
 .item1 {
     grid-area: header;
-    /* background-color: #fbf3e9; */
 }
+
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
@@ -50,11 +50,13 @@
     grid-area: filler;
     width: 100px;
 }
+
 .item3 {
     grid-area: booked;
     border: 2px solid #dcccb6;
     margin: 50px;
 }
+
 .item4 {
     grid-area: notbooked;
     border: 2px solid #dcccb6;
@@ -156,6 +158,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .button-booked:hover,
 .button-booked-2:hover {
     background-color: #b15d22;
@@ -174,14 +177,6 @@ h2 {
     align-items: center;
 }
 
-/* @media screen and (min-width: 768px) {
-    .yogaclasses-heading {
-        text-align: left;
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-} */
-
 .dashboard-image {
     display: none;
 }
@@ -192,19 +187,17 @@ h2 {
             "header header header header header header"
             "menu filler booked booked notbooked notbooked";
     }
+
     .item2 {
         margin-top: 45px;
         width: 220px;
     }
+
     .item4,
     .item3 {
         height: 500px;
         overflow-y: scroll;
     }
-
-    /* .item3 {
-        margin-bottom: 320px;
-    } */
 
     .dashboard-image {
         display: block;

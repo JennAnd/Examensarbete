@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     display: flex;
     min-height: 100vh;
@@ -27,7 +28,6 @@ footer {
     color: rgb(232, 232, 224);
     background-color: #403c3c;
     height: 250px;
-    /*  left: 0; */
     width: 100%;
     margin-top: auto;
 }

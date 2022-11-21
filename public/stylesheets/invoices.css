@@ -36,6 +36,7 @@
 .item1 {
     grid-area: header;
 }
+
 .item2 {
     grid-area: menu;
     background-color: #dcccb6;
@@ -45,6 +46,7 @@
     grid-area: filler;
     width: 100px;
 }
+
 .item3 {
     grid-area: invoices;
 
@@ -83,6 +85,7 @@ table {
     border: 1px solid #dcccb6;
     margin: 10px 0;
 }
+
 tr {
     height: 40px;
 }
@@ -91,6 +94,7 @@ th {
     font-size: 14px;
     border-bottom: 1px solid #dcccb6;
 }
+
 td {
     text-align: center;
     font-size: 14px;

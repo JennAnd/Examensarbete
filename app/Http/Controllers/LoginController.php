@@ -25,7 +25,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             $userName = Auth::user()->firstname;
-            // dd($userName);
+
 
             $user = Auth::user();
 

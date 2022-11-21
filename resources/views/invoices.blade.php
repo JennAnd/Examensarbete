@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../stylesheets/invoices.css">
 @include('profilenavbar')
 
-
 <div class="adminpanel-body">
     <div class="grid-container">
         <div class="item1">
@@ -65,7 +64,5 @@
                 </tr>
             </table>
         </div>
-
-
     </div>
 </div>
