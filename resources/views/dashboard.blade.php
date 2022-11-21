@@ -17,6 +17,7 @@
         <div class="filler-item"></div>
         <div class="item3">
             <!-- Booked yoga classes -->
+
             <h2 class="yogaclasses-heading">Your booked yogaclasses</h2>
             @foreach ($bookedYogaclasses as $yogaclass)
             <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>

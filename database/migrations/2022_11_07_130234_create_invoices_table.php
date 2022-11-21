@@ -25,6 +25,12 @@ return new class extends Migration
             $table->date('due_date');
             $table->integer('total_amount');
             $table->boolean('paid')->default(0);
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('address');
+            $table->integer('postal_code');
+            $table->string('city');
+            $table->string('country');
         });
     }
 

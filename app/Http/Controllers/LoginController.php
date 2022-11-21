@@ -27,7 +27,16 @@ class LoginController extends Controller
             $userName = Auth::user()->firstname;
             // dd($userName);
 
-            return redirect()->intended('dashboard')->with('message', "Welcome, $userName!");
+            $user = Auth::user();
+
+            if ($user->total_classes == 0) {
+                $message = "Welcome $user->firstname! You currently have 0 classes in your balance.In order to book a yoga class, please go to 'My profile' to buy classes.";
+            } else {
+                $message = "Welcome $user->firstname!";
+            }
+
+
+            return redirect()->intended('dashboard')->with('message', $message);
         }
 
         return back()->withErrors([

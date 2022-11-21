@@ -15,7 +15,8 @@ class Yogaclass extends Model
         'datetime',
         'length',
         'available',
-        'reserved',
+        'reserved'
+
     ];
 
     public function users()
