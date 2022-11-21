@@ -28,7 +28,7 @@ class EventController extends Controller
         $query->setContentType('events');
 
         $events = $this->client->getEntries($query);
-
+        /* dd($events); */
         return view('events', [
             'events' => $events
         ]);
