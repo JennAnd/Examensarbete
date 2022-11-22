@@ -16,7 +16,7 @@
         <div class="filler-item"></div>
         <div class="item3">
             <div class="make-yogaclass">
-                <h2 class="yogaclasses-heading">Create yogaclass</h2>
+                <h2 class="yogaclasses-heading">Create yoga class</h2>
                 <form method="post" action="make-yogaclass">
                     @csrf
                     <div class="input-column">
@@ -48,7 +48,7 @@
 
         <div class="item4">
             <div class="show-yogaclasses">
-                <h2 class="yogaclasses-heading">Yogaclasses</h2>
+                <h2 class="yogaclasses-heading">Yoga classes</h2>
                 @foreach ($yogaclasses as $yogaclass)
                 <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>
                 <div class="yogaclass">
