@@ -109,4 +109,78 @@ class DashboardController extends Controller
 
         return redirect('dashboard')->with('message', "Your yoga class is cancelled.");
     }
+
+    public function confirmBooking(Request $request)
+    {
+        $user = Auth::user();
+        $id = $user->id;
+
+        $yogaclasses = Yogaclass::select('*')
+            ->orderBy('datetime')->get();
+        $bookedYogaclasses = Auth::user()->yogaclasses;
+        // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
+        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('datetime')->get();
+        // dd($bookedYogaclasses->only('id')->toArray());
+
+        // Delete classes that expired
+
+        foreach ($yogaclasses as $yogaclass) {
+            if (strtotime('now') >= strtotime($yogaclass->datetime)) {
+                $expiredYogaclass = Yogaclass::find($yogaclass->id);
+                $expiredYogaclass->delete();
+            }
+        }
+
+        // Fetch again after deleted yoga class
+        $yogaclasses = Yogaclass::select('*')
+            ->orderBy('datetime')->get();
+
+
+        $chosenYogaclass = Yogaclass::find($_GET['id']);
+
+        return view('confirmbooking', [
+            'user' => $user,
+            'yogaclasses' => $yogaclasses,
+            'bookedYogaclasses' => $bookedYogaclasses,
+            'notBookedYogaclasses' => $notBookedYogaclasses,
+            'chosenYogaclass' => $chosenYogaclass
+        ]);
+    }
+
+    public function cancelBooking(Request $request)
+    {
+        $user = Auth::user();
+        $id = $user->id;
+
+        $yogaclasses = Yogaclass::select('*')
+            ->orderBy('datetime')->get();
+        $bookedYogaclasses = Auth::user()->yogaclasses;
+        // $notBookedYogaclasses = Yogaclass::doesntHave('users')->get();
+        $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('datetime')->get();
+        // dd($bookedYogaclasses->only('id')->toArray());
+
+        // Delete classes that expired
+
+        foreach ($yogaclasses as $yogaclass) {
+            if (strtotime('now') >= strtotime($yogaclass->datetime)) {
+                $expiredYogaclass = Yogaclass::find($yogaclass->id);
+                $expiredYogaclass->delete();
+            }
+        }
+
+        // Fetch again after deleted yoga class
+        $yogaclasses = Yogaclass::select('*')
+            ->orderBy('datetime')->get();
+
+
+        $chosenYogaclass = Yogaclass::find($_GET['id']);
+
+        return view('cancelyogaclass', [
+            'user' => $user,
+            'yogaclasses' => $yogaclasses,
+            'bookedYogaclasses' => $bookedYogaclasses,
+            'notBookedYogaclasses' => $notBookedYogaclasses,
+            'chosenYogaclass' => $chosenYogaclass
+        ]);
+    }
 }

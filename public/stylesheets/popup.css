@@ -1,0 +1,81 @@
+.popup-background {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.popup-box {
+    width: 375px;
+    height: 375px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border: 5px solid #dcccb6;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.book-button {
+    color: rgb(232, 232, 224);
+    background-color: #c27b49;
+    width: 90px;
+    height: 40px;
+    font-family: "Raleway";
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.book-button:hover {
+    background-color: #b15d22;
+    cursor: pointer;
+}
+.cancel-button {
+    color: #b0a390;
+    background-color: #fbf3e9;
+    width: 90px;
+    height: 40px;
+    font-family: "Raleway";
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    border: 3px solid #b0a390;
+}
+
+.cancel-button:hover {
+    cursor: pointer;
+}
+
+.popup-box {
+    background-color: #fbf3e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-family: "Raleway Light";
+    text-align: center;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.popup-heading {
+    font-family: "Raleway Light";
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.popup-confirm {
+    margin-top: 50px;
+}

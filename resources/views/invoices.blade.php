@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../stylesheets/invoices.css">
-@include('profilenavbar')
+@include('adminnavbar')
 
 <div class="adminpanel-body">
     <div class="grid-container">

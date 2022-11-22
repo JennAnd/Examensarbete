@@ -36,14 +36,14 @@
                     <p class="shopping-cart-total">Total price: ${{$membership->price + $VAT}}.00</p>
                     <p>Please type in your password below to confirm your purchase</p>
                 </div>
-                <form action="buy-membership" method="post">
+                <form class="form-membership" action="buy-membership" method="post">
                     @csrf
                     <input class="hidden-value" type="hidden" value="">
                     <div class="input-column">
                         <label for="">Password</label>
                         <div class="password-field">
                             <input type="password" name="password" id="password">
-                            <button type="submit" class="button-edit-contact" onclick="return confirm('Are you sure you want to buy?')">Confirm</button>
+                            <button type="submit" class="button-confirm">Confirm & buy</button>
                         </div>
                     </div>
                     @if (isset($_GET["hidden-input-amount"] ))
@@ -54,7 +54,7 @@
                     @endif
                 </form>
                 <form action="/profile">
-                    <button class="button-buy" onclick="return confirm('Are you sure you want to cancel?')">Cancel</button>
+                    <button class="button-buy">Cancel</button>
                 </form>
             </div>
         </div>

@@ -76,6 +76,12 @@ nav div {
     font-weight: bolder;
 }
 
+.admin-heading {
+    font-family: "Raleway Light";
+    font-size: 24px;
+    color: rgb(232, 232, 224);
+}
+
 /*--- Desktop ---*/
 @media screen and (min-width: 1040px) {
     nav {

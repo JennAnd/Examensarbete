@@ -72,6 +72,7 @@ Route::get('/payments/{id}', [PaymentsController::class, 'showClickedInvoice'])-
 Route::post('confirm-payment', [PaymentsController::class, 'confirmPayment']);
 
 Route::post('book', [DashboardController::class, 'bookYogaclass']);
+
 Route::post('/cancelbooked', [DashboardController::class, 'cancelBookedYogaclass']);
 Route::get('dashboard', DashboardController::class)->middleware('auth')->name('dashboard');
 
@@ -90,3 +91,9 @@ Route::post('delete-yogaclass', [YogaclassController::class, 'deleteYogaclass'])
 Route::post('make-yogaclass', YogaclassController::class);
 
 Route::post('edit-contact', [MembershipController::class, 'editContactInfo']);
+
+Route::get('confirmbooking', [DashboardController::class, 'confirmBooking']);
+Route::get('cancelyogaclass', [DashboardController::class, 'cancelBooking']);
+
+Route::get('confirmmembership', [ProfileController::class, 'confirmMembershipView']);
+Route::get('/admindeleteyogaclass', [AdminPanelController::class, 'adminDeleteYogaclassView'])->middleware('admin');

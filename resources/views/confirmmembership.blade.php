@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../stylesheets/profile.css">
+<link rel="stylesheet" href="../stylesheets/popup.css">
 @include('profilenavbar')
 
 <div class="profile-body">
@@ -94,5 +95,32 @@
     </div>
     <img class="profile-image" src="assets/memberships.webp" alt="">
 </div>
+
+<!-- Pop up -->
+<div class="popup-background"></div>
+<div class="popup-box">
+    <div class="popup-details">
+        <p class="popup-heading">Membership details</p>
+        <p class="popup-title">{{$chosen_membership->type}}</p>
+        <p class="popup-date">{{$chosen_membership->price}} USD</p>
+    </div>
+    <div>
+        <p class="popup-confirm">
+            Are you sure you want to buy?
+        </p>
+    </div>
+    <div class="buttons">
+        <form action="/profile">
+            <button class="cancel-button">Cancel</button>
+        </form>
+        <form action="/profileconfirm" method="GET">
+            @csrf
+            <input type="hidden" value="<?= $_GET['hidden-input-id'] ?>" name="hidden-input-id" id="hidden-input-id">
+            <input type="hidden" value="<?= $_GET['hidden-input-amount'] ?>" name="hidden-input-amount" id="hidden-input-amount">
+            <button class="book-button">Yes</button>
+        </form>
+    </div>
+</div>
+
 
 <script src="/scripts/profile.js"></script>

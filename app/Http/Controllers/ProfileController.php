@@ -101,4 +101,21 @@ class ProfileController extends Controller
             return redirect()->back()->with('message', "You have to complete your contact information before purchase.");
         }
     }
+
+    public function confirmMembershipView()
+    {
+        $user = Auth::user();
+        $memberships = Membership::select('*')
+            ->get();
+        $total_classes = $user->total_classes;
+        $chosenMembership = Membership::find($_GET['hidden-input-id']);
+        // dd($chosenMembership);
+
+        return view('confirmmembership', [
+            'memberships' => $memberships,
+            'total_classes' => $total_classes,
+            'user' => $user,
+            'chosen_membership' => $chosenMembership
+        ]);
+    }
 }

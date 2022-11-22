@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../stylesheets/adminmemberships.css">
-@include('profilenavbar')
+@include('adminnavbar')
 
 <div class="adminmemberships-body">
     <div class="grid-container">

@@ -1,5 +1,7 @@
 <head>
     <link rel="stylesheet" href="../stylesheets/dashboard.css">
+    <link rel="stylesheet" href="../stylesheets/popup.css">
+
 </head>
 @include('profilenavbar')
 <div class="dashboard-body">
@@ -16,8 +18,8 @@
         </div>
         <div class="filler-item"></div>
         <div class="item3">
-
             <!-- Booked yoga classes -->
+
             <h2 class="yogaclasses-heading">Your booked yogaclasses</h2>
             @foreach ($bookedYogaclasses as $yogaclass)
             <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>
@@ -31,14 +33,15 @@
                     <p>{{$yogaclass->reserved}}</p>
                     <p>reserved</p>
                 </div>
-                <form method="GET" action="cancelyogaclass">
+                <form method="POST" action="cancelbooked">
                     @csrf
                     <input type="hidden" value="<?= $yogaclass->id ?>" name="id" id="id">
-                    <button class="button-booked-2" type="submit">-</button>
+                    <button class="button-booked-2" type="submit" onclick="return confirm('Do you want to cancel this yoga class?')">-</button>
                 </form>
             </div>
             @endforeach
         </div>
+
 
         <div class="item4">
             <!-- Not booked yoga classes -->
@@ -71,4 +74,25 @@
         </div>
     </div>
     <img class="dashboard-image" src="assets/events.webp" alt="">
+</div>
+<!-- Pop up -->
+<div class="popup-background"></div>
+<div class="popup-box">
+    <div class="popup-details">
+        <p class="popup-heading">Do you want to cancel?</p>
+        <p class="popup-title">{{$chosenYogaclass->class_name}}, {{$chosenYogaclass->length}} min</p>
+        <p class="popup-date">{{date("D j/m", strtotime($chosenYogaclass->datetime));}}</p>
+        <p class="popup-time">{{date("H:i", strtotime($chosenYogaclass->datetime));}}</p>
+        <p>{{$chosenYogaclass->teacher}}</p>
+    </div>
+    <div class="buttons">
+        <form action="/dashboard">
+            <button class="cancel-button">No</button>
+        </form>
+        <form action="/cancelbooked" method="POST">
+            @csrf
+            <input type="hidden" value="<?= $chosenYogaclass->id ?>" name="id" id="id">
+            <button class="book-button">Yes</button>
+        </form>
+    </div>
 </div>

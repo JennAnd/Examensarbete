@@ -135,7 +135,8 @@ body {
 }
 
 .button-buy,
-.button-edit-contact {
+.button-edit-contact,
+.button-confirm {
     background-color: #c27b49;
     border: none;
     color: rgb(232, 232, 224);
@@ -143,6 +144,9 @@ body {
     font-family: "Raleway";
     padding: 5px 10px;
     border-radius: 5px;
+}
+.button-confirm {
+    width: 200px;
 }
 
 .button-buy:hover,
@@ -172,7 +176,7 @@ label {
     font-family: "Raleway";
 }
 
-form {
+.form-membership {
     display: flex;
     flex-direction: column;
     align-items: center;

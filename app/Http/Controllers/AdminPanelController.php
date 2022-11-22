@@ -27,4 +27,20 @@ class AdminPanelController extends Controller
             'memberships' => $memberships
         ]);
     }
+    public function adminDeleteYogaclassView()
+    {
+
+        $yogaclasses = Yogaclass::select('*')
+            ->orderBy('datetime', 'ASC')->get();
+
+        $memberships = Membership::select('*')->get();
+
+        $chosenYogaclass = Yogaclass::find($_GET['yogaclass_id']);
+
+        return view('admindeleteyogaclass', [
+            'yogaclasses' => $yogaclasses,
+            'memberships' => $memberships,
+            'chosen_yogaclass' => $chosenYogaclass
+        ]);
+    }
 }
