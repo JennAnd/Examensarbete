@@ -97,3 +97,5 @@ Route::get('cancelyogaclass', [DashboardController::class, 'cancelBooking']);
 
 Route::get('confirmmembership', [ProfileController::class, 'confirmMembershipView']);
 Route::get('/admindeleteyogaclass', [AdminPanelController::class, 'adminDeleteYogaclassView'])->middleware('admin');
+Route::get('/admindeletemembership', [AdminMembershipsController::class, 'confirmDeleteMembershipView'])->middleware('admin');
+Route::get('invoicesconfirm', [InvoiceController::class, 'invoicesConfirmView']);

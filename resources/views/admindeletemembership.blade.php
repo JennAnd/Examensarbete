@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../stylesheets/adminmemberships.css">
+<link rel="stylesheet" href="../stylesheets/popup.css">
 @include('adminnavbar')
 
 <div class="adminmemberships-body">
@@ -24,10 +25,10 @@
                         <p>{{$membership->type}}</p>
                         <p>{{$membership->price}} USD</p>
                     </div>
-                    <form action="admindeletemembership" method="GET">
+                    <form action="delete-membership" method="POST">
                         @csrf
                         <input type="hidden" value="<?= $membership->id ?>" name="membership_id">
-                        <button class="adminpanel-button">Delete</button>
+                        <button class="adminpanel-button" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
                     </form>
                 </div>
                 @endforeach
@@ -57,5 +58,32 @@
                 </form>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Pop up -->
+<div class="popup-background"></div>
+<div class="popup-box">
+    <div class="popup-details">
+        <p class="popup-heading">Membership details</p>
+        <p>{{$chosen_membership->type}}</p>
+        <p>{{$chosen_membership->price}} USD</p>
+
+
+    </div>
+    <div>
+        <p class="popup-confirm">
+            Are you sure you want to delete?
+        </p>
+    </div>
+    <div class="buttons">
+        <form action="/adminmemberships">
+            <button class="cancel-button">Cancel</button>
+        </form>
+        <form action="/delete-membership" method="POST">
+            @csrf
+            <input type="hidden" value="<?= $_GET['membership_id'] ?>" name="membership_id" id="membership_id">
+            <button class="book-button">Yes</button>
+        </form>
     </div>
 </div>

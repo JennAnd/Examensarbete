@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="../stylesheets/adminpanel.css">
-@include('profilenavbar')
+<link rel="stylesheet" href="../stylesheets/popup.css">
+@include('adminnavbar')
 
 <div class="adminpanel-body">
     <div class="grid-container">
@@ -49,21 +50,21 @@
         <div class="item4">
             <div class="show-yogaclasses">
                 <h2 class="yogaclasses-heading">Yogaclasses</h2>
-                @foreach ($yogaclasses as $chosen_yogaclass)
-                <p class="yogaclass-date">{{date("D j/m", strtotime($chosen_yogaclass->datetime));}}</p>
+                @foreach ($yogaclasses as $yogaclass)
+                <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>
                 <div class="yogaclass">
                     <div class="yogaclass-details">
-                        <p class="yogaclass-time">{{date("H:i", strtotime($chosen_yogaclass->datetime));}} </p>
-                        <p class="yogaclass-title">{{$chosen_yogaclass->class_name}}, {{$chosen_yogaclass->length}} min</p>
-                        <p>{{$chosen_yogaclass->teacher}}</p>
+                        <p class="yogaclass-time">{{date("H:i", strtotime($yogaclass->datetime));}} </p>
+                        <p class="yogaclass-title">{{$yogaclass->class_name}}, {{$yogaclass->length}} min</p>
+                        <p>{{$yogaclass->teacher}}</p>
                     </div>
                     <div>
-                        <p>reserved:{{$chosen_yogaclass->reserved}}</p>
-                        <p>available:{{$chosen_yogaclass->available}} </p>
+                        <p>reserved:{{$yogaclass->reserved}}</p>
+                        <p>available:{{$yogaclass->available}} </p>
                     </div>
                     <form action="delete-yogaclass" method="POST">
                         @csrf
-                        <input type="hidden" value="<?= $chosen_yogaclass->id ?>" name="yogaclass_id">
+                        <input type="hidden" value="<?= $yogaclass->id ?>" name="yogaclass_id">
                         <button class="adminpanel-button" type="submit">Delete</button>
                     </form>
                 </div>
@@ -71,5 +72,32 @@
                 @endforeach
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Pop up -->
+<div class="popup-background"></div>
+<div class="popup-box">
+    <div class="popup-details">
+        <p class="popup-heading">Yoga class details</p>
+        <p class="popup-title">{{$chosen_yogaclass->class_name}}, {{$chosen_yogaclass->length}} min</p>
+        <p class="popup-date">{{date("D j/m", strtotime($chosen_yogaclass->datetime));}}</p>
+        <p class="popup-time">{{date("H:i", strtotime($chosen_yogaclass->datetime));}}</p>
+        <p>{{$chosen_yogaclass->teacher}}</p>
+    </div>
+    <div>
+        <p class="popup-confirm">
+            Are you sure you want to delete?
+        </p>
+    </div>
+    <div class="buttons">
+        <form action="/adminpanel">
+            <button class="cancel-button">Cancel</button>
+        </form>
+        <form action="/delete-yogaclass" method="POST">
+            @csrf
+            <input type="hidden" value="<?= $_GET['yogaclass_id'] ?>" name="yogaclass_id" id="yogaclass_id">
+            <button class="book-button">Yes</button>
+        </form>
     </div>
 </div>

@@ -34,6 +34,6 @@ class YogaclassController extends Controller
         $yogaclassId = $request->get('yogaclass_id');
         Yogaclass::select('*')->where('id', $yogaclassId)->delete();
 
-        return redirect()->back()->with('message', "You have deleted a yoga class.");
+        return redirect('adminpanel')->with('message', "You have deleted a yoga class.");
     }
 }

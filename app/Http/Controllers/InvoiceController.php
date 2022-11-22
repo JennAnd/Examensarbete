@@ -28,4 +28,19 @@ class InvoiceController extends Controller
 
         ]);
     }
+    public function invoicesConfirmView(Request $request)
+    {
+
+        $invoices = DB::table('users')->join('invoices', 'users.id', '=', 'invoices.user_id')->select(
+            '*'
+        )->get()->reverse();
+
+        $chosenInvoice = Invoice::find($_GET['invoice_id']);
+
+        return view('invoicesconfirm', [
+            'invoices' => $invoices,
+            'chosen_invoice' => $chosenInvoice
+
+        ]);
+    }
 }

@@ -21,4 +21,16 @@ class AdminMembershipsController extends Controller
             'memberships' => $memberships
         ]);
     }
+
+    public function confirmDeleteMembershipView()
+    {
+
+        $memberships = Membership::select('*')->get();
+        $chosenMembership = Membership::find($_GET['membership_id']);
+
+        return view('admindeletemembership', [
+            'memberships' => $memberships,
+            'chosen_membership' => $chosenMembership
+        ]);
+    }
 }

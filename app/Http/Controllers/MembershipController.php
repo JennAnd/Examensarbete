@@ -34,7 +34,7 @@ class MembershipController extends Controller
         $membershipId = $request->get('membership_id');
         Membership::select('*')->where('id', $membershipId)->delete();
 
-        return redirect()->back()->with('message', "You have deleted a membership.");
+        return redirect('adminmemberships')->with('message', "You have deleted a membership.");
     }
 
     public function showMemberships()
