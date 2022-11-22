@@ -1,4 +1,4 @@
-<img src="assets/yoga.png" width="100%"/>
+<img src="/assets/yoga.png" width="100%"/>
 
 # Ananda Yoga - A website for a made up yoga studio
 
@@ -20,15 +20,17 @@ git clone https://github.com/JennAnd/Examensarbete
 
 3. Set up a database and fill in variables in the .env file
 
-4. Run ```bash
-   php artisan migrate:fresh --seed
+4. Run
 
-````
+```bash
+  php artisan migrate:fresh --seed
+```
 
 5. Preview the website locally
+
 ```bash
 php artisan serve
-````
+```
 
 6. To log in as admin, go to http://127.0.0.1:8000/admin and enter the following credentials:
 
