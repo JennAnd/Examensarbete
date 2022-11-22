@@ -35,7 +35,7 @@
             </div>
 
             <div class="edit-form">
-                <form class="edit-contact" method="POST" action="/edit-contact">
+                <form class="edit-contact form-membership " method="POST" action="/edit-contact">
                     @csrf
                     <div class="edit-contact-heading">
                         <p class="edit-contact-title"><b>Edit contact info</b></p>
