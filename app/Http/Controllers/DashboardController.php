@@ -23,7 +23,8 @@ class DashboardController extends Controller
 
         $yogaclasses = Yogaclass::select('*')
             ->orderBy('datetime')->get();
-        $bookedYogaclasses = Auth::user()->yogaclasses;
+        // $bookedYogaclasses = Auth::user()->yogaclasses;
+        $bookedYogaclasses = UserYogaclass::select('*')->where('user_id', '=', $id)->join('yogaclasses', 'user_yogaclass.yogaclass_id', '=', 'yogaclasses.id')->orderBy('datetime', 'ASC')->get();
         $notBookedYogaclasses = Yogaclass::whereNotIn('id', $bookedYogaclasses->pluck('id')->toArray())->orderBy('datetime')->get();
 
 
