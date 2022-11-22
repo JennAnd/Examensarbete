@@ -1,4 +1,4 @@
-<img src="/assets/yoga.png" width="100%"/>
+<img src="public/assets/yoga.png" width="100%"/>
 
 # Ananda Yoga - A website for a made up yoga studio
 
