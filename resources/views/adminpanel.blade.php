@@ -57,11 +57,11 @@
                         <p class="yogaclass-title">{{$yogaclass->class_name}}, {{$yogaclass->length}} min</p>
                         <p>{{$yogaclass->teacher}}</p>
                     </div>
-                    <div>
+                    <div class="yogaclass-spots">
                         <p>reserved:{{$yogaclass->reserved}}</p>
                         <p>available:{{$yogaclass->available}} </p>
                     </div>
-                    <form action="admindeleteyogaclass" method="GET">
+                    <form class="yogaclass-delete" action="admindeleteyogaclass" method="GET">
                         @csrf
                         <input type="hidden" value="<?= $yogaclass->id ?>" name="yogaclass_id">
                         <button class="adminpanel-button" type="submit">Delete</button>
