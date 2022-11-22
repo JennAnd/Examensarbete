@@ -18,9 +18,9 @@
         </div>
         <div class="filler-item"></div>
         <div class="item3">
-            <!-- Booked yoga classes -->
 
-            <h2 class="yogaclasses-heading">Your booked yogaclasses</h2>
+            <!-- Booked yoga classes -->
+            <h2 class="yogaclasses-heading">Your booked yoga classes</h2>
             @foreach ($bookedYogaclasses as $yogaclass)
             <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>
             <div class="yogaclass">
@@ -45,7 +45,7 @@
 
         <div class="item4">
             <!-- Not booked yoga classes -->
-            <h2 class="yogaclasses-heading">Yogaclasses</h2>
+            <h2 class="yogaclasses-heading">Yoga classes</h2>
             @foreach ($notBookedYogaclasses as $yogaclass)
             <p class="yogaclass-date">{{date("D j/m", strtotime($yogaclass->datetime));}}</p>
             <div class="yogaclass">
